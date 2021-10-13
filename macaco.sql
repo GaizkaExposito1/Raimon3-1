@@ -17,6 +17,24 @@
 CREATE DATABASE IF NOT EXISTS `kalpatarubd` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `kalpatarubd`;
 
+-- Volcando estructura para tabla kalpatarubd.grupo
+CREATE TABLE IF NOT EXISTS `grupo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla kalpatarubd.grupo: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
+INSERT INTO `grupo` (`id`, `nombre`) VALUES
+	(1, '1 Bachillerato Cientifico-Tecnologico'),
+	(2, '2 Bachillerato Cientifico-Tecnologico'),
+	(3, '1 Bachillerato de Ciencias Sociales'),
+	(4, '2 Bachillerato de Ciencias Sociales'),
+	(5, '1 Grado medio de Sistemas Microinformaticos y Redes'),
+	(6, '2 Grado medio de Sistemas Microinformaticos y Redes');
+/*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
+
 -- Volcando estructura para tabla kalpatarubd.mensajes
 CREATE TABLE IF NOT EXISTS `mensajes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -73,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(320) DEFAULT NULL,
   `rol` int(5) DEFAULT NULL,
   `curso` varchar(100) DEFAULT NULL,
+  `imgUser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Preguntar a helen como guardar la imagen del uzuario',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `dni` (`dni`),
@@ -81,10 +100,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `roles` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`) VALUES
-	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, NULL);
+INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`) VALUES
+	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, NULL, NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
