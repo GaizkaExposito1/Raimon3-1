@@ -4,7 +4,7 @@
 //AcessoBD
 class AccesoBd{
     const RUTA="localhost";
-    const NOMBRE_BD="kalpataru";
+    const NOMBRE_BD="kalpatarubd";
     const USER="R3+1";
     const PASS="Raimon3+2";
     public $conexion;
