@@ -199,6 +199,18 @@ class AccesoBd{
             return $users;
         }
 
+        function getCursos(){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`grupo`");
+            $grupos=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $curso=new Grupo($nombre);
+                $grupos[]=$user;
+            }
+            return $grupos;
+        }
+
         //Mensajes
         function newMensaje(){
 
@@ -255,7 +267,7 @@ class AccesoBd{
         }
 
         function mensajeAprobarEmail(){
-            
+
         }
     
 }
