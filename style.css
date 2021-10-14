@@ -1,0 +1,45 @@
+*{
+    margin: 0 auto;
+}
+.fas {
+    color: #d5b6da;
+}
+.langFlagSpain{/*Por defecto lo tenemos oculto, cunaod le demos al icono (bandera del Euskadi, se ocultara esta, y se mostrara la de españa*/
+    display: none;
+}
+#HeaderMenu{
+    background-color: #8f3cad;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+/*Espaciados del menu1*/
+.spacer1{
+    padding-right: 2%;
+}
+.spacer2{
+    padding-right: 14%;
+}
+.spacer3{
+font-size: 12px;
+padding-right: 2%;
+}
+.beforeSpacer{
+    padding-left: 4%;
+}
+/*Search buttom*/
+
+/*MENU*/
+li {
+    list-style: none;
+    display: inline;
+    color: #d5b6da;
+    font-size:12px ;
+}
+ul {
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    color: #161616;
+}
