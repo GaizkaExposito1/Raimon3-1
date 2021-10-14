@@ -22,15 +22,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dni` varchar(9) DEFAULT NULL,
   `pass` varchar(32) DEFAULT NULL,
-  `username` varchar(50) DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(320) DEFAULT NULL,
   `rol` int(5) DEFAULT NULL,
   `curso` int(5) DEFAULT NULL,
   `imgUser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Preguntar a helen como guardar la imagen del uzuario',
+  `Banned` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `dni` (`dni`),
-  UNIQUE KEY `username` (`username`),
   KEY `roles` (`rol`),
   KEY `Grupo (Curso)` (`curso`),
   CONSTRAINT `Grupo (Curso)` FOREIGN KEY (`curso`) REFERENCES `grupo` (`id`),
@@ -39,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`) VALUES
-	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL);
+INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
+	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
