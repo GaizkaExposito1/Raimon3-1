@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Escape Room</title>
 
-    <link href="style.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <link href="stilo.css" rel="stylesheet" type="text/css"> <!--Css-->
     <meta name="viewport" content="width=device-width, initial-scale=1"><!--Icons en HTML-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
