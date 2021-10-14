@@ -126,24 +126,77 @@ class AccesoBd{
             }
         }
 
-        function editUser(){
-
+        function editUser($pass,$confPass,$email,$username,$userId){
+            if(($pass!=null||$pass!='')&&($confPass==null||$confPass=='')){
+                return "no has introducido la contraseña";
+            }
+            else if(($pass==null||$pass=='')&&($confPass!=null||$confPass!='')){
+                return "no has introducido la confirmacion de contraseña";
+            }
+            else if(($pass!=null||$pass!='')&&($confPass!=null||$confPass!='')){
+                if($pass!=$confPass){
+                    return "las contraseñas no coinciden";
+                }else{
+                    $hashPass="0";
+                    $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`pass`='$hashPass') where (`id` = '$userId')");
+                }
+            }
+            if(($email!=null||$email!='')){
+                $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
+                if($emailBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$email') where (`id` = '$userId')");}
+            }
+            if(($username!=null||$username!='')){
+                $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
+                if($usernameBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$username') where (`id` = '$userId')");}
+            }
+            return "ok";
         }
 
         function getUsersCurso($idCurso){
-
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso'");
+            $users=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $users[]=$user;
+            }
+            return $users;
         }
         
-        function banUser(){
+        function banUser($userId){
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`banned`='1') where (`id` = '$userId')");
+            return "ok";
+        }
 
+        function UnbanUser($userId){
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`banned`='0') where (`id` = '$userId')");
         }
 
         function getBannedUsers(){
-
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`banned`='1'");
+            $users=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $users[]=$user;
+            }
+            return $users;
         }
 
-        function getUserRol(){
-
+        function getUserRol($rol){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='$rol'");
+            $users=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $users[]=$user;
+            }
+            return $users;
         }
 
         //Mensajes
@@ -194,6 +247,15 @@ class AccesoBd{
 
         function deletePalabraPrefiltro(){
 
+        }
+
+        //Emails
+        function recordarPassEmail(){
+
+        }
+
+        function mensajeAprobarEmail(){
+            
         }
     
 }
