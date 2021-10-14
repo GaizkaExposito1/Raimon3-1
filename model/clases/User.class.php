@@ -6,19 +6,21 @@ class User{
     public $rol;
     public $curso;
     public $imgUser;
-    //username??
+    public $username;
+    //baneo??
 
-    function __construct($dni,$pass,$email,$rol,$curso,$imgUser){
+    function __construct($dni,$pass,$email,$rol,$curso,$imgUser,$username){
         $this->dni=$dni;
         $this->pass=$pass;
         $this->email=$email;
         $this->rol=$rol;
         $this->curso=$curso;
         $this->imgUser=$imgUser;
+        $this->username=$username;
        
     }
     function __toString(){
-        return $this->dni;
+        return $this->username;
     }
 }
 ?>
