@@ -19,20 +19,35 @@ USE `kalpatarubd`;
 
 -- Volcando estructura para tabla kalpatarubd.grupo
 CREATE TABLE IF NOT EXISTS `grupo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(5) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla kalpatarubd.grupo: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
-INSERT INTO `grupo` (`id`, `nombre`) VALUES
+REPLACE INTO `grupo` (`id`, `nombre`) VALUES
 	(1, '1 Bachillerato Cientifico-Tecnologico'),
 	(2, '2 Bachillerato Cientifico-Tecnologico'),
 	(3, '1 Bachillerato de Ciencias Sociales'),
 	(4, '2 Bachillerato de Ciencias Sociales'),
-	(5, '1 Grado medio de Sistemas Microinformaticos y Redes'),
-	(6, '2 Grado medio de Sistemas Microinformaticos y Redes');
+	(5, '1 Formacion de  Servicios Administrativos'),
+	(6, '2 Formacion de Servicios Administrativos'),
+	(7, '1 Grado medio de Sistemas Microinformaticos y Redes'),
+	(8, '2 Grado medio de Sistemas Microinformaticos y Redes'),
+	(9, '1 Grado medio de Gestion Administrativa'),
+	(10, '2 Grado medio de Gestion Administrativa'),
+	(11, '1 Grado medio de Actividades Comerciales'),
+	(12, '2 Grado medio de Actividades Comerciales'),
+	(13, '1 Grado superior de Administracion de Sistemas Informaticos en Red'),
+	(14, '2 Grado superior de Administracion de Sistemas Informaticos en Red'),
+	(15, '1 Grado superior de Desarollo de Aplicaciones Web'),
+	(16, '2 Grado superior de Desarollo de Aplicaciones Web'),
+	(26, '1 Grado Superior de  Administración y Finanzas'),
+	(27, '2 Grado Superior de Administracion y Finanzas'),
+	(28, '1 Grado Superior de Marketing y Publicidad'),
+	(29, '1 Grado Superior de Integración Social'),
+	(30, '2 Grado Superior de Integración Social');
 /*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
 
 -- Volcando estructura para tabla kalpatarubd.mensajes
@@ -76,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 -- Volcando datos para la tabla kalpatarubd.roles: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` (`id`, `rol`) VALUES
+REPLACE INTO `roles` (`id`, `rol`) VALUES
 	(1, ' User'),
 	(2, 'Admin'),
 	(3, 'SuperAdmin');
@@ -87,23 +102,26 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dni` varchar(9) DEFAULT NULL,
   `pass` varchar(32) DEFAULT NULL,
-  `username` varchar(50) DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(320) DEFAULT NULL,
   `rol` int(5) DEFAULT NULL,
-  `curso` varchar(100) DEFAULT NULL,
+  `curso` int(5) DEFAULT NULL,
   `imgUser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Preguntar a helen como guardar la imagen del uzuario',
+  `Banned` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `dni` (`dni`),
-  UNIQUE KEY `username` (`username`),
   KEY `roles` (`rol`),
+  KEY `Grupo (Curso)` (`curso`),
+  CONSTRAINT `Grupo (Curso)` FOREIGN KEY (`curso`) REFERENCES `grupo` (`id`),
   CONSTRAINT `roles` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.users: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`) VALUES
-	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, NULL, NULL);
+REPLACE INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
+	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
