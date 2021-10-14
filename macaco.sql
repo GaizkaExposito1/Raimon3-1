@@ -17,38 +17,31 @@
 CREATE DATABASE IF NOT EXISTS `kalpatarubd` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `kalpatarubd`;
 
--- Volcando estructura para tabla kalpatarubd.grupo
-CREATE TABLE IF NOT EXISTS `grupo` (
+-- Volcando estructura para tabla kalpatarubd.users
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+  `dni` varchar(9) DEFAULT NULL,
+  `pass` varchar(32) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `email` varchar(320) DEFAULT NULL,
+  `rol` int(5) DEFAULT NULL,
+  `curso` int(5) DEFAULT NULL,
+  `imgUser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Preguntar a helen como guardar la imagen del uzuario',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `dni` (`dni`),
+  UNIQUE KEY `username` (`username`),
+  KEY `roles` (`rol`),
+  KEY `Grupo (Curso)` (`curso`),
+  CONSTRAINT `Grupo (Curso)` FOREIGN KEY (`curso`) REFERENCES `grupo` (`id`),
+  CONSTRAINT `roles` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
-INSERT INTO `grupo` (`id`, `nombre`) VALUES
-	(1, '1 Bachillerato Cientifico-Tecnologico'),
-	(2, '2 Bachillerato Cientifico-Tecnologico'),
-	(3, '1 Bachillerato de Ciencias Sociales'),
-	(4, '2 Bachillerato de Ciencias Sociales'),
-	(5, '1 Formacion de  Servicios Administrativos'),
-	(6, '2 Formacion de Servicios Administrativos'),
-	(7, '1 Grado medio de Sistemas Microinformaticos y Redes'),
-	(8, '2 Grado medio de Sistemas Microinformaticos y Redes'),
-	(9, '1 Grado medio de Gestion Administrativa'),
-	(10, '2 Grado medio de Gestion Administrativa'),
-	(11, '1 Grado medio de Actividades Comerciales'),
-	(12, '2 Grado medio de Actividades Comerciales'),
-	(13, '1 Grado superior de Administracion de Sistemas Informaticos en Red'),
-	(14, '2 Grado superior de Administracion de Sistemas Informaticos en Red'),
-	(15, '1 Grado superior de Desarollo de Aplicaciones Web'),
-	(16, '2 Grado superior de Desarollo de Aplicaciones Web'),
-	(26, '1 Grado Superior de  Administración y Finanzas'),
-	(27, '2 Grado Superior de Administracion y Finanzas'),
-	(28, '1 Grado Superior de Marketing y Publicidad'),
-	(29, '1 Grado Superior de Integración Social'),
-	(30, '2 Grado Superior de Integración Social');
-/*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
+-- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`) VALUES
+	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
