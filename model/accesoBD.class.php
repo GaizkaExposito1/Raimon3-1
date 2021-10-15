@@ -301,9 +301,15 @@ class AccesoBd{
             return $sms;
         }
 
-        function deleteMensaje($id){
+        function deleteMensaje($id, $userId){
+            $sms=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (`id`='$id');");
+            $u=$this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`id` = '$userId')");
+            if($sms->userId==$userId || $u->rol==2 || $u->rol==3){
             $this->lanzarSQL("DELETE from `kalpatarubd`.`mensajes` where (`id`='$id');");
-            return "ok";
+            return "ok";}
+            else{
+                return "no tienes permiso para borrar este mensaje";
+            }
         }
 
         function editMensaje($tipografia,$colorTipografia,$color, $form,$id){
