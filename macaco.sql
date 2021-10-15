@@ -24,15 +24,15 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 REPLACE INTO `grupo` (`id`, `nombre`) VALUES
 	(1, '1 Bachillerato Cientifico-Tecnologico'),
 	(2, '2 Bachillerato Cientifico-Tecnologico'),
 	(3, '1 Bachillerato de Ciencias Sociales'),
 	(4, '2 Bachillerato de Ciencias Sociales'),
-	(5, '1 Formacion de  Servicios Administrativos'),
-	(6, '2 Formacion de Servicios Administrativos'),
+	(5, '1 Formacion basica de  Servicios Administrativos'),
+	(6, '2 Formacion basica de Servicios Administrativos'),
 	(7, '1 Grado medio de Sistemas Microinformaticos y Redes'),
 	(8, '2 Grado medio de Sistemas Microinformaticos y Redes'),
 	(9, '1 Grado medio de Gestion Administrativa'),
