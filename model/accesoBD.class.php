@@ -231,9 +231,15 @@ class AccesoBd{
             if($texto==null || $texto==''){
                 return "no has escrito el texto";
             }
+            else{
             $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`forma`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$form','$texto','$anonimo','0');");
+            $bool=$this->hasTextWordInPrefiltro($texto);
+            if($bool=="ok"){
             $this->mensajeAprobarEmail();
-            return "ok";
+            return "ok";}else{
+                return "la palabra $bool no esta permitida, porfavor cambia el mensaje";
+            }
+        }
         }
 
         function getNumPosit(){
@@ -332,19 +338,47 @@ class AccesoBd{
 
         //Prefiltro
         function getPrefiltro(){
-
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`prefiltro`;");
+            $PF=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $palabra=new Prefiltro($palabra);
+                $PF[]=$palabra;
+            }
+            return $PF;
         }
 
-        function hasTextWordInPrefiltro(){
-
+        function hasTextWordInPrefiltro($text){
+            $words=array(str_word_count($text,1));
+            $PF=$this->getPrefiltro();
+            $palabra="ok";
+            for($i=0; $i<count($words);$i++){
+                for($j=0;$j<count($PF);$j++){
+                    if($words[$i]==$PF[$j]){
+                        $palabra= $words[$i];
+                    }
+                } 
+            }
+            return $palabra;
         }
 
-        function addPalabraPrefiltro(){
-
+        function addPalabraPrefiltro($word){
+            if(($word==null)||($word=='')){
+                return "palabra en blanco";
+            }else{
+                $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$word');");
+                return "ok";
+            }
         }
 
-        function deletePalabraPrefiltro(){
-
+        function deletePalabraPrefiltro($word){
+            if($word==null){
+                return "palabra no seleccionada";
+            }else{
+                $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$word');");
+                return "ok";
+            }
         }
 
         //Emails
