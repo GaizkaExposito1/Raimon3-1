@@ -95,7 +95,7 @@ class AccesoBd{
                         //hash contraseña
                         $hashPass="0";
                         //insert a la bd
-                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',2,null,null);");
+                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email','2','null','null');");
                         return "ok";
                     }
                 }
@@ -128,10 +128,10 @@ class AccesoBd{
 
         function editUser($pass,$confPass,$email,$username,$userId){
             if(($pass!=null||$pass!='')&&($confPass==null||$confPass=='')){
-                return "no has introducido la contraseña";
+                return "no has introducido la confirmacion de contraseña";
             }
             else if(($pass==null||$pass=='')&&($confPass!=null||$confPass!='')){
-                return "no has introducido la confirmacion de contraseña";
+                return "no has introducido la contraseña";
             }
             else if(($pass!=null||$pass!='')&&($confPass!=null||$confPass!='')){
                 if($pass!=$confPass){
@@ -206,42 +206,128 @@ class AccesoBd{
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
                 $curso=new Grupo($nombre);
-                $grupos[]=$user;
+                $grupos[]=$curso;
             }
             return $grupos;
         }
 
         //Mensajes
-        function newMensaje(){
-
+        function newMensaje($userId, $tipografia,$colorTipografia,$color, $form,$texto,$anonimo){
+            if($tipografia==null){
+                $tipografia="Comic Sans";
+            }
+            if($colorTipografia==null){
+                $colorTipografia="#000000";
+            }
+            if($color==null){
+                $color="#000000";
+            }
+            if($form==null){
+                $form="post-it";
+            }
+            if($anonimo==null){
+                $anonimo=0;
+            }
+            if($texto==null || $texto==''){
+                return "no has escrito el texto";
+            }
+            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`forma`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$form','$texto','$anonimo','0');");
+            $this->mensajeAprobarEmail();
+            return "ok";
         }
 
         function getNumPosit(){
-
+            $num=$this->lanzarSQL("SELECT count(*) from `kalpatarubd`.`mensajes` where (`forma`='post-it');");
+            return $num;
         }
 
         function getNumHojas(){
-            
+            $num=$this->lanzarSQL("SELECT count(*) from `kalpatarubd`.`mensajes` where (`forma`='hoja');");
+            return $num;
         }
 
-        function getUserMensajes(){
-
+        function getUserMensajes($userId){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`='$userId');");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
         }
 
-        function getUserMensajesApproved(){
-
+        function getMensajesCurso($cursoId){
+            //$result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`=(SELECT `id` from `kalpatarubd`.`users` where (`curso`='$cursoId');");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes`,`kalpatarubd`.`users` where `kalpatarubd`.`users`.`id`= `kalpatarubd`.`mensajes`.`userId` and `kalpatarubd`.`users`,`curso`='$cursoId';");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
         }
 
-        function getUserMensajesNotApproved(){
-
+        function getUserMensajesApproved($userId){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`='null'));");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
         }
 
-        function deleteMensaje(){
-
+        function getUserMensajesNotApproved($userId){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`!='null'));");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
         }
 
-        function editMensaje(){
+        function deleteMensaje($id){
+            $this->lanzarSQL("DELETE from `kalpatarubd`.`mensajes` where (`id`='$id');");
+            return "ok";
+        }
 
+        function editMensaje($tipografia,$colorTipografia,$color, $form,$id){
+            if($tipografia==null){
+                return "no has introducido la contraseña";
+            }
+            if($tipografia!=null){
+                    $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`tipografia`='$tipografia') where (`id` = '$id')");
+                }
+            if($colorTipografia!=null){
+                $CTipoBD=$this->lanzarSQL("SELECT `colorTipografia` from `kalpatarubd`.`mensajes` where (`colorTipografia`='$colorTipografia')");
+                if($CTipoBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`colorTipografia`='$colorTipografia') where (`id` = '$id')");}
+            }
+            if($color!=null){
+                $colorBD=$this->lanzarSQL("SELECT `color` from `kalpatarubd`.`mensajes` where (`color`='$color')");
+                if($colorBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`color`='$color') where (`id` = '$id')");}
+            }
+            if($color!=null){
+                $colorBD=$this->lanzarSQL("SELECT `color` from `kalpatarubd`.`mensajes` where (`color`='$color')");
+                if($colorBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`color`='$color') where (`id` = '$id')");}
+            }
+            if($form!=null){
+                $formBD=$this->lanzarSQL("SELECT `forma` from `kalpatarubd`.`mensajes` where (`forma`='$form')");
+                if($formBD==null){
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`forma`='$form') where (`id` = '$id')");}
+            }
+            return "ok";
         }
 
         //Prefiltro
