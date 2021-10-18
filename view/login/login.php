@@ -8,7 +8,11 @@ if (isset($lang)) {
     $url_prefix=".";
 	$url_prefixU="..";
 }
+<<<<<<< Updated upstream
 require_once ("$url_prefixU/lang_" . $lang . ".php");
+=======
+require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
+>>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +31,7 @@ require_once ("$url_prefixU/lang_" . $lang . ".php");
 	  <div class="left">
 		<div class="login"><?php echo $language["INICIO_SESION"]; ?></div>
 		<div class="eula"><?php echo $language["LOGIN_SUBTITULO"]; ?></div>
+		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>
 	  </div>
 	  <div class="right"> 
 		<div class="form">
@@ -41,3 +46,10 @@ require_once ("$url_prefixU/lang_" . $lang . ".php");
   </div>
 </body>
 </html>
+
+<script>
+	function mostrarCaja() {
+		
+	}
+
+</script>
