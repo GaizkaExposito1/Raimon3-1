@@ -1,10 +1,10 @@
 <?php
 //require
-require_once "Grupo.class.php";
-require_once "User.class.php";
-require_once "Mensaje.class.php";
-require_once "Prefiltro.class.php";
-require_once "Rol.class.php";
+require_once "clases/Grupo.class.php";
+require_once "clases/User.class.php";
+require_once "clases/Mensaje.class.php";
+require_once "clases/Prefiltro.class.php";
+require_once "clases/Rol.class.php";
 
 require "PHPMailer.php";
 require "Exception.php";
@@ -266,6 +266,7 @@ class AccesoBd{
 
         function getMensajesCurso($cursoId){
             //$result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`=(SELECT `id` from `kalpatarubd`.`users` where (`curso`='$cursoId');");
+           //DA ERROR
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes`,`kalpatarubd`.`users` where `kalpatarubd`.`users`.`id`= `kalpatarubd`.`mensajes`.`userId` and `kalpatarubd`.`users`,`curso`='$cursoId';");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){

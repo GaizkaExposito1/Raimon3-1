@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/registroStyle.css">
-<script src="js/login.js"></script>
+<link rel="stylesheet" href="/registroStyle.css">
+<script src="/login.js"></script>
 </head>
 <body>
 	

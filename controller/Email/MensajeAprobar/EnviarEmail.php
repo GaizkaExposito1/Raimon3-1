@@ -1,9 +1,10 @@
 <?php
-require "PHPMailer.php";
+require "./controller/librerias/PHPMailer.php";
+/*require "PHPMailer.php";
 require "Exception.php";
 require "SMTP.php";
 require "OAuth.php";
-require "POP3.php";
+require "POP3.php";*/
 //hay k investigar
 function EnviarEmailAprobar($mensaje){
     //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
@@ -25,7 +26,7 @@ function EnviarEmailAprobar($mensaje){
     $email->IsHTML(true);//poder pner html y css en el correo
     //$email->Subject="$subject"
     $email->Subject="JoseMaria que vive a 200 metros quiere conocerte";
-    $email->Body=file_get_contents('./htmlFile.html');
+    $email->Body=file_get_contents('htmlFile.html');
     $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
     if($email->Send()){
         //correo enviado
