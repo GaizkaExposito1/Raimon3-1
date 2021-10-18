@@ -14,6 +14,7 @@ $bd= new AccesoBd();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="registroStyle.css">
 <script src="/login.js"></script>
+<script src="js/jquery.min.js"></script>
 </head>
 <body>
 	
@@ -23,6 +24,10 @@ $bd= new AccesoBd();
 	  <div class="left">
 		<div class="register">Registro!!</div>
 		<div class="eula">Bienvenido al arbol de los deseos!!</div>
+		<input type="button" id="continuar" value="continuar" onclick="botonContinuar()">
+		<!--Este boton es para el responsive-->
+
+
 	  </div>
 	  <div class="right"> 
 		<div class="form">
@@ -47,7 +52,7 @@ $bd= new AccesoBd();
 
 
 		  <select name="select" >
-           <option value="curso" disabled selected>Curso</option>
+           <option value="curso" disabled selected> Curso</option>
            <?php 
 		   $cursos=$bd->getCursos();
 		   
@@ -58,18 +63,26 @@ $bd= new AccesoBd();
 
 		   ?>
          </select>
-		 
 
-
-        
-
-
-
-
-		  <input type="submit" id="submit" value="Aceptar">
+		  <input type="submit" id="aceptar" value="Aceptar">
 		</div>
 	  </div>
 	</div>
   </div>
 </body>
 </html>
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+

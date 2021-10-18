@@ -12,9 +12,9 @@ https://mdbootstrap.com/docs/standard/content-styles/colors/
 
 body {
     background: #EDE7F6;
-    font-family: 'Inter UI', sans-serif;
     margin: 0;
     padding: 20px;
+   /* margin-bottom: 20px;*/
   }
   .page {
     background: #B39DDB;
@@ -73,19 +73,22 @@ body {
   }
 
   select{
-    border: 0;
-    /*color: #f2f2f2;*/
+
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
     font-size: 20px;
     height: 30px;
-    line-height: 30px;
-    outline: none;
     width: 100%;
-    border-radius: 10px;
+    line-height: 30px;
+    color: black;
     background-color: #EDE7F6;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
     margin-top: 8%;
     opacity: 70%;
-    text-align: center;
-    color: black;
+    
+  
   }
 
 
@@ -101,6 +104,7 @@ body {
     text-align: center;
   }
   
+  /*Todos los input*/
   /*
   input {
     border: 0;
@@ -150,7 +154,7 @@ body {
 
    
   input[type="submit"] {
-
+    font-family: 'JetBrains Mono', monospace;
     border: 0;
     font-size: 20px;
     height: 30px;
@@ -160,10 +164,52 @@ body {
     border-radius: 10px;
     background-color: #EDE7F6;
     
-
-
     color: #707075;
     margin-top: 20px;
     border-radius: 10px;
   }
+
+  input[type="button"] {
+    
+    width: 60%;
+    border-radius: 10px;
+    background-color: #EDE7F6;
+  }
+
+ 
+  /*-------------------------------------------------------------------------------------------*/
+  @media screen and (max-width: 600px) {
   
+    body{
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .register {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 31px;
+      font-weight: 900;
+      margin: 133px 34px 30px;
+    }
+  
+
+.left{
+  margin: 20px;
+  background: white;
+  width: 30%;
+
+}
+
+#continuar{
+  width: 60%;
+  border-radius: 10px;
+  background-color: #EDE7F6;
+
+}
+
+.right {
+visibility: hidden;
+}
+
+
+  }
