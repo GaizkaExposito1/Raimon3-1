@@ -17,15 +17,15 @@ function EnviarEmailAprobar($mensaje){
     $email->Host='smtp.gmail.com';
     $email->Port='465';
     //cuenta con la k el servidor va a enviar esto
-    $email->Username='2daw1021@gmail.com';
-    $email->Password='segundodaw';
-    $email->From='2daw1021@gmail.com';
-    $email->FromName='Pokemons';
-    $email->AddAddress('15zun3a1202shi@gmail.com');
-    $email->AddReplyTo('2daw1021@gmail.com');
+    $email->Username='retoraimon@gmail.com';
+    $email->Password='raimon3+1';
+    $email->From='retoraimon@gmail.com';
+    $email->FromName='Kalpataru';
+    $email->AddAddress('retoraimon@gmail.com');
+    $email->AddReplyTo('el de las pavas');
     $email->IsHTML(true);//poder pner html y css en el correo
     //$email->Subject="$subject"
-    $email->Subject="JoseMaria que vive a 200 metros quiere conocerte";
+    $email->Subject="Creado deseo en Kalpataru";
     $email->Body=file_get_contents('htmlFile.html');
     $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
     if($email->Send()){
