@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Escape Room</title>
 
-    <link href="styleheader1.css" rel="stylesheet" type="text/css"> <!--Css-->
-    <link href="styleheader2.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <link href="styleheader3.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <link href="styleheader4.css" rel="stylesheet" type="text/css"> <!--Css-->
     <meta name="viewport" content="width=device-width, initial-scale=1"><!--Icons en HTML-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/jpg" href="view/assets/favicon.jpg"/>
@@ -38,7 +38,7 @@
 
     </nav>
     <nav class="topnav2" id="myTopnav2">
-      <img id="LogoCLSLarge" class="CSLlogo" width="130" alt="CentroSanLuis Logo" src="view/assets/CentroSanLuisLargo.png">
+      <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="view/assets/CentroSanLuisLargo.png">
       <a href="#news" id="PagePrincipal">Pagina Principal</a>
       <a href="#about" id="Administracion">Zona Administracion</a>
       <a href="#about" id="VerMensajes">Ver mensajes</a>
@@ -50,6 +50,16 @@
       </a>
     </nav>
     </header>
+    <div id="contenido">
+    <?php //Contenido
+        $view="principal"; //Por defecto
+        if (isset($_GET['view'])){
+          $view=$_GET['view'];
+        }
+        include "/controller/conexion/".$view.".php";
+
+    ?>
+    </div>
 </body>
 
 </html>
