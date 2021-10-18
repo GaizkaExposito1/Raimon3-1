@@ -1,16 +1,24 @@
 <?php
 //require
+<<<<<<< Updated upstream
 require_once "clases/Grupo.class.php";
 require_once "clases/User.class.php";
 require_once "clases/Mensaje.class.php";
 require_once "clases/Prefiltro.class.php";
 require_once "clases/Rol.class.php";
+=======
+/*require_once "Grupo.class.php";
+require_once "User.class.php";
+require_once "Mensaje.class.php";
+require_once "Prefiltro.class.php";
+require_once "Rol.class.php";
+>>>>>>> Stashed changes
 
 require "PHPMailer.php";
 require "Exception.php";
 require "SMTP.php";
 require "OAuth.php";
-require "POP3.php";
+require "POP3.php";*/
 //AcessoBD
 class AccesoBd{
     const RUTA="localhost";
