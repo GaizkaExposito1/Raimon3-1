@@ -54,7 +54,7 @@ $bd= new AccesoBd();
 		  <select name="select" >
            <option value="curso" disabled selected> Curso</option>
            <?php 
-		   $cursos=$bd->getCursos();
+		   $cursos=$grupos;
 		   
 		   for ($i=0; $i < count($cursos); $i++) { 
 			echo "<option value='cursos'>$cursos[$i]</option>";

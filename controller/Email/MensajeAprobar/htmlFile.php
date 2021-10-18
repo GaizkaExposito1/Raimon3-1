@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Han enviado un deseo a revisión</h1>
+    <h1>Han enviado un deseo a revisión</h1>  
     <form>
         <label>Usuario:</label><?php $usuario ?>
         <label>Mensaje</label><?php $mensaje ?>
