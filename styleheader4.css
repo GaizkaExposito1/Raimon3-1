@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
 /*font-family: 'Josefin Sans', sans-serif;*/
-/*    font-family: 'JetBrains Mono', monospace;*/
+/*font-family: 'JetBrains Mono', monospace;*/
 .MidHeader{
   background-color: rgb(208, 156, 216, 0.6);
   padding-top: 1%;
@@ -14,13 +14,10 @@ img#LogoCLSLarge {
   left: 12px;
   position: relative;
 }
-
-
 .topnav2 {
   overflow: hidden;
   background-color: rgb(208, 156, 216, 0.6);
 }
-
 .topnav2 a {
   float: right;
   display: block;
@@ -30,47 +27,17 @@ img#LogoCLSLarge {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav2 a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .topnav2 a.active {
   background-color: #04AA6D;
   color: white;
 }
-
 .topnav2 #ir {
   display: none;
 }
-/*#PagePrincipal{
-  top: 66px;
-  right: 122px;
-  position: absolute;
-  display: none;
-}
-#Administracion{
-  top: 0px;
-  left: 1080px;
-  position: relative;
-}
-#VerMensajes{
-  top: 0px;
-  left: 1080px;
-  position: relative;
-}
-#CrearMensaje{
-  top: 0px;
-  left: 1080px;
-  position: relative;
-}
-#Login{
-  top: 0px;
-  left: 1080px;
-  position: relative;
-}*/
-
 @media screen and (max-width: 600px) {
   .topnav2 a:not(:first-child) {display: none;}
   .topnav2 a#ir {
@@ -88,9 +55,7 @@ img#LogoCLSLarge {
     display: block;
     text-align: right;
   }
-
   #LogoCLSLarge{
-
     font-family: 'JetBrains Mono', monospace;
     padding-left: 1.5%;
     position: initial;
@@ -98,7 +63,6 @@ img#LogoCLSLarge {
     border: none;
     float: left;
     margin-right: 1.5%;
-    
   }
   #PagePrincipal{
     position: relative;
@@ -124,20 +88,22 @@ img#LogoCLSLarge {
 /*Movil un poco Gigante, tablets y ordenadores con pantallas enanas xD*/
 @media  screen and (min-width: 600px) and (max-width: 1000px){
   #LogoCLSLarge{
-
     font-family: 'JetBrains Mono', monospace;
     padding-left: 1.5%;
     border: none;
     float: left;
     margin-right: 1.5%;
-    
-}
-  .topnav2 a:not(:first-child) {display: none;}
+  }
+  .topnav2 a:not(:first-child) {
+    display: none;
+  }
   .topnav2 a#ir {
     float: right;
     display: block;
   }
-  .topnav2.responsive2 {position: relative;}
+  .topnav2.responsive2 {
+    position: relative;
+  }
   .topnav2.responsive2 #ir {
     position: absolute;
     right: 0;

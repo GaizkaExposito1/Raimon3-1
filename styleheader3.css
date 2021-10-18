@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
 /*font-family: 'Josefin Sans', sans-serif;*/
-/*    font-family: 'JetBrains Mono', monospace;*/
+/*font-family: 'JetBrains Mono', monospace;*/
 
 body {
     margin:0;
@@ -11,7 +11,6 @@ body {
   overflow: hidden;
   background-color: #8f3cad;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -91,7 +90,6 @@ body {
   float: right;
   margin-right: 1.5%;
  }
-  
 #filter{
   background-color: #fff;
   border-radius: 20px;
@@ -123,7 +121,6 @@ body {
   outline:none;
   text-align:center;
   font-weight:bold;
-  
  }
     /*Languages*/
 #langFlagSpain{
@@ -135,8 +132,6 @@ body {
 .topnav{
   padding-bottom: 0.5%;
  }
-
-
 /*MOBILE */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child){
@@ -146,7 +141,9 @@ body {
     float: left;
     display: block;
   }
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     left: 0;
@@ -158,49 +155,52 @@ body {
     text-align: right;
     clear: both;
   }
-  .topnav.responsive {float: none;}
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    float: none;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive {
     display: block;
     width: 100%;
     text-align: right;
   }
   a.active{
-  float: right;}
-
-    /*Languages*/
-    #langFlagSpain{
+    float: right;
+  }
+  /*Languages*/
+  #langFlagSpain{
     display: inline;
-    }
-    #langFlagBasque{
+  }
+  #langFlagBasque{
     display: none;
+  }
+  /*First Header*/
+  #phone{
+    position: initial;
+  }
+  #mail{
+    position: initial;
+  }
+  #News{
+    position: initial;
+  }
+  #Intranet{
+    position: initial;
+  }
+  #Moodle{
+    position: initial;
+  }
+  #AccessAlum{
+    position: initial;
+  }
+  #LangEs{
+    position: initial;
+  }
+  #LangEus{
+    position: initial;
     }
-
-    /*First Header*/
-    #phone{
-      position: initial;
-     }
-     #mail{
-      position: initial;
-     }
-     #News{
-      position: initial;
-     }
-     #Intranet{
-      position: initial;
-     }
-     #Moodle{
-      position: initial;
-     }
-     #AccessAlum{
-      position: initial;
-     }
-     #LangEs{
-      position: initial;
-     }
-    #LangEus{
-      position: initial;
-     }
     /*Buttom*/
   .txtBuscar{
     border-radius:20px;
@@ -212,29 +212,24 @@ body {
     margin-top: 0.5%;
     float: right;
     margin-right: 1.5%;
-    
-}
-
-#filter{
-background-color: #fff; 
-border-radius:20px;
-padding-top: 1%;
-padding-bottom: 1%;
-padding-right: 3%;
+  }
+  #filter{
+    background-color: #fff; 
+    border-radius:20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
     position:absolute;
     right: 35px;
     top: 9px;
     border:none;
     height:20px;
     width:20px;
-
     outline:none;
     text-align:center;
     font-weight:bold;
-
-}
-.Buscar{
-
+  }
+  .Buscar{
     border-radius:20px;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -248,9 +243,7 @@ padding-right: 3%;
     outline:none;
     text-align:center;
     font-weight:bold;
-}
-
-
+  }
 }
 /*Movil un poco Gigante, tablets y ordenadores con pantallas enanas xD*/
 @media  screen and (min-width: 600px) and (max-width: 1000px){
@@ -285,64 +278,56 @@ padding-right: 3%;
   }
   a.active{
   float: right;}
-
-    /*Languages*/
-    #langFlagSpain{
+  /*Languages*/
+  #langFlagSpain{
     display: inline;
-    }
-    #langFlagBasque{
-    display: none;
-    }
-
-
-    /*Buttom*/
-    .txtBuscar{
-      border-radius:20px;
-      font-family: 'JetBrains Mono', monospace;
-      padding-top: 2%;
-      padding-left: 1.5%;
-      padding-bottom: 2%;
-      border: none;
-      margin-top: 0.5%;
-      float: right;
-      margin-right: 1.5%;
   }
-  
+  #langFlagBasque{
+    display: none;
+  }
+    /*Buttom*/
+  .txtBuscar{
+    border-radius:20px;
+    font-family: 'JetBrains Mono', monospace;
+    padding-top: 2%;
+    padding-left: 1.5%;
+    padding-bottom: 2%;
+    border: none;
+    margin-top: 0.5%;
+    float: right;
+    margin-right: 1.5%;
+  }
   #filter{
-  background-color: #fff; 
-  border-radius:20px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-right: 3%;
-      position:absolute;
-      right: 35px;
-      top: 12px;
-      border:none;
-      height:20px;
-      width:20px;
-      outline:none;
-      text-align:center;
-      font-weight:bold;
-  
+    background-color: #fff; 
+    border-radius:20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    position:absolute;
+    right: 35px;
+    top: 12px;
+    border:none;
+    height:20px;
+    width:20px;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
   }
   .Buscar{
-  
-      border-radius:20px;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      padding-right: 3%;
-      background-color: #fff;
-      border: none;
-      position:absolute;
-      right: 10px;
-      top: 5px;
-      border:none;
-      outline:none;
-      text-align:center;
-      font-weight:bold;
-  
+    border-radius:20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 3%;
+    background-color: #fff;
+    border: none;
+    position:absolute;
+    right: 10px;
+    top: 5px;
+    border:none;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
   }
-
 }
 
 
