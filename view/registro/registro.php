@@ -1,3 +1,11 @@
+<?php
+require_once "../../model/accesoBD.class.php";
+require_once "../../model/clases/Grupo.class.php";
+
+$bd= new AccesoBd();
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +26,9 @@
 	  </div>
 	  <div class="right"> 
 		<div class="form">
+
+
+
           <label for="dni">Dni</label>
 		  <input type="text" id="text">
 
@@ -33,7 +44,27 @@
 
 		  <label for="userName">Usuario</label>
 		  <input type="text" id="text">
+
+
+		  <select name="select" >
+           <option value="curso" disabled selected>Curso</option>
+           <?php 
+		   $cursos=$bd->getCursos();
+		   
+		   for ($i=0; $i < count($cursos); $i++) { 
+			echo "<option value='cursos'>$cursos[$i]</option>";
+			
+		   }
+
+		   ?>
+         </select>
 		 
+
+
+        
+
+
+
 
 		  <input type="submit" id="submit" value="Aceptar">
 		</div>

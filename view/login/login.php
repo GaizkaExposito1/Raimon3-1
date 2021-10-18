@@ -16,8 +16,13 @@ require_once ("$url_prefixU/lang_" . $lang . ".php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
 	<link rel="stylesheet"  href="<?php echo "$url_prefix"?>/loginStyle.css"> 
 	<script src="<?php echo "$url_prefix"?>/login.js"></script>
+=======
+<link rel="stylesheet" href="css/loginStyle.css"> 
+<script src="js/login.js"></script>
+>>>>>>> Stashed changes
 </head>
 <body>
 	
