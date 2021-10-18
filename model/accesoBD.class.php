@@ -1,13 +1,5 @@
 <?php
 //require
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-require_once "clases/Grupo.class.php";
-require_once "clases/User.class.php";
-require_once "clases/Mensaje.class.php";
-require_once "clases/Prefiltro.class.php";
-require_once "clases/Rol.class.php";
-=======
 /*require_once "Grupo.class.php";
 require_once "User.class.php";
 require_once "Mensaje.class.php";
