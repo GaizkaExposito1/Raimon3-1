@@ -1,6 +1,7 @@
 <?php
 //require
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 require_once "clases/Grupo.class.php";
 require_once "clases/User.class.php";
 require_once "clases/Mensaje.class.php";
@@ -12,6 +13,13 @@ require_once "User.class.php";
 require_once "Mensaje.class.php";
 require_once "Prefiltro.class.php";
 require_once "Rol.class.php";
+>>>>>>> Stashed changes
+=======
+/*require_once "/model/clases/Grupo.class.php";
+require_once "/model/clases/User.class.php";
+require_once "/model/clases/Mensaje.class.php";
+require_once "/model/clases/Prefiltro.class.php";
+require_once "/model/clases/Rol.class.php";
 >>>>>>> Stashed changes
 
 require "PHPMailer.php";

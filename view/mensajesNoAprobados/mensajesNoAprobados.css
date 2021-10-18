@@ -1,0 +1,18 @@
+body {
+    background: #EDE7F6;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #fuera {
+      background-color: #B39DDB;
+      width: 90%;
+      margin-left: 5%;
+  }
+
+  #dentro {
+    width: 85;
+    margin-left: 2.5%;
+  }
