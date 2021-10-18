@@ -273,8 +273,6 @@ class AccesoBd{
         }
 
         function getMensajesCurso($cursoId){
-            //$result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`=(SELECT `id` from `kalpatarubd`.`users` where (`curso`='$cursoId');");
-           //DA ERROR
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes`,`kalpatarubd`.`users` where `kalpatarubd`.`users`.`id`= `kalpatarubd`.`mensajes`.`userId` and `kalpatarubd`.`users`.`curso`='$cursoId';");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
