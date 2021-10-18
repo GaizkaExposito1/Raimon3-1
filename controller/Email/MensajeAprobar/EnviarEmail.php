@@ -26,7 +26,7 @@ function EnviarEmailAprobar($mensaje){
     $email->IsHTML(true);//poder pner html y css en el correo
     //$email->Subject="$subject"
     $email->Subject="Creado deseo en Kalpataru";
-    $email->Body=file_get_contents('htmlFile.html');
+    $email->Body=file_get_contents('htmlFile.php');
     $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
     if($email->Send()){
         //correo enviado
