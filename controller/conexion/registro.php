@@ -6,5 +6,5 @@ $bd= new AccesoBd();
 //colecciones de datos necesarios
 $grupos=$bd->getCursos();
 //redireccion
-include "./view/login/login.php";
+include "../../view/registro/registro.php";
 ?>
