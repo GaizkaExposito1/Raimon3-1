@@ -32,12 +32,12 @@
     </nav>
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="view/assets/CentroSanLuisLargo.png">
-      <a href="#contact" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
-      <a href="#about" id="CrearMensaje">Nuevo Mensaje</a>
-      <a href="#about" id="VerMensajes">Ver mensajes</a>
-      <a href="#about" id="Administracion">Zona Administracion</a>
-      <a href="#news" id="PagePrincipal">Pagina Principal</a>
-      <a href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
+      <a  href="index.php?section=pokedex" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
+      <a  href="index.php?section=pokedex" id="CrearMensaje">Nuevo Mensaje</a>
+      <a  href="index.php?section=pokedex" id="VerMensajes">Ver mensajes</a>
+      <a  href="index.php?section=pokedex" id="Administracion">Zona Administracion</a>
+      <a  href="index.php?section=pokedex" id="PagePrincipal">Pagina Principal</a>
+      <a  href="index.php?section=pokedex" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
   </header>
 </body>

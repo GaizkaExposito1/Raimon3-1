@@ -8,11 +8,7 @@ if (isset($lang)) {
     $url_prefix=".";
 	$url_prefixU="..";
 }
-<<<<<<< Updated upstream
-require_once ("$url_prefixU/lang_" . $lang . ".php");
-=======
 require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
->>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
 <html lang="en">
