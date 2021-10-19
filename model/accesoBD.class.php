@@ -1,18 +1,11 @@
 <?php
 //require
-/*require_once "Grupo.class.php";
-require_once "User.class.php";
-require_once "Mensaje.class.php";
-require_once "Prefiltro.class.php";
-require_once "Rol.class.php";
->>>>>>> Stashed changes
-=======
 /*require_once "/model/clases/Grupo.class.php";
 require_once "/model/clases/User.class.php";
 require_once "/model/clases/Mensaje.class.php";
 require_once "/model/clases/Prefiltro.class.php";
 require_once "/model/clases/Rol.class.php";
->>>>>>> Stashed changes
+
 
 require "PHPMailer.php";
 require "Exception.php";
@@ -189,7 +182,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
                 $users[]=$user;
             }
             return $users;
@@ -201,7 +194,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
                 $users[]=$user;
             }
             return $users;

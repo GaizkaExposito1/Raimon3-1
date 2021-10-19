@@ -1,7 +1,6 @@
 <?php
 class User{
     public $dni;
-    public $pass;
     public $email;
     public $rol;
     public $curso;
@@ -9,9 +8,8 @@ class User{
     public $username;
     //baneo??
 
-    function __construct($dni,$pass,$email,$rol,$curso,$imgUser,$username){
+    function __construct($dni,$email,$rol,$curso,$imgUser,$username){
         $this->dni=$dni;
-        $this->pass=$pass;
         $this->email=$email;
         $this->rol=$rol;
         $this->curso=$curso;

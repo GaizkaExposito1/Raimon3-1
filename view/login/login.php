@@ -1,12 +1,14 @@
 <?php
 
 if (isset($lang)) {
-    $url_prefix="./view";
+    $url_prefixU="./view";
+	$url_prefix="./view";
 }else{
     $lang = "es";
-    $url_prefix="";
+    $url_prefixU="";
+	$url_prefix=".";
 }
-require_once ("$url_prefix/Language/lang_" . $lang . ".php");
+require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,8 @@ require_once ("$url_prefix/Language/lang_" . $lang . ".php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="loginStyle.css"> 
+	<!--no linkea el css-->
+	<link rel="stylesheet"  href="<?php echo "$url_prefix"?>/loginStyle.css"> 
 	<script src="login.js"></script>
 </head>
 <body>

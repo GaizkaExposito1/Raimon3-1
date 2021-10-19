@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Principal/style.css">
-    <link href="../styleheader3.css" rel="stylesheet" type="text/css"> <!--Css-->
-    <link href="../styleheader4.css" rel="stylesheet" type="text/css"> <!--Css-->
     <script src="../principal.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

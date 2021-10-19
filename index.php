@@ -2,9 +2,11 @@
 
 if (isset($lang)) {
     $url_prefix="..";
+    $url_prefixS="../";
 }else{
     $lang = "es";
     $url_prefix=".";
+    $url_prefixS="";
 }
 
 require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
@@ -14,9 +16,9 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
 
 <head>
     <meta charset="UTF-8">
-    <title>Kalpataru | Arbol de los deseos</title>
-    <link href="styleheader3.css" rel="stylesheet" type="text/css"> <!--Css-->
-    <link href="styleheader4.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <title><?php echo $language["TITLE"]; ?></title>
+    <link href="<?php echo "$url_prefixS"?>styleheader3.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <link href="<?php echo "$url_prefixS"?>styleheader4.css" rel="stylesheet" type="text/css"> <!--Css-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
 
 </head>
@@ -31,10 +33,10 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
             <button class="Buscar" type="submit"><i class="fa fa-search"></i></button>
           </form>
       </div>
-        <a href="#home" id="News">Noticias</a>
-        <a href="#news" id="Intranet">Intranet</a>
-        <a href="#contact" id="Moodle">Moodle</a>
-        <a href="#about" id="AccessAlum">Acceso Alumnado</a>
+        <a href="#home" id="News"><?php echo $language["NOTICIAS"]; ?></a>
+        <a href="#news" id="Intranet"><?php echo $language["INTRANET"]; ?></a>
+        <a href="#contact" id="Moodle"><?php echo $language["MOODLE"]; ?></a>
+        <a href="#about" id="AccessAlum"><?php echo $language["ACC_ALUMNADO"]; ?></a>
         <a href="#news" id="phone"><i class="fas fa-phone-alt"></i>&nbsp;944 39 50 62</a>
         <a href="#contact" id="mail"><i class="fas fa-envelope" ></i>&nbsp;idazkaritza@centrosanluis.com</a>
         <a href="#CambiarIdiomaAEuskera" id="LangEs"><img id="langFlagSpain" width="16" alt="Castellano" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/32px-Flag_of_Spain_%28Civil%29.svg.png"></a>
@@ -42,12 +44,12 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="TopHeader()">&#9776;</a>
     </nav>
     <nav class="topnav2" id="myTopnav2">
-      <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="view/assets/CentroSanLuisLargo.png">
+      <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="<?php echo "$url_prefixS"?>view/assets/CentroSanLuisLargo.png">
       <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
-      <a  href="index.php?section=crearMensajes" id="CrearMensaje">Nuevo Mensaje</a>
-      <a  href="index.php?section=verMensajes" id="VerMensajes">Ver mensajes</a>
-      <a  href="index.php?section=Administracion" id="Administracion">Zona Administracion</a>
-      <a  href="index.php?section=principal" id="PagePrincipal">Pagina Principal</a>
+      <a  href="index.php?section=crearMensajes" id="CrearMensaje"><?php echo $language["NEW_MENSAJE"]; ?></a>
+      <a  href="index.php?section=verMensajes" id="VerMensajes"><?php echo $language["MENSAJES"]; ?></a>
+      <a  href="index.php?section=Administracion" id="Administracion"><?php echo $language["ADMIN"]; ?></a>
+      <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>
       <a  href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
   </header>
