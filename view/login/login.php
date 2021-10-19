@@ -1,14 +1,15 @@
 <?php
 
 if (isset($lang)) {
-    $url_prefixU="./view";
 	$url_prefix="./view";
+    $url_prefixU="./view";
+	
 }else{
     $lang = "es";
-    $url_prefixU="";
+    $url_prefixU="..";
 	$url_prefix=".";
 }
-require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
+require_once ("$url_prefixU/Language/lang_".$lang.".php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
