@@ -1,0 +1,27 @@
+#myCarouselCustom{
+
+width: 40%;
+float: right;
+margin-right: 5%;
+
+
+}
+.carousel-inner {
+    position: relative;
+    width: 10%;
+    height: 10em;
+    overflow: hidden;
+
+    
+}
+
+ .active{
+     background-color: black;
+     color: white;
+     width: 40%;
+     border-radius:solid 2px black;
+     font-size: 1em;
+     margin-left: 13%;
+     margin-top: 2%;
+
+ }
