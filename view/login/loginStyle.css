@@ -102,8 +102,6 @@ body {
       margin-top: 20%;
       width: 100%;
     }
-
-    
     .left {
       margin-top: -50px;
       margin-left: 10%;
@@ -122,15 +120,13 @@ body {
       height: 50%;
       visibility: hidden;
     }
-    
+
     #mostrar {
       color: #999;
       background-color: white;
       margin-bottom: 200%;    
     }
-
-    
-
-
   }
-  
+  @media  screen and (min-width: 600px) and (max-width: 1000px){
+    
+  }

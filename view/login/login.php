@@ -1,14 +1,14 @@
 <?php
 
 if (isset($lang)) {
-	$url_prefix="./view";
-    $url_prefixU="./view";
-	
+    $url_prefix="./view";
+	$url_prefixU="./view";
 }else{
     $lang = "es";
-    $url_prefixU="..";
-	$url_prefix=".";
+    $url_prefix=".";
+	$url_prefixU="..";
 }
+
 require_once ("$url_prefixU/Language/lang_".$lang.".php");
 ?>
 <!DOCTYPE html>
@@ -17,9 +17,8 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--no linkea el css-->
 	<link rel="stylesheet"  href="<?php echo "$url_prefix"?>/loginStyle.css"> 
-	<script src="login.js"></script>
+	<script src="<?php echo "$url_prefix"?>/login.js"></script>
 </head>
 <body>
 	
@@ -36,7 +35,7 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
 		  <input type="text" id="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
-		  <input type="password" id="password">
+		  <input type="password" id="password" placeholder=" poner el ojo que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</div>
 	  </div>
