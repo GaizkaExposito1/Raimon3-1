@@ -1,3 +1,3 @@
 <?php
-include "./view/login/login.php";
+include "$url_prefix/view/login/login.php";
 ?>

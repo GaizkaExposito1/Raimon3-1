@@ -1,8 +1,5 @@
 <?php
-<<<<<<< Updated upstream
 //require
-=======
->>>>>>> Stashed changes
 /*require_once "Grupo.class.php";
 require_once "User.class.php";
 require_once "Mensaje.class.php";

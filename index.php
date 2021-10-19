@@ -1,3 +1,14 @@
+<?php
+
+if (isset($lang)) {
+    $url_prefix="..";
+}else{
+    $lang = "es";
+    $url_prefix=".";
+}
+
+require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -32,14 +43,24 @@
     </nav>
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="view/assets/CentroSanLuisLargo.png">
-      <a  href="index.php?section=pokedex" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
-      <a  href="index.php?section=pokedex" id="CrearMensaje">Nuevo Mensaje</a>
-      <a  href="index.php?section=pokedex" id="VerMensajes">Ver mensajes</a>
-      <a  href="index.php?section=pokedex" id="Administracion">Zona Administracion</a>
-      <a  href="index.php?section=pokedex" id="PagePrincipal">Pagina Principal</a>
-      <a  href="index.php?section=pokedex" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
+      <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
+      <a  href="index.php?section=crearMensajes" id="CrearMensaje">Nuevo Mensaje</a>
+      <a  href="index.php?section=verMensajes" id="VerMensajes">Ver mensajes</a>
+      <a  href="index.php?section=Administracion" id="Administracion">Zona Administracion</a>
+      <a  href="index.php?section=principal" id="PagePrincipal">Pagina Principal</a>
+      <a  href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
   </header>
+  <div id="contenido">
+    <?php
+    //contenido
+    $param="principal";//por defecto
+    if(isset($_GET['section'])){
+        $param=$_GET['section'];
+    }
+    include "$url_prefix/controller/conexion/".$param.".php";
+    ?>
+    </div>
 </body>
 </html>
 

@@ -1,10 +1,15 @@
 <?php
-require_once "../../model/accesoBD.class.php";
-require_once "../../model/clases/Grupo.class.php";
 
-$bd= new AccesoBd();
- ?>
-
+if (isset($lang)) {
+    $url_prefix="../../view/registro";
+	$url_prefixU="../../view/Language";
+}else{
+    $lang = "es";
+    $url_prefix=".";
+	$url_prefixU="..";
+}
+require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +17,8 @@ $bd= new AccesoBd();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="registroStyle.css">
-<script src="/login.js"></script>
+<link rel="stylesheet" href="<?php echo "$url_prefix"?>/registroStyle.css">
+<script src="<?php echo "$url_prefix"?>/registro.js"></script>
 <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -54,13 +59,9 @@ $bd= new AccesoBd();
 		  <select name="select" >
            <option value="curso" disabled selected> Curso</option>
            <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$cursos[$i]</option>";
-			
+		   for ($i=0; $i < count($grupos); $i++) { 
+			echo "<option value='cursos'>$grupos[$i]</option>";
 		   }
-
 		   ?>
          </select>
 
