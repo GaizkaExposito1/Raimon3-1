@@ -4,18 +4,17 @@ colores de bootstrap
 https://mdbootstrap.com/docs/standard/content-styles/colors/
 
 */
-=======
->>>>>>> Stashed changes
+
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
 
-<<<<<<< Updated upstream
+
 /*font-family: 'Josefin Sans', sans-serif;*/
 /*    font-family: 'JetBrains Mono', monospace;*/
 
-=======
->>>>>>> Stashed changes
+
+
 body {
     background: #EDE7F6;
     margin: 0;
