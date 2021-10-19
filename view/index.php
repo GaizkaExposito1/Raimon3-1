@@ -17,8 +17,8 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
 <head>
     <meta charset="UTF-8">
     <title><?php echo $language["TITLE"]; ?></title>
-    <link href="<?php echo "$url_prefixS"?>styleheader3.css" rel="stylesheet" type="text/css"> <!--Css-->
-    <link href="<?php echo "$url_prefixS"?>styleheader4.css" rel="stylesheet" type="text/css"> <!--Css-->
+    <link href="<?php echo "$url_prefixS"?>styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 1-->
+    <link href="<?php echo "$url_prefixS"?>styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
 
 </head>
