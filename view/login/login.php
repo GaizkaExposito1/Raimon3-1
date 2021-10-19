@@ -25,17 +25,17 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 
 <div class="page">
 	<div class="container">
-	  <div class="left">
+	  <div class="left" id="left">
 		<div class="login"><?php echo $language["INICIO_SESION"]; ?></div>
 		<div class="eula"><?php echo $language["LOGIN_SUBTITULO"]; ?></div>
 		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>
 	  </div>
-	  <div class="right"> 
-		<div class="form">
+	  <div class="right" id="right"> 
+		<div class="form" >
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
 		  <input type="text" id="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
-		  <input type="password" id="password" placeholder=" poner el ojo que todo lo ve">
+		  <input type="password" id="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</div>
 	  </div>
@@ -46,7 +46,12 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 
 <script>
 	function mostrarCaja() {
-		
+		let MostrarForm = document.getElementById("right");
+		let cambiarTamañoLeft = document.getElementById("left");
+		let ocultarBoton = document.getElementById("mostar");
+        MostrarForm.style.visibility="visible";
+		cambiarTamañoLeft.style.height="88%";
+        ocultarBoton.style.visibility="visible";
 	}
 
 </script>
