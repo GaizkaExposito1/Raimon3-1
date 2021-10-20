@@ -21,9 +21,9 @@ $bd= new AccesoBd();
 <div class="page">
 	<div class="container">
 	  <div class="left">
-		<div class="register">Crear Mensaje</div>
+		<div class="crearMensaje">Crear Mensaje</div>
 		<div class="eula">Aqui podras escribir tu mensaje</div>
-		<input type="button" id="continuar" value="continuar" onclick="botonContinuar()">
+		<input type="button" id="mostrar" value="mostrar" onclick="botonContinuar()">
 		<!--Este boton es para el responsive-->
 
 
@@ -33,7 +33,7 @@ $bd= new AccesoBd();
 
 
 
-        <textarea name= textarea rows= 10 cols= 38 placeholder="Escribe aqui tu Mensaje..."></textarea>
+        <textarea name= textarea rows= 6 cols= 48 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
 
         <select name="select" >
            <option value="curso" disabled selected> Color</option>

@@ -17,23 +17,23 @@ require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="registroStyle.css">
+	<link rel="stylesheet" href="registroStyle.css">
 
-<script src="/login.js"></script>
+	<script src="<?php echo "$url_prefix"?>/register.js"></script>
 <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="page">
 	<div class="container">
-	  <div class="left">
+	  <div class="left" id="left">
 		<div class="register"><?php echo $language["REGISTRO"]; ?></div>
 		<div class="eula"><?php echo $language["REGIS_SUBTITLE"]; ?></div>
 		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>		<!--Este boton es para el responsive-->
 
 
 	  </div>
-	  <div class="right"> 
+	  <div class="right" id="right"> 
 		<form action=""  method="post">
 
 
@@ -72,10 +72,6 @@ require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 </body>
 </html>
 
-
-
-
-</script>
 
 
 
