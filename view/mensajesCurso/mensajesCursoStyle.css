@@ -1,0 +1,108 @@
+/*
+colores de bootstrap
+https://mdbootstrap.com/docs/standard/content-styles/colors/
+
+*/
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+
+/*font-family: 'Josefin Sans', sans-serif;*/
+/*    font-family: 'JetBrains Mono', monospace;*/
+
+
+
+body {
+    background: #EDE7F6;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-size: cover;
+}
+
+.page {
+    background: #B39DDB;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    position: absolute;
+    place-content: center;
+    width: calc(100% - 40px);
+}
+
+#titulo {
+    color: black;
+    background-color: #FFFF;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 13%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 900px;
+    font-size: 50px;
+    -moz-box-shadow: -2px 3px 15px #000000;
+    -webkit-box-shadow: -2px 3px 15px #000000;
+    box-shadow: -2px 3px 15px #000000;
+}
+
+#contenido {
+    color: white;
+    background-color: #474A59;
+    -moz-box-shadow: -2px 3px 15px #000000;
+    -webkit-box-shadow: -2px 3px 15px #000000;
+    box-shadow: -2px 3px 15px #000000;
+    width:1100px;
+    margin-bottom: 65%;
+    margin-left: 6%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+@media screen and(max-width:600px) {
+    body {
+        background: #EDE7F6;
+        font-family: 'Inter UI', sans-serif;
+        margin: 0;
+
+    }
+
+    .page {
+        background: #B39DDB;
+        flex-direction: column;
+        height: 95%;
+        place-content: center;
+        width: 95%;
+    }
+    
+    #titulo {
+        color: black;
+        background-color: #FFFF;
+        text-align: center;
+        margin-top: 2%;
+        margin-left: 13%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 70%;
+        font-size: 18px;
+        -moz-box-shadow: -2px 3px 15px #000000;
+        -webkit-box-shadow: -2px 3px 15px #000000;
+        box-shadow: -2px 3px 15px #000000;
+    }
+    
+    #contenido {
+        color: white;
+        background-color: #474A59;
+        -moz-box-shadow: -2px 3px 15px #000000;
+        -webkit-box-shadow: -2px 3px 15px #000000;
+        box-shadow: -2px 3px 15px #000000;
+        width: 60%;
+        margin-bottom: 65%;
+        margin-left: 6%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
