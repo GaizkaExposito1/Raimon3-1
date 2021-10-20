@@ -1,12 +1,10 @@
-
-$('#myCarouselCustom').carousel();
-
-
+$('#myCarousel').carousel();
+    
+  
 $("#prevBtn").click(function(){
-    $("#myCarouselCustom").carousel("anterior");
+    $("#myCarousel").carousel("prev");
 });
 
 $("#nextBtn").click(function(){
-    $("#myCarouselCustom").carousel("siguiente");
+    $("#myCarousel").carousel("next");
 });
-
