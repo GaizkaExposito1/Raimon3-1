@@ -1,16 +1,22 @@
+
 <?php
 
 if (isset($lang)) {
     $url_prefix="./view";
 	$url_prefixU="./view";
+	$url_prefixF=".";
+	$url_prefixC=".";
 }else{
     $lang = "es";
     $url_prefix=".";
+	$url_prefixF="../..";
 	$url_prefixU="..";
+	$url_prefixC="..";
 }
 
 require_once ("$url_prefixU/Language/lang_".$lang.".php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +37,13 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>
 	  </div>
 	  <div class="right" id="right"> 
-		<div class="form" >
+		<form class="form" action="<?php echo "$url_prefixF"?>/controller/actions/inicioSesion.php" method="post">
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
 		  <input type="text" id="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
 		  <input type="password" id="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
-		</div>
+		</form>
 	  </div>
 	</div>
   </div>
