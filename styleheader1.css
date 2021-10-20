@@ -87,26 +87,9 @@ body {
   padding-left: 1.5%;
   padding-bottom: 1%;
   border: none;
-  margin-top: 0.5%;
+  margin-top: 0.2%;
   float: right;
   margin-right: 1.5%;
- }
-#filter{
-  background-color: #fff;
-  border-radius: 20px;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  padding-right: 1%;
-  padding-left: 1%;
-  position: absolute;
-  right: 43px;
-  top: 13px;
-  border: none;
-  height: 20px;
-  width: 20px;
-  outline: none;
-  text-align: center;
-  font-weight: bold;
  }
 .Buscar{
   border-radius:20px;
@@ -117,7 +100,7 @@ body {
   background-color: #fff;
   position:absolute;
   right: 19px;
-  top: 7px;
+  top: 3px;
   border:none;
   outline:none;
   text-align:center;
@@ -133,6 +116,15 @@ body {
 .topnav{
   padding-bottom: 0.5%;
  }
+ a {
+  text-decoration: none;
+  color: #d5b6da;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #d5b6da;
+}
 /*MOBILE */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child){
@@ -214,22 +206,6 @@ body {
     float: right;
     margin-right: 1.5%;
   }
-  #filter{
-    background-color: #fff; 
-    border-radius:20px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-right: 3%;
-    position:absolute;
-    right: 35px;
-    top: 9px;
-    border:none;
-    height:20px;
-    width:20px;
-    outline:none;
-    text-align:center;
-    font-weight:bold;
-  }
   .Buscar{
     border-radius:20px;
     padding-top: 2%;
@@ -239,11 +215,20 @@ body {
     border: none;
     position:absolute;
     right: 10px;
-    top: 4px;
+    top: 3px;
     border:none;
     outline:none;
     text-align:center;
     font-weight:bold;
+  }
+  a {
+    text-decoration: none;
+    color: #d5b6da;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: #d5b6da;
   }
 }
 /*Movil un poco Gigante, tablets y ordenadores con pantallas enanas xD*/
@@ -328,6 +313,15 @@ body {
     outline:none;
     text-align:center;
     font-weight:bold;
+  }
+  a {
+    text-decoration: none;
+    color: #d5b6da;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: #d5b6da;
   }
 }
 

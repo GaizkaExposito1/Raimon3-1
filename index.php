@@ -18,9 +18,9 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
     <meta charset="UTF-8">
     <title><?php echo $language["TITLE"]; ?></title>
     <link href="<?php echo "$url_prefixS"?>styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 1-->
-    <link href="<?php echo "$url_prefixS"?>styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2
+    <link href="<?php echo "$url_prefixS"?>styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
-
+    <script src="<?php echo "$url_prefixS"?>index.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,6 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
       <div  class="active Inside" >
           <form id="Buscador" class="active" action="/PonerAction" >
             <input class="txtBuscar" type="text" name="txtBuscar" placeholder="Buscar...">
-            <i class="fas fa-filter" id="filter" ></i><!--Poner con Js el filtro-->
             <button class="Buscar" type="submit"><i class="fa fa-search"></i></button>
           </form>
       </div>
@@ -66,25 +65,3 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
 </body>
 </html>
 
-<script>
-    /*First Menu*/ 
-function TopHeader() {
-  let topnav = document.getElementById("myTopnav");
-  if (topnav.className === "topnav") {
-    topnav.className += " responsive";
-  } else {
-    topnav.className = "topnav";
-  }
-}
-
-    /*Second Menu*/ 
-function MidMenu() {
-  let topnav = document.getElementById("myTopnav2");
-  if (topnav.className === "topnav2") {
-    topnav.className += " responsive2";
-  } else {
-    topnav.className = "topnav2";
-  }
-}
-
-</script>
