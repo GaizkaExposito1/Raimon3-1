@@ -25,3 +25,11 @@ margin-right: 5%;
      margin-top: 2%;
 
  }
+
+ #kalpataru {
+     border: 2px;
+     border-radius: 10%;
+     border-color: #8b419d;
+     width: 500px;
+     height: 500px;
+ }

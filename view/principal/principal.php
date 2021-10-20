@@ -37,7 +37,7 @@
 
         <div>
         
-        <img src="" alt="Aquí estara el árbol">
+        <img id="kalpataru" src="../assets/Arbol.png">
     
         </div>
 
