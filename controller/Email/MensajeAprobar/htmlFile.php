@@ -11,7 +11,7 @@
     <form>
         <label>Usuario:</label><?php $usuario ?>
         <label>Mensaje</label><?php $mensaje ?>
-        <button href="">Aceptar</button>
+        <button href="localhost...">Aceptar</button>
         <button href="">Denegar</button>
     </form>
 </body>

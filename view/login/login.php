@@ -1,4 +1,3 @@
-
 <?php
 
 if (isset($lang)) {
@@ -39,7 +38,7 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>
 	  </div>
 	  <div class="right" id="right"> 
-		<form class="form" action="<?php echo "$url_prefixF"?>/controller/login.php" method="post">
+		<form class="form" action="<?php echo "$url_prefixF"?>/controller/actions/login.php" method="post">
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
 		  <input type="text" id="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
