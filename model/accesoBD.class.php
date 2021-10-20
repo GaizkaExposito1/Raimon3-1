@@ -37,7 +37,6 @@ class AccesoBd{
     function lanzarSQL($sql){
         $tipoSql=substr($sql,0,6);
         $result=mysqli_query($this->conexion,$sql);
-        var_dump($result);
         if(strtoupper($tipoSql)=="SELECT"){
             return $result;
         }
@@ -123,9 +122,10 @@ class AccesoBd{
                 $hashPass=$pass;
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
-                if($userOBT!=null){
+               if($fila=mysqli_fetch_array($userOBT)!=null){
+                $usuario=new User($fila[`dni`], $pass, $fila[`email`], $fila[`rol`],$fila[`curso`],$fila[`imgUser`],$user);
                     session_start();
-                    $_SESSION['usuario']=$userOBT; //Introducir algo en la sesion
+                    $_SESSION['usuario']=$usuario; //Introducir algo en la sesion
                     return "ok";
                 }
                 else{
