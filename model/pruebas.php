@@ -1,6 +1,7 @@
 <?php
 require_once "./accesoBD.class.php";
+require_once "./clases/User.class.php";
 $bd=new AccesoBd();
-$response=$bd->Login("Raimon","raimon3+1");
+$response=$bd->Registro("puto","z","z","PUTO",1,"puto");
 echo "$response";
 ?>

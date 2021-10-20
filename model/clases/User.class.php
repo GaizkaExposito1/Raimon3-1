@@ -4,16 +4,16 @@ class User{
     public $email;
     public $rol;
     public $curso;
-    public $imgUser;
+   // public $imgUser;
     public $username;
     //baneo??
 
-    function __construct($dni,$email,$rol,$curso,$imgUser,$username){
+    function __construct($dni,$email,$rol,$curso,/*$imgUser,*/$username){
         $this->dni=$dni;
         $this->email=$email;
         $this->rol=$rol;
         $this->curso=$curso;
-        $this->imgUser=$imgUser;
+        //$this->imgUser=$imgUser;
         $this->username=$username;
        
     }

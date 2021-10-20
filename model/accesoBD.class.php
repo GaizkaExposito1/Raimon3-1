@@ -45,6 +45,7 @@ class AccesoBd{
     //Funciones especificas
         //Users
         function Registro($dni,$pass,$confPass,$email,$cursoId,$username){
+            //
             //confirmar no campos vacios
             if(($dni==null||$dni=='')&&($pass==null||$pass=='')&&($confPass==null||$confPass=='')&&($email==null||$email=='')&&($username==null||$username=='')&&($cursoId==null)){
                 return "Hay campos vacios";
@@ -59,20 +60,23 @@ class AccesoBd{
                     $dniBD=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`users` where (`dni`='$dni')");
                     $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
                     $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
-                    if($dniBD!=null && $emailBD!=null && $usernameBD!=null){
-                        return "datos ya introducidos por otro usuario";
+                    while(($fila=mysqli_fetch_array($dniBD))!=null){
+                        return "dni ya introducido por otro usuario";
                     }
-                    else{
+                    while(($fila=mysqli_fetch_array($emailBD))!=null){
+                        return "email ya introducido por otro usuario";
+                    }
+                    while(($fila=mysqli_fetch_array($usernameBD))!=null){
+                        return "nombre de usuario ya introducido por otro usuario";
+                    }
                         //hash contraseña
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
-                        //sesion
-                        session_start();
-                        $userNew=new User('$dni','$email',1,'$cursoId',null,'$username');
+                         $userNew=new User($dni, $email, 1,$cursoId,$username);
+                             session_start();
                         $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',1,'$cursoId',null);");
                         return "ok";
-                    }
                 }
             }
         }
@@ -92,21 +96,26 @@ class AccesoBd{
                     $dniBD=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`users` where (`dni`='$dni')");
                     $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
                     $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
-                    if($dniBD!=null && $emailBD!=null && $usernameBD!=null){
-                        return "datos ya introducidos por otro usuario";
+                    while(($fila=mysqli_fetch_array($dniBD))!=null){
+                        return "dni ya introducido por otro usuario";
                     }
-                    else{
+                    while(($fila=mysqli_fetch_array($emailBD))!=null){
+                        return "email ya introducido por otro usuario";
+                    }
+                    while(($fila=mysqli_fetch_array($usernameBD))!=null){
+                        return "nombre de usuario ya introducido por otro usuario";
+                    }
                         //hash contraseña
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         //insert a la bd
-                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email','2','null','null');");
+                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',2,'null','null');");
                         return "ok";
-                    }
                 }
             }
         }
 
         function Login($user,$pass){
+            //CHUCLA
             if(($user==null||$user=='')&&($pass!=null||$pass!='')){
                 return "Nombre de Usuario no introducido";
             }
@@ -118,19 +127,17 @@ class AccesoBd{
             }
             else {
                 //campos no vacios-> hasear pass
-                //$hashPass=password_hash($pass, PASSWORD_BCRYPT);
-                $hashPass=$pass;
+                $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
-               if($fila=mysqli_fetch_array($userOBT)!=null){
-                $usuario=new User($fila[`dni`], $pass, $fila[`email`], $fila[`rol`],$fila[`curso`],$fila[`imgUser`],$user);
+               while(($fila=mysqli_fetch_array($userOBT))!=null){
+                   extract($fila);
+                $usuario=new User($dni, $email, $rol,$curso,$username);
                     session_start();
                     $_SESSION['usuario']=$usuario; //Introducir algo en la sesion
                     return "ok";
                 }
-                else{
                     return "Usuario no encontrado";
-                }
             }
         }
 
@@ -168,6 +175,18 @@ class AccesoBd{
 
         function getUsersCurso($idCurso){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso'");
+            $users=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $users[]=$user;
+            }
+            return $users;
+        }
+
+        function getUsers(){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='2'");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -409,8 +428,13 @@ class AccesoBd{
 
         //estadisiticas
         function getMensajeMaxLike(){
-            $mensaje=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (SELECT max(`numLikes`) from `kalpatarubd`.`mensajes`)");
-            return $mensaje;
+            $mensajeOBT=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (SELECT max(`numLikes`) from `kalpatarubd`.`mensajes`)");
+            while(($fila=mysqli_fetch_array($mensajeOBT))!=null){
+                extract($fila);
+             $mensaje=new Mensaje($userId, $activateToken, $tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+             return $mensaje;
+             }
+            
         }
     
 }

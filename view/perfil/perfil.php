@@ -32,6 +32,22 @@ $bd= new AccesoBd();
 		  <div id="imgPerfil">
 	  		<img src="../assets/cat.jpg" alt="imagen de perfil">
 		  </div>
+		  <div id="editarDatos">
+		  	<form action="" id="editarContraseña" method="post">
+			  <label for="Contraseña">Contraseña</label>
+		 	  <input type="password" id="password">
+			  <label for="Contraseña">Repite Contraseña</label>
+		 	  <input type="password" id="repeatpassword">
+			   <p><input type="submit" id="submit" value="Enviar"></p>
+			</form>
+			<form action="" id="editarEmail" method="post">
+			  <label for="Contraseña">Contraseña</label>
+		 	  <input type="password" id="password">
+			  <label for="Contraseña">Repite Contraseña</label>
+		 	  <input type="password" id="repeatpassword">
+			   <p><input type="submit" id="submit" value="Enviar"></p>
+			</form>
+		  </div>
 	  </div>
 	</div>
   </div>
