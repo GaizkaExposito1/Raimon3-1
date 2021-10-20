@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 REPLACE INTO `grupo` (`id`, `nombre`) VALUES
 	(1, '1 Bachillerato Cientifico-Tecnologico'),
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcando datos para la tabla kalpatarubd.users: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
-	(1, '00000000Z', '9c085426d94a0002948797671a6eb2d0', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
+	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
