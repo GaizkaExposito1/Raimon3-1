@@ -31,7 +31,6 @@ body {
   textarea{
     resize: none;
     margin-top: 3%;
-    background-color:#BDBEC3 
   }
   
   .left {
@@ -160,7 +159,7 @@ body {
       width: 100%;
     }
     textarea { 
-      height: 7em; width: 23em;  background-color:#BDBEC3 
+      height: 7em; width: 23em; 
     }
     .left {
       margin-top: -50px;
@@ -217,7 +216,7 @@ body {
       width: 100%;
     }
     textarea { 
-      height: 7em; width: 23em; background-color:#BDBEC3 ;
+      height: 7em; width: 23em; 
     }
     .left {
       margin-top: -50px;

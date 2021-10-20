@@ -11,9 +11,9 @@ $bd= new AccesoBd();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="crearMensaje.css">
-<script src="<?php echo "$url_prefix"?>/crearMensaje.js"></script> <!--NO FUNCIONA PREGUNTAR-->
-<script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="editarMensaje.css">
+	<script src="<?php echo "$url_prefix"?>/editarMensaje.js"></script> <!--NO FUNCIONA PREGUNTAR-->
+	<script src="js/jquery.min.js"></script>
 </head>
 
 	
@@ -21,8 +21,8 @@ $bd= new AccesoBd();
 <div class="page">
 	<div class="container">
 	  <div class="left" id="left">
-		<div class="crearMensaje">Crear Mensaje</div>
-		<div class="eula">Aqui podras escribir tu mensaje</div>
+		<div class="crearMensaje">Editar Mensaje</div>
+		<div class="eula">Aqui podras editar tu mensaje</div>
 		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 
 
@@ -33,7 +33,7 @@ $bd= new AccesoBd();
 
 
 
-        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
+        <textarea disabled name= textarea rows= 6 cols= 48 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
 
         <select name="select" >
            <option value="curso" disabled selected> Color</option>
