@@ -33,7 +33,7 @@ $bd= new AccesoBd();
 
 
 
-        <textarea name= textarea rows= 6 cols= 48 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
+        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
 
         <select name="select" >
            <option value="curso" disabled selected> Color</option>
