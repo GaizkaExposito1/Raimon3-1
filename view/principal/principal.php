@@ -36,7 +36,7 @@
          </select>
 
         <div>
-        
+        <!-- Aquí debe funcionar la imágen -->
         <img id="kalpataru" src="../assets/Arbol.png">
     
         </div>
