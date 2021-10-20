@@ -17,3 +17,11 @@
           topnav.className = "topnav2";
         }
       }
+      $('.btn-counter').on('click', function(event, count) {
+        event.preventDefault();
+        
+        var $this = $(this),
+            count = $this.attr('data-count'),
+            active = $this.hasClass('active'),
+            multiple = $this.hasClass('multiple-count');
+      });

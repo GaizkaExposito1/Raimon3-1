@@ -1,6 +1,15 @@
 html{
     margin: 10%;
+    background-color: #E8EAF6;
 
+}
+h1{
+    background:#E8EAF6;
+    text-align: center;
+}
+select {
+    margin-left: 9%;
+    width: 35%;
 }
 .carouseandSelect{
     display: flex;
@@ -13,13 +22,6 @@ html{
 width: 50%;
 position: relative;
 
-}
-select{
-    width: 20%;
-}
-
-img{
-    width: 10%;
 }
 
 #myCarousel{
@@ -62,3 +64,27 @@ img{
 
  
  */
+img{
+    padding: 10px; 
+    width: 70%;
+    height: 50em;
+
+}
+
+/*Boton de like*/
+.btn-counter span{
+    color: #ff0000;
+    margin-left: 20%;
+}
+ 
+
+/*links de crear mensajes,mensajes aprobados,no aprobados*/
+.links{
+    width: 50%;
+    margin: 10%;
+    height: 15em;
+   
+}
+    
+
+
