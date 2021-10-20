@@ -65,7 +65,11 @@ class AccesoBd{
                     }
                     else{
                         //hash contraseña
-                        $hashPass="0";
+                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
+                        //sesion
+                        session_start();
+                        $userNew=new User('$dni','$email',1,'$cursoId',null,'$username');
+                        $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',1,'$cursoId',null);");
                         return "ok";
@@ -94,7 +98,7 @@ class AccesoBd{
                     }
                     else{
                         //hash contraseña
-                        $hashPass="0";
+                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email','2','null','null');");
                         return "ok";
@@ -115,16 +119,22 @@ class AccesoBd{
             }
             else {
                 //campos no vacios-> hasear pass
-                $hashPass="0";
+                $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                 if($userOBT!=null){
+                    session_start();
+                    $_SESSION['usuario']=$userOBT; //Introducir algo en la sesion
                     return "ok";
                 }
                 else{
                     return "Usuario no encontrado";
                 }
             }
+        }
+
+        function Logout(){
+            session_destroy();
         }
 
         function editUser($pass,$confPass,$email,$username,$userId){
@@ -138,7 +148,7 @@ class AccesoBd{
                 if($pass!=$confPass){
                     return "las contraseñas no coinciden";
                 }else{
-                    $hashPass="0";
+                    $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
                     $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`pass`='$hashPass') where (`id` = '$userId')");
                 }
             }
@@ -394,6 +404,12 @@ class AccesoBd{
 
         function mensajeAprobarEmail(){
 
+        }
+
+        //estadisiticas
+        function getMensajeMaxLike(){
+            $mensaje=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (SELECT max(`numLikes`) from `kalpatarubd`.`mensajes`)");
+            return $mensaje;
         }
     
 }
