@@ -1,0 +1,102 @@
+/*
+Scheherazade New
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+font-family: 'Scheherazade New', serif;
+
+Italianno
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+font-family: 'Italianno', cursive;
+
+IM Fell English SC
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+font-family: 'IM Fell English SC', serif;
+
+Lobster
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+font-family: 'Lobster', cursive;
+
+Anton
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+font-family: 'Anton', sans-serif;
+
+Dancing Script
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+font-family: 'Dancing Script', cursive;
+
+Architects Daughter
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+font-family: 'Architects Daughter', cursive;
+
+Pacifico
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+font-family: 'Pacifico', cursive;
+
+Indie Flower
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+font-family: 'Indie Flower', cursive;
+
+Saira Condensed
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100&display=swap');
+
+
+Shadows Into Light
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+font-family: 'Shadows Into Light', cursive;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.Scheherazade{
+    font-family: 'Scheherazade New', serif;
+    font-size: larger;
+}
+.Italianno{
+    font-family: 'Italianno', cursive;
+    font-size: larger;
+}
+.IMFellEnglishSC{
+    font-family: 'IM Fell English SC', serif;
+    font-size: larger;
+}
+.Lobster{
+    font-family: 'Lobster', cursive;
+    font-size: larger;
+}
+.Anton{
+    font-family: 'Anton', sans-serif;
+    font-size: larger;
+}
+.Dancing{
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
+}
+.Architects{
+    font-family: 'Architects Daughter', cursive;
+    font-size: larger;
+}
+.Pacifico{
+    font-family: 'Pacifico', cursive;
+    font-size: larger;
+}
+.IndieFlower{
+    font-family: 'Indie Flower', cursive;
+    font-size: larger;
+}
+.SairaCondensed{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: larger;
+}
+.ShadowsIntoLight{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: larger;
+}
