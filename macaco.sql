@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~21 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 REPLACE INTO `grupo` (`id`, `nombre`) VALUES
 	(1, '1 Bachillerato Cientifico-Tecnologico'),
@@ -101,7 +101,7 @@ REPLACE INTO `roles` (`id`, `rol`) VALUES
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dni` varchar(9) DEFAULT NULL,
-  `pass` varchar(32) DEFAULT NULL,
+  `pass` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(320) DEFAULT NULL,
   `rol` int(5) DEFAULT NULL,
