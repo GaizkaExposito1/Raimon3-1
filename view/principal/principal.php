@@ -16,8 +16,8 @@
 
 
 
-
- <!----------------------------------------------------------------------------->
+ <h1>Árbol de los deseos <span>&#127810;</span></h1>
+ <!----------------------------------------------------------------------->
 
   <div class="carouseandSelect">
   
@@ -25,7 +25,7 @@
            <option value="curso" disabled selected> Curso</option>
            <?php 
 		   $cursos=$grupos; 
-         
+           
 		   
 		   for ($i=0; $i < count($cursos); $i++) { 
 			echo "<option value='cursos'>$cursos[$i]</option>";
@@ -37,7 +37,7 @@
 
         <div>
         
-          <img src="../assets/CentroSanLuis.png" alt="">
+          <img src="../assets/Arbol.png" alt="" >
     
         </div>
 
@@ -59,18 +59,32 @@
                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                    minus commodi iusto vel a dolore? Voluptas 
                </p>
-              </div>
+               <!--Prueba de like-->              
+             <p>
+               <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
+                
+             </p>
+            </div>
+
            <div class="item">
                <p class="mensaje">
                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                    minus commodi iusto vel a dolore? Voluptas rep
                </p>
+               <p>
+               <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
+                
+             </p>
            </div>
            <div class="item">
                <p class="mensaje"> 
                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                    minus commodi iusto vel a dolore? Voluptas 
                </p>
+               <p>
+               <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
+                
+             </p>
                
            </div>
        </div>
@@ -84,6 +98,17 @@
            <span class="glyphicon glyphicon-chevron-right"></span>
            <span class="sr-only">Next</span>
        </a>
+
+            <!--------------->
+      
+            <div class="links">
+            <a href="../crearMensajes/crearMensaje.php"><button>Crear Mensaje</button></a>
+            <a href="../mensajesAprobados/mensajesAprobados.php"><button>Mensajes Aprobados</button></a>
+            <a href="../mensajesNoAprobados/mensajesNoAprobados.php"><button>Mensajes Aprobados</button></a>
+
+
+
+            </div>
 
 
 
