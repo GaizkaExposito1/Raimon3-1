@@ -1,26 +1,26 @@
 <?php
 //index
-$language["TITLE"] = "Kalpataru | Deseoen Arbola";
-$language["NOTICIAS"] = "Noticias";
+$language["TITLE"] = "Kalpataru | Desioen zuhaitza";
+$language["NOTICIAS"] = "Albisteak";
 $language["INTRANET"] = "Intranet";
 $language["MOODLE"] = "Moodle";
-$language["ACC_ALUMNADO"] = "Acceso Alumnado";
-$language["NEW_MENSAJE"] = "Nuevo Mensajek";
-$language["MENSAJES"] = "Ver mensajes";
-$language["ADMIN"] = "Zona Administracion";
-$language["PRINCIPAL"] = "Pagina Principal";
+$language["ACC_ALUMNADO"] = "Ikaslearen Arloa";
+$language["NEW_MENSAJE"] = "Mezu Berria";
+$language["MENSAJES"] = "Ikusi Mezua";
+$language["ADMIN"] = "Administrazio-eremua";
+$language["PRINCIPAL"] = "Orrialde Nagusia";
 //login
-$language['INICIO_SESION'] = 'Iniciar Sesión';
-$language["LOGIN_SUBTITULO"] = "Bienvenido al arbol de los deseos!!";
-$language["USER"] = "Usuario";
-$language["PASS"] = "Contraseña";
-$language["ACEPTAR"] = "Aceptar";
+$language['INICIO_SESION'] = 'Hasi Saioa';
+$language["LOGIN_SUBTITULO"] = "Ongi etorri Desioen Zuhaitzera!!";
+$language["USER"] = "Erabiltzailea";
+$language["PASS"] = "Pasahitza";
+$language["ACEPTAR"] = "Onartu";
 //registro
-$language["REGISTRO"] = "Registro!!";
-$language["REGIS_SUBTITLE"] = "Bienvenido al arbol de los deseos!!";
-$language["CONTINUAR"] = "jarraitu";
-$language["DNI"] = "Dni";
-$language["CONF_PASS"] = "Confirmar Contraseña";
-$language["EMAIL"] = "Correo Electrónico";
-$language["CURSO"] = "Curso";
+$language["REGISTRO"] = "Erregistroa!!";
+$language["REGIS_SUBTITLE"] = "Ongi etorri Desioen Zuhaitzera!!";
+$language["CONTINUAR"] = "Jarraitu";
+$language["DNI"] = "Nan";
+$language["CONF_PASS"] = "Pasahitza Baieztatu";
+$language["EMAIL"] = "Posta Elektronikoa";
+$language["CURSO"] = "Maila";
 ?>
