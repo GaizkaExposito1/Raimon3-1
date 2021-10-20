@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /*
 colores de bootstrap
 https://mdbootstrap.com/docs/standard/content-styles/colors/
@@ -16,66 +15,78 @@ https://mdbootstrap.com/docs/standard/content-styles/colors/
 
 
 body {
-    background: #EDE7F6;
-    margin: 0;
-    padding: 20px;
-   /* margin-bottom: 20px;*/
-  }
-  .page {
-    background: #B39DDB;
-    display: flex;
-    flex-direction: column;
+  background: #EDE7F6;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  caret-color: darkblue;
+}
+.page {
+  background: #B39DDB;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+} 
+
+#mostrar {
+display: none;
+}
+
+
+.container {
+  display: flex;
+  height: 30em;
+  margin: 0 auto;
+  width: 640px;
+}
+
+
+.left {
+    background: white;
     height: calc(100% - 40px);
-    position: absolute;
-    place-content: center;
-    width: calc(100% - 40px);
-  } 
-  
-  .container {
-    display: flex;
-    height: 30em;
-    margin: 0 auto;
-    width: 640px;
+    top: 20px;
+    position: relative;
+    width: 50%;
   }
-  
-  
-  .left {
-      background: white;
-      height: calc(100% - 40px);
-      top: 20px;
-      position: relative;
-      width: 50%;
-    }
-  
   .register {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
     font-weight: 900;
-    margin: 132px 29px 33px; /*Centrar la caja izquierda */
+    margin: 134px 50px 33px; /*Centrar la caja izquierda */
   }
-
-  .eula {
+    .eula {
     font-family: 'JetBrains Mono', monospace;
     color: #999;
     font-size: 13px;
     line-height: 1.5;
     text-align: center;
   }
+.login {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+.eula {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+  background: #474A59;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 50%;
+}
 
-  .right {
-    background: #474A59;
-    box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
-    color: #F1F1F2;
-    position: relative;
-    width: 100%;
-    /*height: 29em;*/
-  }
-  
-  
-  .form {
-    margin: 20px;
-    position: absolute;
-  }
+form {
+  margin: 40px;
+  position: absolute;
+}
 
   select{
 
@@ -95,69 +106,33 @@ body {
     
   
   }
-
-
-  label {
-   
-    font-family: 'JetBrains Mono', monospace;
-    color:  #c2c2c5;
-    display: block;
-    font-size: 14px;
-    height: 16px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  /*Todos los input*/
-  /*
-  input {
-    border: 0;
-    color: #f2f2f2;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-    outline: none;
-    width: 100%;
-    border-radius: 10px;
-
+label {
  
-  }
-  */
+  font-family: 'JetBrains Mono', monospace;
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
   
-  input {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-  }
-  
-  input[type="text"]
+  input[type="text"],input[type="password"],input[type="email"],
+  input[type="submit"]
   {
     width: 95%;
       border: 0;
       border-bottom: 2px solid #EDE7F6;
       outline: 0;
   }
-  
-  
-  input[type="password"]
-  {
-    width: 95%;
-      border: 0;
-      border-bottom: 2px solid #EDE7F6;
-      outline: 0;
-  }
-
-  input[type="email"]
-  {
-    width: 95%;
-      border: 0;
-      border-bottom: 2px solid #EDE7F6;
-      outline: 0;
-  }
-
-   
+     
   input[type="submit"] {
     font-family: 'JetBrains Mono', monospace;
     border: 0;
@@ -182,39 +157,103 @@ body {
   }
 
  
-  /*-------------------------------------------------------------------------------------------*/
-  @media screen and (max-width: 600px) {
-  
-    body{
-      margin: 0%;
-      padding: 0%;
+  @media screen and (max-width:500px){
+    body {
+      background: #EDE7F6;
+      font-family: 'Inter UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .register{
+      font-size: 34px;
+      margin: 0;
+      margin-bottom: 12%;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+      margin-top: 20%;
+      width: 100%;
+    }
+    .left {
+      margin-top: -50px;
+      margin-left: 9%;
+      width: 100%;
+      height: 27%;
+    }
+    .eula{
+      text-align: center;
+      margin: 0;
+      margin-bottom: 12%;
+    }
+    .right {
+      margin-top: 7%;
+      margin-right: 12%;
+      margin-left: -78%;
+      background: #474A59;
+      box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
+      color: #F1F1F2;
+      width: 90%;
+      height: 68%;
+      visibility: hidden;
     }
 
-    .register {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 31px;
-      font-weight: 900;
-      margin: 133px 34px 30px;
+    #mostrar {
+      color: #999;
+      display: block;
+      margin-top: 23%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      width: 100%;
+      border: 0;
+      background-color: white;  
     }
-  
+  }
+  @media  screen and (min-width: 600px) and (max-width: 1000px){
+    body {
+      background: #EDE7F6;
+      font-family: 'Inter UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .registro{
+      font-size: 34px;
+      margin: 0;
+      margin-bottom: 12%;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+      margin-top: 20%;
+      width: 100%;
+    }
+    .left {
+      margin-top: -50px;
+      margin-left: 9%;
+      width: 100%;
+      height: 27%;
+    }
+    .eula{
+      text-align: center;
+      margin: 0;
+      margin-bottom: 12%;
+    }
+    .right {
+      margin-top: 7%;
+      margin-right: 12%;
+      margin-left: -78%;
+      background: #474A59;
+      box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
+      color: #F1F1F2;
+      width: 90%;
+      height: 68%;
+      visibility: hidden;
+    }
 
-.left{
-  margin: 20px;
-  background: white;
-  width: 30%;
-
-}
-
-#continuar{
-  width: 60%;
-  border-radius: 10px;
-  background-color: #EDE7F6;
-
-}
-
-.right {
-visibility: hidden;
-}
-
-
+    #mostrar {
+      color: #999;
+      background-color: white;    
+    }
   }

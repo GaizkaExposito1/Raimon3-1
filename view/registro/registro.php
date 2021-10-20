@@ -29,13 +29,12 @@ require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 	  <div class="left">
 		<div class="register"><?php echo $language["REGISTRO"]; ?></div>
 		<div class="eula"><?php echo $language["REGIS_SUBTITLE"]; ?></div>
-		<input type="button" id="continuar" value="<?php echo $language["CONTINUAR"]; ?>" onclick="botonContinuar()">
-		<!--Este boton es para el responsive-->
+		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>		<!--Este boton es para el responsive-->
 
 
 	  </div>
 	  <div class="right"> 
-		<div class="form">
+		<form action=""  method="post">
 
 
 
@@ -57,16 +56,16 @@ require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 
 
 		  <select name="select" >
-           <option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
-           <?php 
-		   for ($i=0; $i < count($grupos); $i++) { 
-			echo "<option value='cursos'>$grupos[$i]</option>";
-		   }
-		   ?>
-         </select>
+			<option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
+				<?php 
+				for ($i=0; $i < count($grupos); $i++) { 
+					echo "<option value='cursos'>$grupos[$i]</option>";
+				}
+				?>
+          </select>
 
 		  <input type="submit" id="aceptar" value="<?php echo $language["ACEPTAR"]; ?>">
-		</div>
+		</form>
 	  </div>
 	</div>
   </div>
