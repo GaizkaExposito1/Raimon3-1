@@ -12,7 +12,7 @@ $bd= new AccesoBd();
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="crearMensaje.css">
-<script src="/login.js"></script>
+<script src="<?php echo "$url_prefix"?>/crearMensaje.js"></script> <!--NO FUNCIONA PREGUNTAR-->
 <script src="js/jquery.min.js"></script>
 </head>
 
@@ -20,16 +20,16 @@ $bd= new AccesoBd();
 <article>
 <div class="page">
 	<div class="container">
-	  <div class="left">
+	  <div class="left" id="left">
 		<div class="crearMensaje">Crear Mensaje</div>
 		<div class="eula">Aqui podras escribir tu mensaje</div>
-		<input type="button" id="mostrar" value="mostrar" onclick="botonContinuar()">
-		<!--Este boton es para el responsive-->
+		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
+
 
 
 	  </div>
-	  <div class="right"> 
-		<div class="form">
+	  <div class="right" id="right"> 
+	  <form action=""  method="post">
 
 
 
@@ -86,14 +86,11 @@ $bd= new AccesoBd();
          </select>
 
 		  <input type="submit" id="aceptar" value="Aceptar">
-		</div>
+		</form>
 	  </div>
 	</div>
   </div>
 </article>
-
-
-
 
 
 
