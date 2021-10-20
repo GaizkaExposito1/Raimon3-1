@@ -1,35 +1,64 @@
-#myCarouselCustom{
-
-width: 40%;
-float: right;
-margin-right: 5%;
-
+html{
+    margin: 10%;
 
 }
-.carousel-inner {
-    position: relative;
+.carouseandSelect{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: absolute;
+}
+
+.principalSC{
+width: 50%;
+position: relative;
+
+}
+select{
+    width: 20%;
+}
+
+img{
     width: 10%;
-    height: 10em;
-    overflow: hidden;
-
-    
 }
 
- .active{
-     background-color: black;
-     color: white;
-     width: 40%;
-     border-radius:solid 2px black;
-     font-size: 1em;
-     margin-left: 13%;
-     margin-top: 2%;
+#myCarousel{
+    position: absolute;
+    width: 40%;
+    height: 15em;
+    margin-left: 70%;
+    background: -webkit-linear-gradient(to right, #b882ce, #5fa1ca);
+    background: linear-gradient(to right, #b882ce, #5fa1ca);
 
- }
+}
 
- #kalpataru {
-     border: 2px;
-     border-radius: 10%;
-     border-color: #8b419d;
-     width: 500px;
-     height: 500px;
- }
+.mensaje{
+    
+    color: black;
+    margin-top: 8%;
+    margin-top: 22%;
+    text-align: center;
+
+   }
+
+/*
+    .carousel-inner {
+        position: relative;
+        width: 10% ;
+        height: 10em;
+        overflow: hidden;
+
+    }
+    .carousel-indicators {
+        bottom: 10%;
+    }
+    
+     .active{ 
+         width: 40%;
+         border-radius:solid 2px black;
+         font-size: 1em;
+         margin-left: 29%;
+     }
+
+ 
+ */
