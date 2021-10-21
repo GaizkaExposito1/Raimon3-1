@@ -17,9 +17,9 @@ if(isset($_GET['section'])){
     <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 1-->
     <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
-
-  
     <script src="./index.js"></script>
+    <link href="./view/<?php echo $param ?>/<?php echo $param ?>.css" rel="stylesheet" type="text/css">  <!--Css unicamente para cada contenido-->
+    <script src="./<?php echo $param ?>/<?php echo $param ?>.js"></script>
 </head>
 
 <body>
