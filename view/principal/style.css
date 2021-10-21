@@ -43,27 +43,7 @@ position: relative;
 
    }
 
-/*
-    .carousel-inner {
-        position: relative;
-        width: 10% ;
-        height: 10em;
-        overflow: hidden;
 
-    }
-    .carousel-indicators {
-        bottom: 10%;
-    }
-    
-     .active{ 
-         width: 40%;
-         border-radius:solid 2px black;
-         font-size: 1em;
-         margin-left: 29%;
-     }
-
- 
- */
 img{
     padding: 10px; 
     width: 70%;
@@ -79,12 +59,32 @@ img{
  
 
 /*links de crear mensajes,mensajes aprobados,no aprobados*/
-.links{
+
+#links{
     width: 50%;
     margin: 10%;
     height: 15em;
    
 }
     
+/*Botones que te llevan al curso*/
+.boton_curso{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #9556b3;
+    border-radius: 50px;
+    border: 2px solid #9556b3;
+
+}
+
+.boton_curso:hover{
+transform: scale(2.5);
+background-color: #2c2430;
+border-radius:0px;
 
 
+
+}

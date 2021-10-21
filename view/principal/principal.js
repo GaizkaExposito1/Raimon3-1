@@ -8,3 +8,10 @@ $("#prevBtn").click(function(){
 $("#nextBtn").click(function(){
     $("#myCarousel").carousel("next");
 });
+
+$(select).click(function(){
+
+
+
+
+});

@@ -18,30 +18,30 @@
 
  <h1>Árbol de los deseos <span>&#127810;</span></h1>
  <!----------------------------------------------------------------------->
-
   <div class="carouseandSelect">
-  
-        <select name="select" >
+
+  <select name="select" >
            <option value="curso" disabled selected> Curso</option>
-           <?php 
-		   $cursos=$grupos; 
-           
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$cursos[$i]</option>";
-			
-		   }
+           <option>putoo</option>
+           <option>putoo22</option>
 
-		   ?>
-        </select>
-
+           </select>
+    
+         <!--Imagen del Arbol-->   
         <div>
         
           <img src="../assets/Arbol.png" alt="" >
     
         </div>
 
+      <!---30 Botones-->
+      <div >
+       <button class="boton_curso">Ok</button>
+       <button class="boton_curso">Ok</button>
+       
+ 
 
+    </div>  
         
      <!-------Boststrap carousel--------->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -59,10 +59,9 @@
                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                    minus commodi iusto vel a dolore? Voluptas 
                </p>
-               <!--Prueba de like-->              
+                   <!--Boton de like-->              
              <p>
-               <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
-                
+               <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
              </p>
             </div>
 
@@ -94,21 +93,19 @@
            <span class="glyphicon glyphicon-chevron-left"></span>
            <span class="sr-only">Previous</span>
        </a>
+
        <a class="right carousel-control" href="#myCarousel" data-slide="next">
            <span class="glyphicon glyphicon-chevron-right"></span>
            <span class="sr-only">Next</span>
        </a>
 
-            <!--------------->
+         <!-------Links para ir a otras paginas--------->
       
-            <div class="links">
-            <a href="../crearMensajes/crearMensaje.php"><button>Crear Mensaje</button></a>
-            <a href="../mensajesAprobados/mensajesAprobados.php"><button>Mensajes Aprobados</button></a>
-            <a href="../mensajesNoAprobados/mensajesNoAprobados.php"><button>Mensajes Aprobados</button></a>
-
-
-
-            </div>
+        <div id="links">
+            <a href="/Raimon3-1/controller/conexion/crearMensaje.php"><button>Crear Mensaje</button></a>
+            <a href="/Raimon3-1/controller/conexion/mensajesAprobados.php"><button>Mensajes Aprobados</button></a>
+            <a href="/Raimon3-1/controller/conexion/mensajesNoAprobados.php"><button>Mensajes Aprobados</button></a>
+        </div>
 
 
 
