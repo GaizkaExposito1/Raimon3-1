@@ -6,7 +6,7 @@ $language["INTRANET"] = "Intranet";
 $language["MOODLE"] = "Moodle";
 $language["ACC_ALUMNADO"] = "Acceso Alumnado";
 $language["NEW_MENSAJE"] = "Nuevo Mensaje";
-$language["MENSAJES"] = "Ver mensajes";
+$language["MENSAJES"] = "Ver mensajes aprobados";
 $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
 //login
