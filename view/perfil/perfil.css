@@ -112,7 +112,7 @@ img{
   width: 50%;
 }
 
-form#editarContraseña,form#editarEmail, form#editarUsername {
+form#editarContraseña, form#editarEmail, form#editarUsername {
   left: 320px;
   top: -173px;
   position: relative;
@@ -133,7 +133,7 @@ label {
     background: transparent;
     border-bottom: 1px solid black;
   }
-   input[type="password"], input[type="email"], imput[type="text"]{
+   input[type="password"], input[type="email"], input[type="text"]{
     width: 90%;
     border: 0;
     border-bottom: 2px solid #EDE7F6;

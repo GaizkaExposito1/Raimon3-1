@@ -81,12 +81,14 @@ $bd= new AccesoBd();
 			  <label for="email">Email Antiguo</label>
 		 	  <input type="email" id="email">
 			  <label for="email">Nuevo Email</label>
+			  <input type="email" id="email">
 			   <p><input type="submit" id="submit" value="Enviar"></p>
 			</form>
 			<form action="" id="editarUsername" method="post">
 			  <label for="Username">Username Antiguo</label>
 		 	  <input type="text" id="username">
 			  <label for="Username">Nuevo Username</label>
+			  <input type="text" id="username">
 			   <p><input type="submit" id="submit" value="Enviar"></p>
 			</form>
 		  </div>
@@ -99,8 +101,8 @@ $bd= new AccesoBd();
 
 
 <!--
-	datos perfil
-camios de perfil (foto, contraseña, email, username)
+	datos perfil tic
+camios de perfil (foto, contraseña, email, username) tic
 enlace para ver mensajes aprobados 
 enlace para ver mensajes no aprobados
 ------------------------

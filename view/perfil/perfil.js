@@ -10,18 +10,26 @@ function mostrarCaja() {
 $(document).ready(function(){
     $("#cambiarContraseña").click(function(){
         $("#editarContraseña").css("display", "inline");
-        $("#editaremail").css("display", "none");
-        $("#editarusername").css("display", "none");
+        $("#editarEmail").css("display", "none");
+        $("#editarUsername").css("display", "none");
+        $('input[type="text"]').val('');
+        $('input[type="email"]').val('');
     });
+
     $("#cambiarEmail").click(function(){
         $("#editarContraseña").css("display", "none");
-        $("#editaremail").css("display", "inline");
-        $("#editarusername").css("display", "none");
+        $("#editarEmail").css("display", "inline");
+        $("#editarUsername").css("display", "none");
+        $('input[type="password"]').val('');
+        $('input[type="text"]').val('');
     });
-        $("#cambiarUsername").click(function(){
-            $("#editarContraseña").css("display", "none");
-            $("#editaremail").css("display", "none");
-            $("#editarusername").css("display", "inline");
+
+    $("#cambiarUsername").click(function(){
+        $("#editarContraseña").css("display", "none");
+        $("#editarEmail").css("display", "none");
+        $("#editarUsername").css("display", "inline");
+        $('input[type="password"]').val('');
+        $('input[type="email"]').val('');
     });
 
 
