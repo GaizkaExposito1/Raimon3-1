@@ -12,8 +12,8 @@ $bd= new AccesoBd();
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="crearMensaje.css">
-<script src="<?php echo "$url_prefix"?>/crearMensaje.js"></script> <!--NO FUNCIONA PREGUNTAR-->
-<script src="js/jquery.min.js"></script>
+<script src="./crearMensaje.js"></script> <!--NO FUNCIONA PREGUNTAR-->
+<script src="./jquery.min.js"></script>
 </head>
 
 	

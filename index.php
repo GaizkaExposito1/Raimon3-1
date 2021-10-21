@@ -1,15 +1,11 @@
 <?php
+require_once "./controller/set_idioma.php";
 
-if (isset($lang)) {
-    $url_prefix="..";
-    $url_prefixS="../";
-}else{
-    $lang = "es";
-    $url_prefix=".";
-    $url_prefixS="";
+//contenido
+$param="principal";//por defecto
+if(isset($_GET['section'])){
+    $param=$_GET['section'];
 }
-
-require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,10 +13,10 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
 <head>
     <meta charset="UTF-8">
     <title><?php echo $language["TITLE"]; ?></title>
-    <link href="<?php echo "$url_prefixS"?>styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 1-->
-    <link href="<?php echo "$url_prefixS"?>styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
+    <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 1-->
+    <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
-    <script src="<?php echo "$url_prefixS"?>index.js"></script>
+    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -38,12 +34,12 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
         <a href="#about" id="AccessAlum"><?php echo $language["ACC_ALUMNADO"]; ?></a>
         <a href="#news" id="phone"><i class="fas fa-phone-alt"></i>&nbsp;944 39 50 62</a>
         <a href="#contact" id="mail"><i class="fas fa-envelope" ></i>&nbsp;idazkaritza@centrosanluis.com</a>
-        <a href="#CambiarIdiomaAEuskera" id="LangEs"><img id="langFlagSpain" width="16" alt="Castellano" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/32px-Flag_of_Spain_%28Civil%29.svg.png"></a>
-        <a href="#CambiarIdiomaACastellano" id="LangEus"><img id="langFlagBasque" width="16" alt="Euskara" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_the_Basque_Country.svg"></a>
+        <a href="index.php?section=<?php echo $param?>&lang=es" id="LangEs"><img id="langFlagSpain" width="16" alt="Castellano" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/32px-Flag_of_Spain_%28Civil%29.svg.png"></a>
+        <a href="index.php?section=<?php echo $param?>&lang=eu" id="LangEus"><img id="langFlagBasque" width="16" alt="Euskara" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_the_Basque_Country.svg"></a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="TopHeader()">&#9776;</a>
     </nav>
     <nav class="topnav2" id="myTopnav2">
-      <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="<?php echo "$url_prefixS"?>view/assets/CentroSanLuisLargo.png">
+      <img id="LogoCLSLarge" class="CSLlogo2" width="130" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
       <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
       <a  href="index.php?section=crearMensajes" id="CrearMensaje"><?php echo $language["NEW_MENSAJE"]; ?></a>
       <a  href="index.php?section=verMensajes" id="VerMensajes"><?php echo $language["MENSAJES"]; ?></a>
@@ -54,12 +50,7 @@ require_once ("$url_prefix/view/Language/lang_" . $lang . ".php");
   </header>
   <div id="contenido">
     <?php
-    //contenido
-    $param="principal";//por defecto
-    if(isset($_GET['section'])){
-        $param=$_GET['section'];
-    }
-    include "$url_prefix/controller/conexion/".$param.".php";
+    include "./controller/conexion/".$param.".php";
     ?>
     </div>
 </body>
