@@ -1,21 +1,5 @@
 <?php
-
-if (isset($lang)) {
-    $url_prefix="../view/login/";
-	$url_prefixU="../view";
-	$url_prefixF="..";
-	$url_prefixC=".";
-	$url_prefixBD="./";
-}else{
-    $lang = "es";
-    $url_prefix="./";
-	$url_prefixBD="../../";
-	$url_prefixF=".";
-	$url_prefixU="..";
-	$url_prefixC="..";
-}
-
-require_once ("$url_prefixU/Language/lang_".$lang.".php");
+require_once ("./view/Language/lang_".$lang.".php");
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +8,8 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="<?php echo "$url_prefix"?>loginStyle.css"> 
-	<!--<script src="<?php echo "$url_prefix"?>/login.js"></script>-->
+	<link rel="stylesheet"  href="./loginStyle.css"> 
+	<!--<script src="login.js"></script>-->
 </head>
 <body>
 	
@@ -38,7 +22,7 @@ require_once ("$url_prefixU/Language/lang_".$lang.".php");
 		<input type="button" id="mostrar" name="mostrar" value="Mostrar" onclick=mostrarCaja() ></input>
 	  </div>
 	  <div class="right" id="right"> 
-		<form class="form" action="<?php echo "$url_prefixF"?>/controller/actions/login.php" method="post">
+		<form class="form" action="./controller/actions/login.php" method="post">
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
 		  <input type="text" id="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>

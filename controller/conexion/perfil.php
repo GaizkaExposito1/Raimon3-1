@@ -1,10 +1,10 @@
 <?php
 //require
-require_once "$url_prefix/model/accesoBD.class.php";
+require_once "../../model/accesoBD.class.php";
 //accesobd
 $bd= new AccesoBd();
 //colecciones de datos necesarios
 
 //redireccion
-include "$url_prefix/view/perfil/perfil.php";
+include "./view/perfil/perfil.php";
 ?>

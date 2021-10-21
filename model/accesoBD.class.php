@@ -37,6 +37,7 @@ class AccesoBd{
     function lanzarSQL($sql){
         $tipoSql=substr($sql,0,6);
         $result=mysqli_query($this->conexion,$sql);
+        //var_dump($result);
         if(strtoupper($tipoSql)=="SELECT"){
             return $result;
         }
@@ -45,7 +46,7 @@ class AccesoBd{
     //Funciones especificas
         //Users
         function Registro($dni,$pass,$confPass,$email,$cursoId,$username){
-            //
+            //CHUCLA
             //confirmar no campos vacios
             if(($dni==null||$dni=='')&&($pass==null||$pass=='')&&($confPass==null||$confPass=='')&&($email==null||$email=='')&&($username==null||$username=='')&&($cursoId==null)){
                 return "Hay campos vacios";
@@ -60,28 +61,35 @@ class AccesoBd{
                     $dniBD=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`users` where (`dni`='$dni')");
                     $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
                     $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
-                    while(($fila=mysqli_fetch_array($dniBD))!=null){
+                    while((mysqli_fetch_array($dniBD))!=null){
                         return "dni ya introducido por otro usuario";
                     }
-                    while(($fila=mysqli_fetch_array($emailBD))!=null){
+                    while((mysqli_fetch_array($emailBD))!=null){
                         return "email ya introducido por otro usuario";
                     }
-                    while(($fila=mysqli_fetch_array($usernameBD))!=null){
+                    while((mysqli_fetch_array($usernameBD))!=null){
                         return "nombre de usuario ya introducido por otro usuario";
                     }
                         //hash contraseña
-                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
+                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                        echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
                          $userNew=new User($dni, $email, 1,$cursoId,$username);
                              session_start();
                         $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
+                        //comprobar el dni de sanluis con el dni del user
+                        //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
+                        //while((mysqli_fetch_array($userCentro))!=null){
                         //insert a la bd
-                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',1,'$cursoId',null);");
+                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','1','$cursoId','0');");
                         return "ok";
+                    //} return "no eres usuario del centro";
+                        
                 }
             }
         }
 
         function newAdmin($dni,$pass,$confPass,$email,$username){
+            //CHUCLA
             //confirmar no campos vacios
             if(($dni==null||$dni=='')&&($pass==null||$pass=='')&&($confPass==null||$confPass=='')&&($email==null||$email=='')&&($username==null||$username=='')){
                 return "Hay campos vacios";
@@ -105,11 +113,15 @@ class AccesoBd{
                     while(($fila=mysqli_fetch_array($usernameBD))!=null){
                         return "nombre de usuario ya introducido por otro usuario";
                     }
+                     //comprobar el dni de sanluis con el dni del user
+                        //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
+                        //while((mysqli_fetch_array($userCentro))!=null){
                         //hash contraseña
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         //insert a la bd
-                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`,`pass`,`username`,`email`,`rol`,`curso`,`imgUser`) VALUES ('$dni','$hashPass','$username','$email',2,'null','null');");
+                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','2','16','0');");
                         return "ok";
+                         //} return "no es usuario del centro";
                 }
             }
         }
@@ -146,6 +158,7 @@ class AccesoBd{
         }
 
         function editUser($pass,$confPass,$email,$username,$userId){
+            //hacer comprobacion que antigua sea dif de nuevo
             if(($pass!=null||$pass!='')&&($confPass==null||$confPass=='')){
                 return "no has introducido la confirmacion de contraseña";
             }
@@ -162,24 +175,27 @@ class AccesoBd{
             }
             if(($email!=null||$email!='')){
                 $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
-                if($emailBD==null){
+                while((mysqli_fetch_array($emailBD))!=null){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$email') where (`id` = '$userId')");}
             }
             if(($username!=null||$username!='')){
                 $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
-                if($usernameBD==null){
+                while((mysqli_fetch_array($usernameBD))!=null){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$username') where (`id` = '$userId')");}
             }
             return "ok";
         }
 
         function getUsersCurso($idCurso){
+            
+
+
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso'");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($dni, $email, $rol,$curso,$username);
                 $users[]=$user;
             }
             return $users;
