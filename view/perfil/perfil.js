@@ -6,3 +6,23 @@ function mostrarCaja() {
     cambiarTamañoLeft.style.height="88%";
     ocultarBoton.style.visibility="";
 }
+
+$(document).ready(function(){
+    $("#cambiarContraseña").click(function(){
+        $("#editarContraseña").css("display", "inline");
+        $("#editaremail").css("display", "none");
+        $("#editarusername").css("display", "none");
+    });
+    $("#cambiarEmail").click(function(){
+        $("#editarContraseña").css("display", "none");
+        $("#editaremail").css("display", "inline");
+        $("#editarusername").css("display", "none");
+    });
+        $("#cambiarUsername").click(function(){
+            $("#editarContraseña").css("display", "none");
+            $("#editaremail").css("display", "none");
+            $("#editarusername").css("display", "inline");
+    });
+
+
+});

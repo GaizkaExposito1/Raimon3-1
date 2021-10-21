@@ -61,7 +61,7 @@ body {
   color: #F1F1F2;
   position: relative;
   width: 100%;
-  /*height: 29em;*/
+  height: 31em;
 }
   
 #continuar{
@@ -70,15 +70,52 @@ body {
 #imgPerfil{
   text-align: center;
 }
+#datosPerfil{
+  width: 50%;
+  margin-top: 8%;
+}
+#cambiarContraseña{
+  position: relative ;
+  top: -6px ;
+  left: 7px ;
+  color: #e050c8 ;
+  background-color: transparent ;
+  border: 0 ;
+}
+#cambiarUsername{
+  position: relative ;
+  top: -6px ;
+  left: 7px ;
+  color: #e050c8 ;
+  background-color: transparent ;
+  border: 0 ;
+}
+#cambiarEmail{
+  position: relative ;
+  top: -6px ;
+  left: 7px ;
+  color: #e050c8 ;
+  background-color: transparent ;
+  border: 0 ;
+}
+#editarContraseña, #editarEmail, #editarUsername{
+  display: none;
+}
 img{
   border-radius: 50%;
-  width: 30%;
+  width: 20%;
   box-shadow:3px 2px 2px #000;
   margin-top: 3%;
-
 }
-form#editarContraseña{
+#editarDatsos{
+
   width: 50%;
+}
+
+form#editarContraseña,form#editarEmail, form#editarUsername {
+  left: 320px;
+  top: -173px;
+  position: relative;
 }
 label {
   font-family: 'JetBrains Mono', monospace;
@@ -96,7 +133,7 @@ label {
     background: transparent;
     border-bottom: 1px solid black;
   }
-   input[type="password"]{
+   input[type="password"], input[type="email"], imput[type="text"]{
     width: 90%;
     border: 0;
     border-bottom: 2px solid #EDE7F6;
@@ -109,6 +146,7 @@ label {
       height: 30px;
       line-height: 30px;
       outline: none;
+      margin-top: 2%;
       width: 90%;
       background-color: #EDE7F6;
       color: #707075;
@@ -119,7 +157,39 @@ label {
       border-radius: 10px;
       background-color: #EDE7F6;
     }
-
+    /*ALERT MODAL BOOSTRAP*/
+    .btn.btn-secondary{
+      color:#B39DDB !important ;
+      background-color: transparent !important;
+    }
+    .modal-footer, .modal-body, .modal-header {
+      background-color: #664c96 !important;
+      color:#B39DDB !important ; 
+    }
+    
+    .btn-primary:hover {
+      color: #fff;
+      background-color: #286090;
+      border-color: #204d74;
+    }
+    
+    .btn.focus, .btn:focus, .btn:hover {
+      color: #333;
+      text-decoration: none;
+    }
+    .btn-primary {
+      position: relative !important;
+      top: -58px !important;
+      left: -32px !important;
+      color: #e050c8 !important;
+      background-color: transparent !important;
+      border: 0 !important;
+    }
+    .btn-primary:hover {
+      color: #e050c8 !important;
+      background-color: transparent !important;
+      border: 0 !important;
+    }
 @media screen and (max-width: 600px) {
   body {
     background: #EDE7F6;
