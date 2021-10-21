@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +8,7 @@
     <script src="jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 </head>
-<body>
+
 <h1>Árbol de los deseos <span>&#127810;</span></h1>
 <!----------------------------------------------------------------------->
 <div class="carouseandSelect">
@@ -80,5 +78,4 @@
         <a href="/Raimon3-1/controller/conexion/mensajesNoAprobados.php"><button>Mensajes Aprobados</button></a>
     </div>
 </div>
-</body>
-</html>
+
