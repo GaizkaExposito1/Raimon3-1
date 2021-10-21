@@ -6,7 +6,7 @@
 
 body {
     margin:0;
-    font-family: 'Josefin Sans', sans-serif; 
+    font-family: 'Josefin Sans', sans-serif !important;
   }
 .topnav {
   overflow: hidden;
@@ -32,52 +32,52 @@ body {
 }
 /*First Header*/
 #phone{
-  left: 17px;
-  top: 4px;
+  left: -334px;
+  top: -30px;
   font-size: 12px;
-  position: absolute;
+  position: relative;
  }
 #mail{
-  left: 140px;
-  top: 4px;
-  position: absolute;
+  left: -334px;
+  top: -30px;
+  position: relative;
   font-size: 12px;
  }
 #News{
-  left: 475px;
-  top: 4px;
+  /* left: 475px; */
+  /* top: 4px; */
   font-size: 12px;
-  position: absolute;
+  position: relative;
  }
 #Intranet{
-  left: 538px;
-  top: 4px;
-  position: absolute;
+  /* left: 538px; */
+  /* top: 4px; */
+  position: relative;
   font-size: 12px;
  }
 #Moodle{
-  left: 601px;
-  top: 4px;
-  position: absolute;
+  /* left: 601px; */
+  /* top: 4px; */
+  position: relative;
   font-size: 12px;
  }
 #AccessAlum{
-  left: 649px;
-  top: 4px;
+  /* left: 649px; */
+  /* top: 4px; */
   font-size: 12px;
-  position: absolute;
+  position: relative;
  }
 #LangEs{
-  left: 451px;
-  top: 4px;
   font-size: 12px;
-  position: absolute;
+  position: relative;
+  left: -184px;
+  top: -32px;
  }
 #LangEus{
-  left: 451px;
-  top: 4px;
+  /* left: 451px; */
+  /* top: 4px; */
   font-size: 12px;
-  position: absolute;
+  position: relative;
  }
   /*Buttom*/
 .txtBuscar{
@@ -93,14 +93,14 @@ body {
  }
 .Buscar{
   border-radius:20px;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   padding-right: 1%;
   padding-left: 1%;
   background-color: #fff;
-  position:absolute;
-  right: 19px;
-  top: 3px;
+  position:relative;
+  left: 1220px;
+  top: 9px;
   border:none;
   outline:none;
   text-align:center;
@@ -117,8 +117,8 @@ body {
   padding-bottom: 0.5%;
  }
  a {
-  text-decoration: none;
-  color: #d5b6da;
+  text-decoration: none !important;
+  color: #d5b6da !important;
 }
 a:hover,
 a:focus {
@@ -138,7 +138,7 @@ a:focus {
     position: relative;
   }
   .topnav.responsive .icon {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
   }
@@ -213,7 +213,7 @@ a:focus {
     padding-right: 3%;
     background-color: #fff;
     border: none;
-    position:absolute;
+    position:relative;
     right: 10px;
     top: 3px;
     border:none;
@@ -243,9 +243,11 @@ a:focus {
   .topnav{
     padding-bottom: 0.5%;
   }
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
   }
@@ -263,7 +265,8 @@ a:focus {
     text-align: right;
   }
   a.active{
-  float: right;}
+  float: right;
+}
   /*Languages*/
   #langFlagSpain{
     display: inline;
@@ -289,7 +292,7 @@ a:focus {
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 3%;
-    position:absolute;
+    position:relative;
     right: 35px;
     top: 12px;
     border:none;
@@ -306,7 +309,7 @@ a:focus {
     padding-right: 3%;
     background-color: #fff;
     border: none;
-    position:absolute;
+    position:relative;
     right: 10px;
     top: 5px;
     border:none;
@@ -324,25 +327,3 @@ a:focus {
     color: #d5b6da;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

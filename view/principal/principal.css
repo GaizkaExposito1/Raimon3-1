@@ -1,8 +1,4 @@
-html{
-    margin: 10%;
-   
- 
-}
+
 body{
     background-color: #c6a9d1 !important;
 }
@@ -38,11 +34,11 @@ select {
     margin-top: 22%;
     text-align: center;
 }
-img{
+/*img{
     padding: 10px; 
     width: 70%;
     height: 50em;
-}
+}*/
 /*Boton de like*/
 .btn-counter span{
     color: #ff0000;

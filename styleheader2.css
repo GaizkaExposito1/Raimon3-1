@@ -12,6 +12,8 @@
 img#LogoCLSLarge {
   top: 2px;
   left: 12px;
+  width: 12%;
+  height: 12%;
   position: relative;
 }
 .topnav2 {
@@ -21,7 +23,7 @@ img#LogoCLSLarge {
 .topnav2 a {
   float: right;
   display: block;
-  color: #f2f2f2;
+  color: #f2f2f2 !important;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -29,7 +31,7 @@ img#LogoCLSLarge {
 }
 .topnav2 a:hover {
   background-color: #ddd;
-  color: black;
+  color: black !important;
 }
 .topnav2 a.active {
   background-color: #04AA6D;
@@ -62,6 +64,8 @@ img#LogoCLSLarge {
     scroll-padding-right: 20%;
     border: none;
     float: left;
+    width: 30% !important;
+    height: 30% !important;
     margin-right: 1.5%;
   }
   #PagePrincipal{
@@ -70,7 +74,7 @@ img#LogoCLSLarge {
   }
   #Administracion{
     position: relative;
-    top: -61px;
+    top: -12px;
   }
   #VerMensajes{
     position: relative;
@@ -78,11 +82,11 @@ img#LogoCLSLarge {
   }
   #CrearMensaje{
     position: relative;
-    top: 104px;
+    top: 129px;
   }
   #Login{
     position: relative;
-    top: 186px;
+    top: 216px;
   }
 }
 /*Movil un poco Gigante, tablets y ordenadores con pantallas enanas xD*/
