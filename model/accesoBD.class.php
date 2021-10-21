@@ -145,7 +145,6 @@ class AccesoBd{
                while(($fila=mysqli_fetch_array($userOBT))!=null){
                    extract($fila);
                 $usuario=new User($dni, $email, $rol,$curso,$username);
-                    session_start();
                     $_SESSION['usuario']=$usuario; //Introducir algo en la sesion
                     return "ok";
                 }

@@ -1,6 +1,3 @@
-<?php
-require_once ("./view/Language/lang_".$lang.".php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
