@@ -1,9 +1,13 @@
 html{
     margin: 10%;
-    background-color: #E8EAF6;
+   
+ 
 }
+body{
+    background-color: #c6a9d1 !important;
+}
+
 h1{
-    background:#E8EAF6;
     text-align: center;
 }
 select {
