@@ -1,13 +1,11 @@
 <?php
 session_start();
-require_once ("/model/accesoBD.class.php");
-require_once ("/model/clases/User.class.php");
+require_once ("../../model/accesoBD.class.php");
+require_once ("../../model/clases/User.class.php");
 $bd= new AccesoBd();
 $result=$bd->Registro($_POST['dni'],$_POST['pass'],$_POST['confpass'],$_POST['email'],$_POST['cursoId'],$_POST['username']);
-echo $result;
-/*if($result="ok"){
-    header("Location: ./controller/conexion/principal.php");
-}else if(){
-    header("Location: ./controller/conexion/registro.php");
-}else{ header("Location: ./controller/conexion/registro.php");}*/
+
+if($result="ok"){
+     header("Location: ../../index.php");
+}else{ header("Location: ../../index.php?section=registro&error=$result");}
 ?>
