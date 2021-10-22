@@ -34,11 +34,7 @@ select {
     margin-top: 22%;
     text-align: center;
 }
-/*img{
-    padding: 10px; 
-    width: 70%;
-    height: 50em;
-}*/
+
 /*Boton de like*/
 .btn-counter span{
     color: #ff0000;
@@ -50,7 +46,12 @@ select {
     margin: 10%;
     height: 15em;
 }
+input#links{
+    margin: 2%;
+}
+
 /*Botones que te llevan al curso*/
+/*
 .boton_curso{
     text-decoration: none;
     padding: 10px;
@@ -65,4 +66,59 @@ select {
     transform: scale(2.5);
     background-color: #2c2430;
     border-radius:0px;
+}
+*/
+
+
+.btnMostrar{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+/* Mensaje actual */
+.btnMostrar .mensajeUsuario {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Muestra el deseo del usuario*/
+.btnMostrar .mensajeUsuario::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+.btnMostrar .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: animacionBoton 1s
+}
+
+/* Animación del boton */
+@-webkit-keyframes animacionBoton {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes animacionBoton {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
