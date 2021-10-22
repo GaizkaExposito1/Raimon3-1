@@ -13,6 +13,7 @@
 		  <input type="password" id="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
+		
 	  </div>
 	</div>
   </div>

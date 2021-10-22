@@ -74,7 +74,6 @@ class AccesoBd{
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
                          $userNew=new User($dni, $email, 1,$cursoId,$username);
-                             session_start();
                         $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
                         //comprobar el dni de sanluis con el dni del user
                         //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
