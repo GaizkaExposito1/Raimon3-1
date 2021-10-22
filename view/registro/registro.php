@@ -10,15 +10,7 @@ if (isset($lang)) {
 require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 ?>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="registroStyle.css">
-	<script src="<?php echo "$url_prefix"?>/register.js"></script>
-	<script src="jquery.min.js"></script>
-</head>
-
+<article>
 <div class="page">
 	<div class="container">
 		<div class="left" id="left">
@@ -51,7 +43,7 @@ require_once ("$url_prefixU/Language/lang_" . $lang . ".php");
 		</div>
 	</div>
 </div>
-
+				</article>
 
 
 
