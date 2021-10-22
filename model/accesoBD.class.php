@@ -256,7 +256,7 @@ class AccesoBd{
         }
 
         //Mensajes
-        function newMensaje($userId, $tipografia,$colorTipografia,$color, $form,$texto,$anonimo){
+        function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto,$anonimo){
             if($tipografia==null){
                 $tipografia="Comic Sans";
             }
@@ -266,9 +266,6 @@ class AccesoBd{
             if($color==null){
                 $color="#000000";
             }
-            if($form==null){
-                $form="post-it";
-            }
             if($anonimo==null){
                 $anonimo=0;
             }
@@ -276,7 +273,7 @@ class AccesoBd{
                 return "no has escrito el texto";
             }
             else{
-            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`forma`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$form','$texto','$anonimo','0');");
+            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','$anonimo','0');");
             $bool=$this->hasTextWordInPrefiltro($texto);
             if($bool=="ok"){
             $this->mensajeAprobarEmail();

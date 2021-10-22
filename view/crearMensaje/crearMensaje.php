@@ -1,9 +1,3 @@
-<?php
-require_once "../../model/accesoBD.class.php";
-require_once "../../model/clases/mensaje.class.php";
-
-$bd= new AccesoBd();
- ?>
 <article>
 <div class="page">
 	<div class="container">
@@ -23,55 +17,20 @@ $bd= new AccesoBd();
         <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
 
         <select name="select" >
-           <option value="curso" disabled selected> Color</option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$colorTipografia[$i]</option>";
-			
-		   }
-
-		   ?>
+           <option value="curso" disabled selected> Color Letra</option>
+		   <!--rueda color-->
+           
          </select>
          <select name="select" >
            <option value="curso" disabled selected> Tipografia</option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$tipografia[$i]</option>";
-			
-		   }
-
-		   ?>
+		   <option value="curso" > Tipografia</option>
          </select>	  
 
 		  <select name="select" >
            <option value="curso" disabled selected> Color Hoja</option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$color[$i]</option>";
-			
-		   }
-
-		   ?>
+		   <!--rueda color-->
+           
          </select>
-         <select name="select" >
-           <option value="curso" disabled selected> Forma Hoja</option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$Forma[$i]</option>";
-			
-		   }
-
-		   ?>
-         </select>
-
 		  <input type="submit" id="aceptar" value="Aceptar">
 		</form>
 	  </div>

@@ -18,7 +18,7 @@
 					<input type="email" id="email">
 					<label for="userName"><?php echo $language["USER"]; ?></label>
 					<input type="text" id="text">
-					<select name="select" >
+					<select name="cursoId" >
 						<option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
 						<?php 
 						for ($i=0; $i < count($grupos); $i++) { 
