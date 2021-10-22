@@ -9,12 +9,12 @@
 						echo "<option value='cursos'>$grupos[$i]</option>";
 					}
 					?>
-				</select>
-
-    <select name="select" >
+                    <!--No os asusteis esto es prueba-->
+	</select>
+         <select name="Selectsms" id="Selectsms" >
         <option value="curso" disabled selected> Curso</option>
-        <option >putoo</option>
-        <option>putoo22</option>
+        <option value="puto1" >putoo</option>
+        <option value="puto2">putoo22</option>
     </select>
 
     <!--Imagen del Arbol-->   
