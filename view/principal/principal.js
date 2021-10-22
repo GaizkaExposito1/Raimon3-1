@@ -1,3 +1,11 @@
+function mostrarMensaje() {
+    let btnMostrar = document.getElementById("mybotonMostrar");
+    btnMostrar.toggle("show");
+}
+
+
+/*------------------------------------------------------------------------ */
+/*
 $('#myCarousel').carousel();
     
   
@@ -8,10 +16,5 @@ $("#prevBtn").click(function(){
 $("#nextBtn").click(function(){
     $("#myCarousel").carousel("next");
 });
-
-$(select).click(function(){
-
-
-
-
-});
+*/
+/*------------------------------------------------------------------------- */

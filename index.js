@@ -17,6 +17,7 @@
           topnav.className = "topnav2";
         }
       }
+      /*
       $('.btn-counter').on('click', function(event, count) {
         event.preventDefault();
         
@@ -25,3 +26,4 @@
             active = $this.hasClass('active'),
             multiple = $this.hasClass('multiple-count');
       });
+      */

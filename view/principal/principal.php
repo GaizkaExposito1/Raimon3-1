@@ -1,21 +1,38 @@
-
 <h1>Árbol de los deseos <span>&#127810;</span></h1>
 <!----------------------------------------------------------------------->
 <div class="carouseandSelect">
+
+<select name="select" >
+					<option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
+					<?php 
+					for ($i=0; $i < count($grupos); $i++) { 
+						echo "<option value='cursos'>$grupos[$i]</option>";
+					}
+					?>
+				</select>
+
     <select name="select" >
         <option value="curso" disabled selected> Curso</option>
-        <option>putoo</option>
+        <option >putoo</option>
         <option>putoo22</option>
     </select>
+
     <!--Imagen del Arbol-->   
     <div>
         <img src="../assets/Arbol.png" alt="" >
     </div>
+
     <!---30 Botones-->
     <div>
-        <button class="boton_curso">Ok</button>
-        <button class="boton_curso">Ok</button>
-    </div>  
+        <button class="btnMostrar" onclick="mostrarMensaje();">
+            ook!!
+            <span class="mensajeUsuario" id="mybotonMostrar">¡Aqui estara el mensaje del deseo!</span>
+        </button>
+    </div>
+
+
+
+
     <!-------Boststrap carousel--------->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
