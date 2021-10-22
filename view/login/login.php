@@ -9,9 +9,9 @@
 	  <div class="right" id="right"> 
 		<form class="form" action="./controller/actions/login.php" method="post">
 		  <label for="suario"><?php echo $language["USER"]; ?></label>
-		  <input type="text" id="text">
+		  <input type="text" id="text" name="text">
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
-		  <input type="password" id="password" placeholder=" pon el ojop que todo lo ve">
+		  <input type="password" id="password"  name="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 
 		</form>

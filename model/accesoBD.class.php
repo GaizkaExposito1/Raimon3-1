@@ -136,7 +136,8 @@ class AccesoBd{
             }
             else {
                 //campos no vacios-> hasear pass
-                $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                //$hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                $hashPass=$pass;
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                while(($fila=mysqli_fetch_array($userOBT))!=null){
