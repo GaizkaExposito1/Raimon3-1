@@ -249,7 +249,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $curso=new Grupo($nombre);
+                $curso=new Grupo($nombre,$id);
                 $grupos[]=$curso;
             }
             return $grupos;

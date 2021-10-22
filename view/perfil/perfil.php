@@ -48,27 +48,27 @@ $bd= new AccesoBd();
 					</div>
 				</div>
 				<div id="editarDatsos">
-					<form action="" id="editarContraseña" method="post">
+					<form action="./controller/actions/editPerfil.php" id="editarContraseña" method="post">
 						<label for="Contraseña">Contraseña Antiguo</label>
 						<input type="password" id="email">
 						<label for="Contraseña">Nuevo Contraseña</label>
-						<input type="password" id="NewEmail">
+						<input type="password" id="NewEmail" name="newPass">
 						<label for="Contraseña">Repite Nuevo Contraseña</label>
-						<input type="password" id="repeatNewEmail">
+						<input type="password" id="repeatNewEmail" name="newConfpass">
 						<p><input type="submit" id="submit" value="Enviar"></p>
 					</form>
 					<form action="" id="editarEmail" method="post">
 						<label for="email">Email Antiguo</label>
 						<input type="email" id="email">
 						<label for="email">Nuevo Email</label>
-						<input type="email" id="email">
+						<input type="email" id="email" name="newEmail">
 						<p><input type="submit" id="submit" value="Enviar"></p>
 					</form>
 					<form action="" id="editarUsername" method="post">
 						<label for="Username">Username Antiguo</label>
 						<input type="text" id="username">
 						<label for="Username">Nuevo Username</label>
-						<input type="text" id="username">
+						<input type="text" id="username" name="newUsername">
 						<p><input type="submit" id="submit" value="Enviar"></p>
 					</form>
 				</div>
