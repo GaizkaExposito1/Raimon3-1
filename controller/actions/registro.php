@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once ("../../model/accesoBD.class.php");
+require_once ("/model/accesoBD.class.php");
+require_once ("/model/clases/User.class.php");
 $bd= new AccesoBd();
 $result=$bd->Registro($_POST['dni'],$_POST['pass'],$_POST['confpass'],$_POST['email'],$_POST['cursoId'],$_POST['username']);
 echo $result;

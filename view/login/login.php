@@ -1,3 +1,4 @@
+
 <div class="page">
 	<div class="container">
 	  <div class="left" id="left">
@@ -12,7 +13,6 @@
 		  <label for="password"><?php echo $language["PASS"]; ?></label>
 		  <input type="password" id="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
-		  <a href="../registro/registro.php">Registro</a>
 
 		</form>
 		

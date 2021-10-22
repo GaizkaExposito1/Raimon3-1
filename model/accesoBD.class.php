@@ -25,9 +25,7 @@ class AccesoBd{
     }
 
     function establecerConexion(){
-        $this->conexion=mysqli_connect(self::RUTA, self::USER,self::PASS,self::NOMBRE_BD) or 
-                        die("bd no conectada puto, mirate el codigo");
-        echo "la conexion chuclo congrats </br>";
+        $this->conexion=mysqli_connect(self::RUTA, self::USER,self::PASS,self::NOMBRE_BD);
     }
 
     function cerrarConexion(){
