@@ -1,15 +1,11 @@
-<?php
-require_once "../../model/accesoBD.class.php";
-require_once "../../model/clases/mensaje.class.php";
 
-$bd= new AccesoBd();
- ?>
+
 <article>
 <div class="page">
 	<div class="container">
 	  <div class="left" id="left">
-		<div class="crearMensaje">Crear Mensaje</div>
-		<div class="eula">Aqui podras escribir tu mensaje</div>
+		<div class="crearMensaje">Editar Mensaje</div>
+		<div class="eula">Aqui podras editar tu mensaje</div>
 		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 
 
@@ -20,7 +16,7 @@ $bd= new AccesoBd();
 
 
 
-        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
+        <textarea disabled name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
 
         <select name="select" >
            <option value="curso" disabled selected> Color</option>

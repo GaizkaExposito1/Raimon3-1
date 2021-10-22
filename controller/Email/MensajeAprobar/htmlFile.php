@@ -11,8 +11,8 @@
     <form>
         <label>Usuario:</label><?php $usuario ?>
         <label>Mensaje</label><?php $mensaje ?>
-        <button href="localhost...">Aceptar</button>
-        <button href="">Denegar</button>
+        <button href="localhost/mikel/Raimon3-1/controller/Email/Acept.php">Aceptar</button>
+        <button href="localhost/mikel/Raimon3-1/controller/Email/Deny.php">Denegar</button>
     </form>
 </body>
 </html>
