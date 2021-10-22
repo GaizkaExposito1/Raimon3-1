@@ -1,4 +1,3 @@
-
 <div class="page">
 	<div class="container">
 		<div class="left" id="left">
@@ -31,7 +30,7 @@
 		</div>
 	</div>
 </div>
-
+				</article>
 
 
 
