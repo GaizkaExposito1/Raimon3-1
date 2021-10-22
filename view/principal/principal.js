@@ -1,11 +1,22 @@
-function mostrarMensaje() {
-    let btnMostrar = document.getElementById("mybotonMostrar");
-    btnMostrar.toggle("show");
-}
+
+
+$(document).ready(function(){
+    $("#btnMostrar").click(function(){
+        $("#mybotonMostrar").css("visibility", "visible");
+      
+    });    });
 
 
 /*------------------------------------------------------------------------ */
 /*
+function mostrarMensaje() {
+    let btnMostrar = document.getElementById("mybotonMostrar");
+    btnMostrar.style.visibility="visible";
+
+}
+
+
+
 $('#myCarousel').carousel();
     
   

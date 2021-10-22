@@ -20,6 +20,8 @@ if(isset($_GET['section'])){
     <script src="./index.js"></script>
     <link href="./view/<?php echo $param ?>/<?php echo $param ?>.css" rel="stylesheet" type="text/css">  <!--Css unicamente para cada contenido-->
     <script src="./jquery.min.js"></script>
+    <script src="./view/<?php echo $param ?>/<?php echo $param ?>.js"></script>
+
     <!--Boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>

@@ -24,7 +24,7 @@
 
     <!---30 Botones-->
     <div>
-        <button class="btnMostrar" onclick="mostrarMensaje();">
+        <button class="btnMostrar" id="btnMostrar" onclick="mostrarMensaje();">
             ook!!
             <span class="mensajeUsuario" id="mybotonMostrar">¡Aqui estara el mensaje del deseo!</span>
         </button>
