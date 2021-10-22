@@ -10,7 +10,7 @@
   padding-left: 2%;
 }
 img#LogoCLSLarge {
-  top: 2px;
+  top: 5px;
   left: 12px;
   width: 12%;
   height: 12%;
@@ -18,7 +18,7 @@ img#LogoCLSLarge {
 }
 .topnav2 {
   overflow: hidden;
-  background-color: rgb(208, 156, 216, 0.6);
+  background-color: rgba(187, 113, 199, 0.6);
 }
 .topnav2 a {
   float: right;
@@ -41,7 +41,9 @@ img#LogoCLSLarge {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  .topnav2 a:not(:first-child) {display: none;}
+  .topnav2 a:not(:first-child) {
+    display: none;
+  }
   .topnav2 a#ir {
     float: right;
     display: block;
@@ -60,12 +62,12 @@ img#LogoCLSLarge {
   #LogoCLSLarge{
     font-family: 'JetBrains Mono', monospace;
     padding-left: 1.5%;
-    position: initial;
-    scroll-padding-right: 20%;
+    /* scroll-padding-right: 20%; */
     border: none;
     float: left;
+    margin-top: 1%;
     width: 30% !important;
-    height: 30% !important;
+    /* height: 30% !important; */
     margin-right: 1.5%;
   }
   #PagePrincipal{
@@ -91,23 +93,12 @@ img#LogoCLSLarge {
 }
 /*Movil un poco Gigante, tablets y ordenadores con pantallas enanas xD*/
 @media  screen and (min-width: 600px) and (max-width: 1000px){
-  #LogoCLSLarge{
-    font-family: 'JetBrains Mono', monospace;
-    padding-left: 1.5%;
-    border: none;
-    float: left;
-    margin-right: 1.5%;
-  }
-  .topnav2 a:not(:first-child) {
-    display: none;
-  }
+  .topnav2 a:not(:first-child) {display: none;}
   .topnav2 a#ir {
     float: right;
     display: block;
   }
-  .topnav2.responsive2 {
-    position: relative;
-  }
+  .topnav2.responsive2 {position: relative;}
   .topnav2.responsive2 #ir {
     position: absolute;
     right: 0;
@@ -118,13 +109,24 @@ img#LogoCLSLarge {
     display: block;
     text-align: right;
   }
+  #LogoCLSLarge{
+    font-family: 'JetBrains Mono', monospace;
+    padding-left: 1.5%;
+    /* scroll-padding-right: 20%; */
+    border: none;
+    float: left;
+    margin-top: 1%;
+    width: 17% !important;
+    /* height: 30% !important; */
+    margin-right: 1.5%;
+  }
   #PagePrincipal{
     position: relative;
     top: -146px;
   }
   #Administracion{
     position: relative;
-    top: -61px;
+    top: -12px;
   }
   #VerMensajes{
     position: relative;
@@ -132,10 +134,10 @@ img#LogoCLSLarge {
   }
   #CrearMensaje{
     position: relative;
-    top: 104px;
+    top: 129px;
   }
   #Login{
     position: relative;
-    top: 186px;
+    top: 216px;
   }
 }

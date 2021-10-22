@@ -56,11 +56,11 @@ if(isset($_GET['section'])){
       <a  href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
   </header>
-  <div id="contenido">
+  <section id="contenido">
     <?php
     include "./controller/conexion/".$param.".php";
     ?>
-    </div>
+    </section>
 </body>
 </html>
 
