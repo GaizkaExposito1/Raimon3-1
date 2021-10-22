@@ -68,10 +68,15 @@ class AccesoBd{
                     while((mysqli_fetch_array($usernameBD))!=null){
                         return "nombre de usuario ya introducido por otro usuario";
                     }
+                    $r=$this->lanzarSQL("SELECT max(`id`) from `kalpatarubd`.`users`;");
+                    while(($fila=mysqli_fetch_array($r))!=null){
+                        $id=$fila['id'];//??
+                        var_dump($id+1);
+                    }
                         //hash contraseña
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
-                         $userNew=new User($dni, $email, 1,$cursoId,$username);
+                         $userNew=new User($id,$dni, $email, 1,$cursoId,$username);
                         $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
                         //comprobar el dni de sanluis con el dni del user
                         //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
@@ -142,7 +147,7 @@ class AccesoBd{
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                while(($fila=mysqli_fetch_array($userOBT))!=null){
                    extract($fila);
-                $usuario=new User($dni, $email, $rol,$curso,$username);
+                $usuario=new User($id,$dni, $email, $rol,$curso,$username);
                     $_SESSION['usuario']=$usuario; //Introducir algo en la sesion
                     return "ok";
                 }
@@ -192,7 +197,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $email, $rol,$curso,$username);
+                $user=new User($id,$dni, $email, $rol,$curso,$username);
                 $users[]=$user;
             }
             return $users;
@@ -352,7 +357,7 @@ class AccesoBd{
             }
         }
 
-        function editMensaje($tipografia,$colorTipografia,$color, $form,$id){
+        function editMensaje($tipografia,$colorTipografia,$color,$id){
             if($tipografia==null){
                 return "no has introducido la contraseña";
             }
@@ -373,11 +378,6 @@ class AccesoBd{
                 $colorBD=$this->lanzarSQL("SELECT `color` from `kalpatarubd`.`mensajes` where (`color`='$color')");
                 if($colorBD==null){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`color`='$color') where (`id` = '$id')");}
-            }
-            if($form!=null){
-                $formBD=$this->lanzarSQL("SELECT `forma` from `kalpatarubd`.`mensajes` where (`forma`='$form')");
-                if($formBD==null){
-                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`forma`='$form') where (`id` = '$id')");}
             }
             return "ok";
         }

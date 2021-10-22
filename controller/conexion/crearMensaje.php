@@ -1,7 +1,8 @@
 <?php
 //require
 require_once "./model/accesoBD.class.php";
-//accesobd
+require_once "./model/clases/mensaje.class.php";
+//acesso bd
 $bd= new AccesoBd();
 //colecciones de datos necesarios
 

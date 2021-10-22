@@ -1,9 +1,4 @@
-<?php
-require_once "../../model/accesoBD.class.php";
-require_once "../../model/clases/mensaje.class.php";
 
-$bd= new AccesoBd();
- ?>
 
 <article>
 <div class="page">

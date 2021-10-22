@@ -1,12 +1,4 @@
-<?php 
-require_once "../../model/clases/mensaje.class.php";
-    require_once "../../model/accesoBD.class.php";
-    $bd = new AccesoBd();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <section id="fuera">
+<section id="fuera">
         <div id="dentro">
             <?php 
                 $mensajesNoAprbds=$bd->getUserMensajesApproved(1);
@@ -18,4 +10,4 @@ require_once "../../model/clases/mensaje.class.php";
                 echo "</ul>";
             ?>
         </div>
-    </section>
+</section>

@@ -31,6 +31,10 @@
 		   <!--rueda color-->
            
          </select>
+		 <input type="radio" id="anonimo" name="anonimo" value="anonimo">
+			<label for="html">anonimo</label><br>
+		<input type="radio" id="NOanonimo" name="anonimo" value="NOanonimo">
+			<label for="css">No anonimo</label><br>
 		  <input type="submit" id="aceptar" value="Aceptar">
 		</form>
 	  </div>
