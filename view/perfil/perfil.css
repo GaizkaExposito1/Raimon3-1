@@ -113,7 +113,7 @@ body {
 #editarContraseña, #editarEmail, #editarUsername{
   display: none;
 }
-img{
+img#imgUser{
   border-radius: 50%;
   width: 20%;
   box-shadow:3px 2px 2px #000;

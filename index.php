@@ -53,7 +53,8 @@ if(isset($_GET['section'])){
       <?php
       if(isset($_SESSION['usuario'])){
       echo "<a  href='index.php?section=crearMensajes' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
-      <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>";
+      <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>
+      <a  href='index.php?section=logout' id='logout'> ". $language["MENSAJES"] ."</a>";
       if($_SESSION['usuario']->rol==2){
       echo"<a  href='index.php?section=Administracion' id='Administracion'> ". $language["ADMIN"] ."</a>";
       }}?>

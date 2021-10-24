@@ -1,9 +1,4 @@
-<?php
-require_once "../../model/accesoBD.class.php";
-require_once "../../model/clases/mensaje.class.php";
 
-$bd= new AccesoBd();
-?>
 <article>
 	<div class="page">
 		<div class="container">
@@ -14,7 +9,7 @@ $bd= new AccesoBd();
 			</div>
 			<div class="right" id="right"> 
 				<div id="imgPerfil">
-					<img src="../assets/cat.jpg" alt="imagen de perfil">
+					<img id="imgUser" src="../assets/cat.jpg" alt="imagen de perfil">
 				</div>
 				<div id="datosPerfil">
 					<p>Usuario : NOMBREUSUARIO</p>
