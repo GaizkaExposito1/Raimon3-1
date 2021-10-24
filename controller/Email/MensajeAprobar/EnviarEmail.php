@@ -22,7 +22,7 @@ function EnviarEmailAprobar($mensaje){
     $email->From='retoraimon@gmail.com';
     $email->FromName='Kalpataru';
     $email->AddAddress('retoraimon@gmail.com');
-    $email->AddReplyTo('el de las pavas');
+    $email->AddReplyTo('l.munoz.vazquez.38@gmail.com');
     $email->IsHTML(true);//poder pner html y css en el correo
     //$email->Subject="$subject"
     $email->Subject="Creado deseo en Kalpataru";
