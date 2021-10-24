@@ -124,7 +124,7 @@ class AccesoBd{
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','2','16','0');");
                         return "ok";
                          //} return "no es usuario del centro";
-                }
+                    }
             }
         }
 
@@ -178,6 +178,7 @@ class AccesoBd{
                     $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`pass`='$hashPass') where (`id` = '$userId')");}
                     else{
                         return "esa contraseña es la misma que la anterior";
+                        }
                     }
                 }
             }
