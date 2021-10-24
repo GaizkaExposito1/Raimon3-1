@@ -79,12 +79,12 @@ class AccesoBd{
                          $userNew=new User($id,$dni, $email, 1,$cursoId,$username);
                         $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
                         //comprobar el dni de sanluis con el dni del user
-                        //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
-                        //while((mysqli_fetch_array($userCentro))!=null){
+                        $userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`alumnosanluis` where (`dni`='$dni')");
+                        while((mysqli_fetch_array($userCentro))!=null){
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','1','$cursoId','0');");
                         return "ok";
-                    //} return "no eres usuario del centro";
+                    } return "no eres usuario del centro";
                         
                 }
             }
