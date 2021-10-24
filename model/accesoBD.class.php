@@ -171,27 +171,34 @@ class AccesoBd{
                 if($pass!=$confPass){
                     return "las contraseñas no coinciden";
                 }else{
+                    $passBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`pass`='$pass')");
+                    while((mysqli_fetch_array($passBD))!=null){
+                        if($pass!=$passBD){
                     $hashPass=password_hash($pass, PASSWORD_BCRYPT);;
-                    $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`pass`='$hashPass') where (`id` = '$userId')");
+                    $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`pass`='$hashPass') where (`id` = '$userId')");}
+                    else{
+                        return "esa contraseña es la misma que la anterior";
+                    }
                 }
             }
             if(($email!=null||$email!='')){
                 $emailBD=$this->lanzarSQL("SELECT `email` from `kalpatarubd`.`users` where (`email`='$email')");
                 while((mysqli_fetch_array($emailBD))!=null){
+                    if($email!=$emailBD){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$email') where (`id` = '$userId')");}
-            }
+                else{return "ese email es el mismo que el anterior";}
+            }}
             if(($username!=null||$username!='')){
                 $usernameBD=$this->lanzarSQL("SELECT `username` from `kalpatarubd`.`users` where (`username`='$username')");
                 while((mysqli_fetch_array($usernameBD))!=null){
+                    if($username!=$usernameBD){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`email`='$username') where (`id` = '$userId')");}
-            }
+                else{return "ese nombre de usuario es el mismo que el anterior";}
+            }}
             return "ok";
         }
 
         function getUsersCurso($idCurso){
-            
-
-
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso'");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
@@ -204,7 +211,7 @@ class AccesoBd{
         }
 
         function getUsers(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='2'");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='3'");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -288,15 +295,6 @@ class AccesoBd{
         }
         }
 
-        function getNumPosit(){
-            $num=$this->lanzarSQL("SELECT count(*) from `kalpatarubd`.`mensajes` where (`forma`='post-it');");
-            return $num;
-        }
-
-        function getNumHojas(){
-            $num=$this->lanzarSQL("SELECT count(*) from `kalpatarubd`.`mensajes` where (`forma`='hoja');");
-            return $num;
-        }
 
         function getUserMensajes($userId){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`='$userId');");
@@ -304,7 +302,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -316,7 +314,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -328,7 +326,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -366,17 +364,12 @@ class AccesoBd{
                 }
             if($colorTipografia!=null){
                 $CTipoBD=$this->lanzarSQL("SELECT `colorTipografia` from `kalpatarubd`.`mensajes` where (`colorTipografia`='$colorTipografia')");
-                if($CTipoBD==null){
+                while((mysqli_fetch_array($CTipoBD))!=null){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`colorTipografia`='$colorTipografia') where (`id` = '$id')");}
             }
             if($color!=null){
                 $colorBD=$this->lanzarSQL("SELECT `color` from `kalpatarubd`.`mensajes` where (`color`='$color')");
-                if($colorBD==null){
-                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`color`='$color') where (`id` = '$id')");}
-            }
-            if($color!=null){
-                $colorBD=$this->lanzarSQL("SELECT `color` from `kalpatarubd`.`mensajes` where (`color`='$color')");
-                if($colorBD==null){
+                while((mysqli_fetch_array($colorBD))!=null){
                 $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`color`='$color') where (`id` = '$id')");}
             }
             return "ok";
@@ -402,7 +395,7 @@ class AccesoBd{
             for($i=0; $i<count($words);$i++){
                 for($j=0;$j<count($PF);$j++){
                     if($words[$i]==$PF[$j]){
-                        $palabra= $words[$i];
+                        $palabra= strtoupper($words[$i]);
                     }
                 } 
             }
@@ -413,7 +406,12 @@ class AccesoBd{
             if(($word==null)||($word=='')){
                 return "palabra en blanco";
             }else{
-                $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$word');");
+                $p=$this->lanzarSQL("SELECT * from `kalpatarubd`.`prefiltro` where (`palabra` = '$word')");
+                while((mysqli_fetch_array($p))!=null){
+                    return "palabra ya introducida";
+                }
+                $Uword=strtoupper($word);
+                $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$Uword');");
                 return "ok";
             }
         }
@@ -422,8 +420,12 @@ class AccesoBd{
             if($word==null){
                 return "palabra no seleccionada";
             }else{
-                $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$word');");
-                return "ok";
+                $p=$this->lanzarSQL("SELECT * from `kalpatarubd`.`prefiltro` where (`palabra` = '$word')");
+                while((mysqli_fetch_array($p))!=null){
+                    $this->lanzarSQL("INSERT INTO `kalpatarubd`.`prefiltro`(`palabra`) VALUES ('$word');");
+                    return "ok";
+                }
+                return "la palabra no ha sido introducida, para ser eliminada debe existir en el prefiltro";
             }
         }
 
@@ -447,5 +449,5 @@ class AccesoBd{
             
         }
     
-}
+    }
 ?>
