@@ -15,7 +15,7 @@ if(isset($_GET['section'])){
 <head>
     <meta charset="UTF-8">
     <title><?php echo $language["TITLE"]; ?></title>
-
+    <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
     <script src="./index.js"></script>

@@ -328,7 +328,7 @@ class AccesoBd{
         }
 
         function getUserMensajesApproved($userId){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`='null'));");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`!='null'));");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -340,7 +340,7 @@ class AccesoBd{
         }
 
         function getUserMensajesNotApproved($userId){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`!='null'));");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`='null'));");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
