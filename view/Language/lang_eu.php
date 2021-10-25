@@ -24,4 +24,26 @@ $language["DNI"] = "Nan";
 $language["CONF_PASS"] = "Pasahitza Baieztatu";
 $language["EMAIL"] = "Posta Elektronikoa";
 $language["CURSO"] = "Maila";
+//perfil y perfil admin
+$language["PERFIL"] = "Profila";
+$language["TXT_PERFIL"] = "Hemen editatu ahal izango duzu zure profila";
+$language["USUARIO_PERFIL"] = "Erabiltzailea : ERABILTZAILEAREN IZENA";
+$language["EMAIL_PERFIL"] = "Email: ERABILTZAILEAREN EMAILA";
+$language["CONTRA_PERFIL"] = "Pasahitza:  ";
+$language["CAMBIAR_CONTRA_PERFIL"] = "Aldatu Pasahitza";
+$language["CAMBIAR_USUARIO_PERFIL"] = "Aldatu Erabiltzailea";
+$language["CAMBIAR_EMAIL_PERFIL"] = "Aldatu Emaila";
+$language["MENSAJES_APROBADOS"] = "Onartutako Mezuak";
+$language["MENSAJES_DENEGADOS"] = "Ukartutako Mezuak";
+$language["VER_CONTRA_PERFIL"] = "Ikusi Pasahitza";
+$language["CONTRA_ES_PERFIL"] = "Zure kontuaren pasahitza:";
+$language["ANTIGUA_CONTRA_PERFIL"] = "Pasahitz Zaharra";
+$language["NEW_CONTRA_PERFIL"] = "Pasahitz Berria";
+$language["REPNEW_CONTRA_PERFIL"] = "Pasahitz Berria Errepikatu";
+$language["ANTIGUO_EMAIL_PERFIL"] = "Email Zaharra";
+$language["NEW_EMAIL_PERFIL"] = "Email Berria";
+$language["ANTIGUO_USERNAME_PERFIL"] = "Erabiltzailearen Izen Zaharra";
+$language["NEW_USERNAME_PERFIL"] = "Erabiltzailearen Izen Berria";
+
+
 ?>
