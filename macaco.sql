@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versión del servidor:         8.0.18 - MySQL Community Server - GPL
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             11.2.0.6213
+-- HeidiSQL Versión:             11.3.0.6295
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,6 +17,21 @@
 CREATE DATABASE IF NOT EXISTS `kalpatarubd` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `kalpatarubd`;
 
+-- Volcando estructura para tabla kalpatarubd.alumnosanluis
+CREATE TABLE IF NOT EXISTS `alumnosanluis` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `dni` varchar(50) DEFAULT NULL,
+  `idgrupo` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id-grupo` (`idgrupo`),
+  CONSTRAINT `id-grupo` FOREIGN KEY (`idgrupo`) REFERENCES `grupo` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla kalpatarubd.alumnosanluis: ~0 rows (aproximadamente)
+DELETE FROM `alumnosanluis`;
+/*!40000 ALTER TABLE `alumnosanluis` DISABLE KEYS */;
+/*!40000 ALTER TABLE `alumnosanluis` ENABLE KEYS */;
+
 -- Volcando estructura para tabla kalpatarubd.grupo
 CREATE TABLE IF NOT EXISTS `grupo` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
@@ -24,9 +39,10 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~22 rows (aproximadamente)
+DELETE FROM `grupo`;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
-REPLACE INTO `grupo` (`id`, `nombre`) VALUES
+INSERT INTO `grupo` (`id`, `nombre`) VALUES
 	(1, '1 Bachillerato Cientifico-Tecnologico'),
 	(2, '2 Bachillerato Cientifico-Tecnologico'),
 	(3, '1 Bachillerato de Ciencias Sociales'),
@@ -61,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   `colorTipografia` varchar(15) DEFAULT NULL,
   `forma` varchar(15) DEFAULT NULL,
   `texto` varchar(280) DEFAULT NULL,
-  `anonimo` tinyint(4) NOT NULL DEFAULT '0',
+  `anonimo` varchar(50) DEFAULT NULL,
   `numLikes` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `userid` (`userId`),
@@ -69,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla kalpatarubd.mensajes: ~0 rows (aproximadamente)
+DELETE FROM `mensajes`;
 /*!40000 ALTER TABLE `mensajes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `mensajes` ENABLE KEYS */;
 
@@ -80,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `prefiltro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla kalpatarubd.prefiltro: ~0 rows (aproximadamente)
+DELETE FROM `prefiltro`;
 /*!40000 ALTER TABLE `prefiltro` DISABLE KEYS */;
 /*!40000 ALTER TABLE `prefiltro` ENABLE KEYS */;
 
@@ -90,9 +108,10 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.roles: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.roles: ~0 rows (aproximadamente)
+DELETE FROM `roles`;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-REPLACE INTO `roles` (`id`, `rol`) VALUES
+INSERT INTO `roles` (`id`, `rol`) VALUES
 	(1, ' User'),
 	(2, 'Admin'),
 	(3, 'SuperAdmin');
@@ -119,9 +138,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `roles` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
+DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-REPLACE INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
+INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
 	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
