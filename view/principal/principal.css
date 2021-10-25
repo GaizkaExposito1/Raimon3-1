@@ -61,8 +61,7 @@ input#links{
 
 
 #imgArbol{
-
-    width: 56.6%;
+    width: 58.6%;
 
 
 }
@@ -93,7 +92,7 @@ input#links{
     position: absolute;
     display: inline-block;
     cursor: pointer;
-    transform: translate(37px, 69px);
+    transform: translate(40px, 58px);
     z-index: 1;
 }
 
@@ -109,13 +108,12 @@ input#links{
 }
 .btn4{
     position: absolute;
-    transform: translate(361px , 73px);
-
+    transform: translate(373px , 52px);
     z-index: 1;
 }
 .btn5{
     position: absolute;
-    transform: translate(441px , 140px);
+    transform: translate(452px , 123px);
     z-index: 1;
 }
 
@@ -127,72 +125,85 @@ input#links{
 
 .btn7{
     position: absolute;
-    transform: translate(-6px , 159px);
+    transform: translate(32px , 139px);
     z-index: 1;
 }
 .btn8{
     position: absolute;
-    transform: translate(-58px , 240px);
+    transform: translate(36px , 241px);
     z-index: 1;
 }
 .btn9{
     position: absolute;
-    transform: translate(84px, 114px);
+    transform: translate(93px, 210px);
     z-index: 1;
 
 }
+
 .btn10{  
     position: absolute;
-    transform: translate(41px, 175px);
+    transform: translate(154px, 193px);
     z-index: 1;
 
 }
-/*
+
 .btn11{
-    transform: translate(-313px, 255px);
+    position: absolute;
+    transform: translate(153px, 258px);
     z-index: 1;
 }
+
 .btn12{
-    transform: translate(-192px, 195px);
+    position: absolute;
+    transform: translate(319px, 206px);
     z-index: 1;
 }
+/*
 .btn13{
+    position: absolute;
     transform: translate(-215px, 364px);
    z-index: 1;
 }
+
 .btn14{
+    position: absolute;
     transform: translate(-212px, 232px);
     z-index: 1;
 }
 .btn15{
+    position: absolute;
     transform: translate(-593px, 361px);
     z-index: 1;
 }
 .btn16{
+    position: absolute;
     transform: translate(-602px, 417px);
     z-index: 1;
 }
 .btn17{
-  
+    position: absolute;
     transform: translate(-565px, 312px);
     z-index: 1;
 }
 .btn18{
+    position: absolute;
     transform: translate(-612px, 461px);
     z-index: 1;
 }
 .btn19{
+    position: absolute;
   transform: translate(-414px, 362px);
     z-index: 1;
 }
 
 .btn20{
+    position: absolute;
     transform: translate(43px, 495px);
     z-index: 1;
 }
 
 .btn21{
-  
+      position: absolute;  
     transform: translate(-565px, 312px);
     z-index: 1;
 }
