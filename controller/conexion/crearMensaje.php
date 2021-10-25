@@ -6,6 +6,8 @@ require_once "./model/clases/mensaje.class.php";
 $bd= new AccesoBd();
 //colecciones de datos necesarios
 
+//capado
+if(isset($_SESSION['usuario'])){
 //redireccion
-include "./view/crearMensaje/crearMensaje.php";
+include "./view/crearMensaje/crearMensaje.php";}
 ?>

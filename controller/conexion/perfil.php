@@ -5,6 +5,8 @@ require_once "./model/accesoBD.class.php";
 $bd= new AccesoBd();
 //colecciones de datos necesarios
 
+//capado
+if(isset($_SESSION['usuario'])){
 //redireccion
-include "./view/perfil/perfil.php";
+include "./view/perfil/perfil.php";}
 ?>

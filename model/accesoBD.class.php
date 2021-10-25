@@ -289,7 +289,13 @@ class AccesoBd{
             $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','$anonimo','0');");
             $bool=$this->hasTextWordInPrefiltro($texto);
             if($bool=="ok"){
-            $this->mensajeAprobarEmail();
+                $r=$this->lanzarSQL("SELECT max(`id`) from `kalpatarubd`.`mensajes`;");
+                while(($fila=mysqli_fetch_array($r))!=null){
+                    $id=$fila['id'];//??
+                    var_dump($id+1);
+                }
+                $sms=new Mensaje($id,$userId,null, $tipografia,$colorTipografia,$color,$texto,$anonimo,0);
+            $this->mensajeAprobarEmail($sms);
             return "ok";}else{
                 return "la palabra $bool no esta permitida, porfavor cambia el mensaje";
             }
@@ -303,7 +309,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -315,7 +321,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -327,7 +333,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -435,7 +441,46 @@ class AccesoBd{
 
         }
 
-        function mensajeAprobarEmail(){
+        function mensajeAprobarEmail($mensaje){
+            require "./controller/librerias/PHPMailer.php";
+    
+                //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
+                $email=new PHPMailer\PHPMailer\PHPMailer();
+                $email->isSMTP();//servidor
+                //$email->SMTPDenug();//salir trazas de error
+                $email->SMTPDebug=1;//errores y mensajes//2 solo mesnajes
+                $email->SMTPAuth=true;
+                $email->SMTPSecure= 'ssl';//para otro tipo de email k no es gmail->datos smtp tipo
+                $email->Host='smtp.gmail.com';
+                $email->Port='465';
+                //cuenta con la k el servidor va a enviar esto
+                $email->Username='retoraimon@gmail.com';
+                $email->Password='raimon3+1';
+                $email->From='retoraimon@gmail.com';
+                $email->FromName='Kalpataru';
+                $email->AddAddress('retoraimon@gmail.com');
+                $email->AddReplyTo('l.munoz.vazquez.38@gmail.com');
+                $email->IsHTML(true);//poder pner html y css en el correo
+                //$email->Subject="$subject"
+                $email->Subject="Creado deseo en Kalpataru";
+                $email->Body='
+                <body>
+                    <h1>Han enviado un deseo a revisión</h1>  
+                    <form>
+                        <label>Mensaje</label>'. $mensaje->text .'
+                        <button href="localhost/mikel/Raimon3-1/controller/Email/Acept.php&id='.$mensaje->id.'">Aceptar</button>
+                        <button href="localhost/mikel/Raimon3-1/controller/Email/Deny.php&id='.$mensaje->id.'">Denegar</button>
+                    </form>
+                </body>';
+                $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
+                if($email->Send()){
+                    //correo enviado
+                    echo "correo enviado en breve te responderemos";
+                }else{
+                    //error
+                    echo $email->ErrorInfo;
+                }
+               
 
         }
 

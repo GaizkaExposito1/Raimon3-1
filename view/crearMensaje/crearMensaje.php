@@ -10,7 +10,7 @@
 
 	  </div>
 	  <div class="right" id="right"> 
-	  <form action=""  method="post">
+	  <form action="./controller/actions/crearMensaje.php"  method="post">
 
 
 

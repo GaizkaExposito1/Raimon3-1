@@ -1,5 +1,6 @@
 <?php
 class Mensaje{
+    public $id;
     public $userId;
     public $activateToken;
     public $tipografia;
@@ -9,7 +10,8 @@ class Mensaje{
     public $anonimo;
     public $numLikes;
 
-    function __construct($userId, $activateToken, $tipografia,$color,$colorTipografia, $texto,$anonimo,$numLikes){
+    function __construct($id,$userId, $activateToken, $tipografia,$color,$colorTipografia, $texto,$anonimo,$numLikes){
+        $this->id=$id;
         $this->userId=$userId;
         $this->activateToken=$activateToken;
         $this->tipografia=$tipografia;

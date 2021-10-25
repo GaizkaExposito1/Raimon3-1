@@ -12,7 +12,7 @@
 
 	  </div>
 	  <div class="right" id="right"> 
-	  <form action=""  method="post">
+	  <form action="./controller/actions/editMensaje.php"  method="post">
 
 
 

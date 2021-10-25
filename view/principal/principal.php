@@ -79,10 +79,13 @@
         <span class="sr-only">Next</span>
     </a>
     <!-------Links para ir a otras paginas--------->
-    <div id="links">
-        <a href="index.php?section=crearMensaje"><button>Crear Mensaje</button></a>
-        <a href="index.php?section=mensajesAprobados"><button>Mensajes Aprobados</button></a>
-        <a href="index.php?section=mensajesNoAprobados"><button>Mensajes No Aprobados</button></a>
-    </div>
+    <?php
+    if(isset($_SESSION['usuario'])){
+    echo "<div id='links'>
+        <a href='index.php?section=crearMensaje'><button>Crear Mensaje</button></a>
+        <a href='index.php?section=mensajesAprobados'><button>Mensajes Aprobados</button></a>
+        <a href='index.php?section=mensajesNoAprobados'><button>Mensajes No Aprobados</button></a>
+    </div>";}
+    ?>
 </div>
 

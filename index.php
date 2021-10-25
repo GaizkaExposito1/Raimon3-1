@@ -49,9 +49,13 @@ if(isset($_GET['section'])){
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
       <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
-      <a  href="index.php?section=crearMensajes" id="CrearMensaje"><?php echo $language["NEW_MENSAJE"]; ?></a>
-      <a  href="index.php?section=verMensajesAprobados" id="VerMensajesAprobados"><?php echo $language["MENSAJES"]; ?></a>
-      <a  href="index.php?section=Administracion" id="Administracion"><?php echo $language["ADMIN"]; ?></a>
+      <?php
+      if(isset($_SESSION['usuario'])){
+      echo "<a  href='index.php?section=crearMensajes' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
+      <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>";
+      if($_SESSION['usuario']->rol==2){
+      echo"<a  href='index.php?section=Administracion' id='Administracion'> ". $language["ADMIN"] ."</a>";
+      }}?>
       <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>
       <a  href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
