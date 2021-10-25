@@ -1,7 +1,4 @@
 
-    <header>
-        <h2>Mensajes por Aprobados</h2>
-    </header>
     <section>
         <div>
             <?php 

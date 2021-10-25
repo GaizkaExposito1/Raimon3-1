@@ -27,3 +27,16 @@
             multiple = $this.hasClass('multiple-count');
       });
       */
+      function cambiarIdioma() {
+        let Es=document.getElementById("langFlagSpain");
+        let Eus=document.getElementById("langFlagBasque");
+        alert("HOlaaa");
+        if(Eus.style.display="none"){
+          Eus.style.display="inline";
+          Es.style.display="none";
+          alert("HOlaaa");
+        }else{
+          Eus.style.display="none";
+          Es.style.display="inline";
+        }
+      }

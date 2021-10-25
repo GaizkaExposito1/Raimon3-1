@@ -16,6 +16,13 @@ img#LogoCLSLarge {
   height: 12%;
   position: relative;
 }
+#langFlagSpain{
+  display: inline;
+ }
+#langFlagBasque{
+  display: none;
+  width: 12%;
+ }
 .topnav2 {
   overflow: hidden;
   background-color: rgba(187, 113, 199, 0.6);
