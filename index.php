@@ -17,8 +17,7 @@ if(isset($_GET['section'])){
     <title><?php echo $language["TITLE"]; ?></title>
     <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">    <script src="./index.js"></script>
     <link href="./view/<?php echo $param ?>/<?php echo $param ?>.css" rel="stylesheet" type="text/css">  <!--Css unicamente para cada contenido-->
     <script src="./jquery.min.js"></script>
     <script src="./view/<?php echo $param ?>/<?php echo $param ?>.js"></script>
