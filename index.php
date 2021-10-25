@@ -1,7 +1,8 @@
 <?php
+require_once "./model/clases/User.class.php";
 session_start();
 require_once "./controller/set_idioma.php";
-require_once "./model/clases/User.class.php";
+
 //contenido
 $param="principal";//por defecto
 if(isset($_GET['section'])){
