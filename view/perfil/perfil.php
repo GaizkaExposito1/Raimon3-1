@@ -53,21 +53,21 @@
 						<input type="password" id="NewEmail" name="newPass">
 						<label for="Contraseña"><?php echo $language["REPNEW_CONTRA_PERFIL"] ?></label>
 						<input type="password" id="repeatNewEmail" name="newConfpass">
-						<p><input type="submit" id="submit" value="Enviar"></p>
+						<p><input type="submit" id="submit" value="<?php echo $language['NEW_USERNAME_PERFIL'] ?>"></p>
 					</form>
 					<form action="" id="editarEmail" method="post">
 						<label for="email"><?php echo $language["ANTIGUO_EMAIL_PERFIL"] ?></label>
 						<input type="email" id="email">
 						<label for="email"><?php echo $language["NEW_EMAIL_PERFIL"] ?></label>
 						<input type="email" id="email" name="newEmail">
-						<p><input type="submit" id="submit" value="Enviar"></p>
+						<p><input type="submit" id="submit" value="<?php echo $language['NEW_USERNAME_PERFIL'] ?>"></p>
 					</form>
 					<form action="" id="editarUsername" method="post">
 						<label for="Username"><?php echo $language["ANTIGUO_USERNAME_PERFIL"] ?></label>
 						<input type="text" id="username">
 						<label for="Username"><?php echo $language["NEW_USERNAME_PERFIL"] ?></label>
 						<input type="text" id="username" name="newUsername">
-						<p><input type="submit" id="submit" value="Enviar"></p>
+						<p><input type="submit" id="submit" value="<?php echo $language['NEW_USERNAME_PERFIL'] ?>"></p>
 					</form>
 				</div>
 			</div>

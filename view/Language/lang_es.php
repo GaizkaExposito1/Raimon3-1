@@ -44,6 +44,20 @@ $language["ANTIGUO_EMAIL_PERFIL"] = "Antiguo Email";
 $language["NEW_EMAIL_PERFIL"] = "Nuevo Email";
 $language["ANTIGUO_USERNAME_PERFIL"] = "Antiguo Nombre de Usuario";
 $language["NEW_USERNAME_PERFIL"] = "Nuevo Nombre de Usuario";
-
+$language["ENVIAR"] = "Enviar";
+//mensajes curso
+$language["MSJ_X_CURSO"] = "Mensajes por Curso";
+//crear mensaje y editar mensaje
+$language["CREAR_MSJ"] = "Crear Mensaje";
+$language["EDITAR_MSJ"] = "Editar Mensaje";
+$language["TXT_CREAR_MSJ"] = "Aqui podras escribir tu mensaje";
+$language["TXT_EDITAR_MSJ"] = "Aqui podras editar tu mensaje";
+$language["PLACEHOLDER_CREAR_MSJ"] = "Escribe aqui tu Mensaje... (Max 280 caracteres)";
+$language["COLOR_LETRA"] = "Color Letra";
+$language["TIPOGRAFIA"] = "Tipografía";
+$language["COLOR_HOJA"] = "Color Hoja";
+$language["ANONIMO"] = "Anónimo";
+$language["NO_ANONIMO"] = "No Anónimo";
+$language["FORMA_HOJA"] = "Forma Hoja";
 
 ?>

@@ -10,7 +10,7 @@
 
     <section>
         <div class="page">
-            <h3 id="titulo">Mensajes por Curso</h3>
+            <h3 id="titulo"><?php echo $language["MSJ_X_CURSO"]; ?></h3>
             <div id="contenido">
                 
                 

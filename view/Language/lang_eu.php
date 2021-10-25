@@ -44,6 +44,20 @@ $language["ANTIGUO_EMAIL_PERFIL"] = "Email Zaharra";
 $language["NEW_EMAIL_PERFIL"] = "Email Berria";
 $language["ANTIGUO_USERNAME_PERFIL"] = "Erabiltzailearen Izen Zaharra";
 $language["NEW_USERNAME_PERFIL"] = "Erabiltzailearen Izen Berria";
-
+$language["ENVIAR"] = "Bidali";
+//mensajes curso
+$language["MSJ_X_CURSO"] = "Mezuak Ikastaroaren Arabera";
+//crear mensaje y editar mensaje
+$language["CREAR_MSJ"] = "Sortu Mezua";
+$language["EDITAR_MSJ"] = "Editatu Mezua";
+$language["TXT_CREAR_MSJ"] = "Hemen Idatzi Ahal Izango Duzu Zure Mezua";
+$language["TXT_EDITAR_MSJ"] = "Hemen Editatu Ahal Izango Duzu Zure Mezua";
+$language["PLACEHOLDER_CREAR_MSJ"] = "Idatzi hemen zure mezua... (Gehienez 280 karaktere)";
+$language["COLOR_LETRA"] = "Letra Kolore";
+$language["TIPOGRAFIA"] = "Tipografia";
+$language["COLOR_HOJA"] = "Orri Kolore";
+$language["ANONIMO"] = "Anonimoa";
+$language["NO_ANONIMO"] = "Ez Anonimoa";
+$language["FORMA_HOJA"] = "Orri Forma";
 
 ?>
