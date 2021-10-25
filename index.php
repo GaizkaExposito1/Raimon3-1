@@ -17,8 +17,7 @@ if(isset($_GET['section'])){
     <title><?php echo $language["TITLE"]; ?></title>
     <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--Iconos fas fa-->
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">    <script src="./index.js"></script>
     <link href="./view/<?php echo $param ?>/<?php echo $param ?>.css" rel="stylesheet" type="text/css">  <!--Css unicamente para cada contenido-->
     <script src="./jquery.min.js"></script>
     <script src="./view/<?php echo $param ?>/<?php echo $param ?>.js"></script>
@@ -51,13 +50,18 @@ if(isset($_GET['section'])){
       <img id="LogoCLSLarge" class="CSLlogo2" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
       <a href="index.php?section=<?php echo $param?>&lang=es"id="LangEs"><img id="langFlagSpain" onclick="cambiarIdioma()"  alt="Castellano" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/32px-Flag_of_Spain_%28Civil%29.svg.png"></a>
       <a href="index.php?section=<?php echo $param?>&lang=eu" id="LangEus"><img id="langFlagBasque" onclick="cambiarIdioma2()"  alt="Euskara" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_the_Basque_Country.svg"></a>
-      <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, si no esta registrado tendra que pasar por esta-->
+     <?php
+     if(isset($_SESSION['usuario'])){
+      echo"<a  href='index.php?section=perfil' id='Login'><i class='fas fa-user'></i></a>";
+     }else{
+      echo"<a  href='index.php?section=login' id='Login'><i class='fas fa-user'></i></a>";}
+      ?>
       <?php
       if(isset($_SESSION['usuario'])){
       echo "<a  href='index.php?section=crearMensajes' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
       <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>
       <a  href='index.php?section=logout' id='logout'> ". $language["LOGOUT"] ."</a>";
-      if($_SESSION['usuario']->rol==2){
+      if($_SESSION['usuario']->rol==2 || $_SESSION['usuario']->rol==1){
       echo"<a  href='index.php?section=Administracion' id='Administracion'> ". $language["ADMIN"] ."</a>";
       }}?>
       <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>

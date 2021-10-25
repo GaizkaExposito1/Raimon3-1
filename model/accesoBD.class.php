@@ -83,8 +83,8 @@ class AccesoBd{
                         while((mysqli_fetch_array($userCentro))!=null){
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','1','$cursoId','0');");
-                        return "ok";
-                    } return "no eres usuario del centro";
+                        return "ok";}
+                     return "no eres usuario del centro";
                         
                 }
             }
@@ -141,8 +141,8 @@ class AccesoBd{
             }
             else {
                 //campos no vacios-> hasear pass
-                $hashPass=password_hash($pass, PASSWORD_BCRYPT);
-                //$hashPass=$pass;
+               // $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                $hashPass=$pass;
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                while(($fila=mysqli_fetch_array($userOBT))!=null){
@@ -200,7 +200,7 @@ class AccesoBd{
         }
 
         function getUsersCurso($idCurso){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso'");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`curso`='$idCurso');");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -212,7 +212,7 @@ class AccesoBd{
         }
 
         function getUsers(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='3'");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='1');");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -287,18 +287,18 @@ class AccesoBd{
             }
             else{
             $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','$anonimo','0');");
-            $bool=$this->hasTextWordInPrefiltro($texto);
-            if($bool=="ok"){
-                $r=$this->lanzarSQL("SELECT max(`id`) from `kalpatarubd`.`mensajes`;");
+           /* $bool=$this->hasTextWordInPrefiltro($texto);
+            if($bool=="ok"){*/
+                $r=$this->lanzarSQL("SELECT max(`id`) as id from `kalpatarubd`.`mensajes`;");
                 while(($fila=mysqli_fetch_array($r))!=null){
-                    $id=$fila['id'];//??
-                    var_dump($id+1);
-                }
-                $sms=new Mensaje($id,$userId,null, $tipografia,$colorTipografia,$color,$texto,$anonimo,0);
+                   extract($fila);
+                   $Id=$id;
+               }
+                $sms=new Mensaje($Id,$userId,null, $tipografia,$colorTipografia,$color,$texto,$anonimo,0);
             $this->mensajeAprobarEmail($sms);
-            return "ok";}else{
+            return "ok";/*}else{
                 return "la palabra $bool no esta permitida, porfavor cambia el mensaje";
-            }
+            }*/
         }
         }
 
@@ -382,6 +382,11 @@ class AccesoBd{
             return "ok";
         }
 
+        function aceptarMensaje($id){
+            $token=md5(uniqid(Rand(), true));
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`activateToken`='$token') where (`id` = '$id')");
+        }
+
         //Prefiltro
         function getPrefiltro(){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`prefiltro`;");
@@ -442,8 +447,6 @@ class AccesoBd{
         }
 
         function mensajeAprobarEmail($mensaje){
-            require "./controller/librerias/PHPMailer.php";
-    
                 //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
                 $email=new PHPMailer\PHPMailer\PHPMailer();
                 $email->isSMTP();//servidor
@@ -458,7 +461,7 @@ class AccesoBd{
                 $email->Password='raimon3+1';
                 $email->From='retoraimon@gmail.com';
                 $email->FromName='Kalpataru';
-                $email->AddAddress('retoraimon@gmail.com');
+                $email->AddAddress('l.munoz.vazquez.38@gmail.com');
                 $email->AddReplyTo('l.munoz.vazquez.38@gmail.com');
                 $email->IsHTML(true);//poder pner html y css en el correo
                 //$email->Subject="$subject"
@@ -467,9 +470,9 @@ class AccesoBd{
                 <body>
                     <h1>Han enviado un deseo a revisión</h1>  
                     <form>
-                        <label>Mensaje</label>'. $mensaje->text .'
-                        <button href="localhost/mikel/Raimon3-1/controller/Email/Acept.php&id='.$mensaje->id.'">Aceptar</button>
-                        <button href="localhost/mikel/Raimon3-1/controller/Email/Deny.php&id='.$mensaje->id.'">Denegar</button>
+                        <label>Mensaje: </label>'. $mensaje->texto .'
+                        <a href="172.26.14.18/mikel/Raimon3-1/controller/Email/Acept.php&id='.$mensaje->id.'">Aceptar</a>
+                        <a href="www.localhost/mikel/Raimon3-1/controller/Email/Deny.php&id='.$mensaje->id.'">Denegar</a>
                     </form>
                 </body>';
                 $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
