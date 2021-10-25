@@ -4,6 +4,7 @@ $language["TITLE"] = "Kalpataru | Arbol de los deseos";
 $language["NOTICIAS"] = "Noticias";
 $language["INTRANET"] = "Intranet";
 $language["MOODLE"] = "Moodle";
+$language["LOGOUT"] = "Salir";
 $language["ACC_ALUMNADO"] = "Acceso Alumnado";
 $language["NEW_MENSAJE"] = "Nuevo Mensaje";
 $language["MENSAJES"] = "Ver mensajes aprobados";

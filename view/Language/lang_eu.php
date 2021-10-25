@@ -4,6 +4,7 @@ $language["TITLE"] = "Kalpataru | Desioen zuhaitza";
 $language["NOTICIAS"] = "Albisteak";
 $language["INTRANET"] = "Intranet";
 $language["MOODLE"] = "Moodle";
+$language["LOGOUT"] = "Itxi";
 $language["ACC_ALUMNADO"] = "Ikaslearen Arloa";
 $language["NEW_MENSAJE"] = "Mezu Berria";
 $language["MENSAJES"] = "Ikusi Gainditu Mezua";
