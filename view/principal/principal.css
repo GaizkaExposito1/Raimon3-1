@@ -1,6 +1,6 @@
 
 body{
-    background-color: #c6a9d1 !important;
+    background-color: #F3E5F5  !important;
 }
 
 h1{
@@ -49,6 +49,11 @@ select {
 }
 input#links{
     margin: 2%;
+}
+
+#imgArbol{
+width: 50%;
+
 }
 
 /*Botones que te llevan al curso*/

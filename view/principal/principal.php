@@ -9,17 +9,11 @@
 						echo "<option value='cursos'>$grupos[$i]</option>";
 					}
 					?>
-                    <!--No os asusteis esto es prueba-->
-	</select>
-         <select name="Selectsms" id="Selectsms" >
-        <option value="curso" disabled selected> Curso</option>
-        <option value="puto1" >putoo</option>
-        <option value="puto2">putoo22</option>
-    </select>
+     </select>
 
     <!--Imagen del Arbol-->   
     <div>
-        <img src="../assets/Arbol.png" alt="" >
+        <img id="imgArbol" src="/Raimon3-1/view/assets/arbol.png" alt="" >
     </div>
 
     <!---30 Botones-->
