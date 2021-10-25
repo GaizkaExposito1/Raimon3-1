@@ -1,6 +1,6 @@
 
 body{
-    background-color: #c6a9d1 !important;
+    background-color: #F3E5F5  !important;
 }
 
 h1{
@@ -24,6 +24,7 @@ select {
     position: absolute;
     width: 40%;
     height: 15em;
+    left: 27%;
     margin-left: 70%;
     background: -webkit-linear-gradient(to right, #b882ce, #5fa1ca);
     background: linear-gradient(to right, #b882ce, #5fa1ca);
@@ -50,6 +51,11 @@ input#links{
     margin: 2%;
 }
 
+#imgArbol{
+width: 50%;
+
+}
+
 /*Botones que te llevan al curso*/
 /*
 .boton_curso{
@@ -68,7 +74,9 @@ input#links{
     border-radius:0px;
 }
 */
-
+#mensajeNoAprobados, #mensajeAprobados, #crearMensaje{
+    width: 100%;
+}
 
 .btnMostrar{
     position: relative;

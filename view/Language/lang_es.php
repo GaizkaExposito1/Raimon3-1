@@ -8,6 +8,7 @@ $language["LOGOUT"] = "Salir";
 $language["ACC_ALUMNADO"] = "Acceso Alumnado";
 $language["NEW_MENSAJE"] = "Nuevo Mensaje";
 $language["MENSAJES"] = "Ver mensajes aprobados";
+$language["LOGOUT"] = "Cerrar sesion";
 $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
 //login
@@ -24,4 +25,26 @@ $language["DNI"] = "Dni";
 $language["CONF_PASS"] = "Confirmar Contraseña";
 $language["EMAIL"] = "Correo Electrónico";
 $language["CURSO"] = "Curso";
+//perfil y perfil admin
+$language["PERFIL"] = "Perfil";
+$language["TXT_PERFIL"] = "Aquí podras editar tu perfil";
+$language["USUARIO_PERFIL"] = "Usuario : NOMBREUSUARIO";
+$language["EMAIL_PERFIL"] = "Email: EMAILUSUARIO";
+$language["CONTRA_PERFIL"] = "Contraseña:  ";
+$language["CAMBIAR_CONTRA_PERFIL"] = "Cambiar Contraseña";
+$language["CAMBIAR_USUARIO_PERFIL"] = "Cambiar Usuario";
+$language["CAMBIAR_EMAIL_PERFIL"] = "Cambiar Email";
+$language["MENSAJES_APROBADOS"] = "Mensajes Aprobados";
+$language["MENSAJES_DENEGADOS"] = "Mensajes Denegados";
+$language["VER_CONTRA_PERFIL"] = "Ver Contraseña";
+$language["CONTRA_ES_PERFIL"] = "La contraseña de tu cuenta es:";
+$language["ANTIGUA_CONTRA_PERFIL"] = "Antigua Contraseña";
+$language["NEW_CONTRA_PERFIL"] = "Nueva Contraseña";
+$language["REPNEW_CONTRA_PERFIL"] = "Repetir Nueva Contraseña";
+$language["ANTIGUO_EMAIL_PERFIL"] = "Antiguo Email";
+$language["NEW_EMAIL_PERFIL"] = "Nuevo Email";
+$language["ANTIGUO_USERNAME_PERFIL"] = "Antiguo Nombre de Usuario";
+$language["NEW_USERNAME_PERFIL"] = "Nuevo Nombre de Usuario";
+
+
 ?>
