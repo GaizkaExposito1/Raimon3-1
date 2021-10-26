@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     $param=$_GET['id'];
 }
 if($param!="acept"){
-$bd->aceptarMensaje($param);
+$bd->deleteMensaje($param, $_SESSION['usuario']->id);
 }
+header("Location: ../../index.php?section=administracion");
 ?>
-<h1>mensaje aprobado</h1>

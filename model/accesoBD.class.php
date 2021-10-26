@@ -245,6 +245,18 @@ class AccesoBd{
             return $users;
         }
 
+        function getNotBannedUsers(){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`banned`='0'");
+            $users=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
+                $users[]=$user;
+            }
+            return $users;
+        }
+
         function getUserRol($rol){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`rol`='$rol'");
             $users=array();
@@ -339,6 +351,18 @@ class AccesoBd{
 
         function getUserMensajesNotApproved($userId){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where ((`userId`='$userId') and (`activateToken`='null'));");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
+        }
+
+        function getMensajesNotApproved(){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where  (`activateToken`='null');");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']

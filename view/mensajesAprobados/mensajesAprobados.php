@@ -1,12 +1,16 @@
 
     <section>
         <div>
+            <ul>
             <?php 
-                echo "<ul>";
+            if(empty($sms)){
+                echo "<h1>No hay mensajes aprobados todavia</h1>";
+            }else{
                     foreach ($sms as $mensajeApr) {
-                        echo "<li>".$mensajeApr."</li>";
+                        echo "<li>v<a href='eliminar.php?id=".$mensajeApr->id."'>Eliminar Mensaje</a></li>";
                     }
-                echo "</ul>";
+            }
             ?>
+            </ul>
         </div>
     </section>

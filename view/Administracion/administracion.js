@@ -34,3 +34,13 @@ $(document).ready(function(){
 
 
 });
+$('#aceptms').click(function(){
+    $('#mensajes').attr('action', 'controller/actions/Acept.php');
+    $('#mensajes').submit();
+ });
+ 
+ 
+ $('#denyms').click(function(){
+    $('#mensajes').attr('action', 'controller/actions/Deny.php');
+    $('#mensajes').submit();
+ });

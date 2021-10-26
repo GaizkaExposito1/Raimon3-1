@@ -4,10 +4,12 @@ require_once "./model/accesoBD.class.php";
 //accesobd
 $bd= new AccesoBd();
 //colecciones de datos necesarios
-
+$usersNB=$bd->getNotBannedUsers();
+$usersB=$bd->getBannedUsers();
+$sms=$bd->getMensajesNotApproved();
 //capado
 if(isset($_SESSION['usuario'])){
     if($_SESSION['usuario']->rol==2){
 //redireccion
-include "./view/administracion/administracion.php";}}
+include "./view/Administracion/administracion.php";}}
 ?>

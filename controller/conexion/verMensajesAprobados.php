@@ -7,6 +7,7 @@ $bd= new AccesoBd();
 //colecciones de datos necesarios
 $user= $_SESSION['usuario'];
 $sms=$bd->getUserMensajesApproved($user->id);
+
 //capado
 if(isset($_SESSION['usuario'])){
 //redireccion
