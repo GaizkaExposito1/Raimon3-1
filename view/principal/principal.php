@@ -1,8 +1,8 @@
 <h1>Árbol de los deseos <span>&#127810;</span></h1>
 <!----------------------------------------------------------------------->
-<div class="carouseandSelect">
+ <div class="carouseandSelect">
 
-<select name="select" >
+  <select name="select" >
 					<option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
 					<?php 
 					for ($i=0; $i < count($grupos); $i++) { 
@@ -37,7 +37,6 @@
         <button class="btn5">
             ook!
         </button>  
-        
         <button class="btn6">
             ook!
         </button>
@@ -118,13 +117,15 @@
         </button> 
         
         
-          <button class="btn30">
-              ook!
-          </button> 
-          <button class="btn31">
-              ook!
-          </button> 
-                
+        <button class="btn30">
+            ook!
+        </button> 
+        <!--
+        <button class="btn31">
+            ook!
+        </button> 
+        
+                -->       
             
     </div>
   

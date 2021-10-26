@@ -10,18 +10,13 @@ select{
    margin-left: 9%;
     width: 35%;
     margin: 5%;
-  /*  transform: translateX(100px);*/
-
 }
+
 .carouseandSelect{
     display: flex;
     flex-direction: column;
     width: 70%;
     position: absolute;
-}
-.principalSC{
-    width: 50%;
-    position: relative;
 }
 #myCarousel{
     position: absolute;
@@ -30,45 +25,29 @@ select{
     height: 17em ;
     left: 4% ;
     margin-left: 90%;
-    background: url(../assets/HojaOto.jpg);
-    /*
+    background: url(../assets/HojaOto.jpg);  
+}
+#links{
+    width:50%;
+    margin: 23%;
+    margin-top: 39%;
+}
+ /*
     background: -webkit-linear-gradient(to right, #b882ce, #5fa1ca);
     background: linear-gradient(to right, #b882ce, #5fa1ca);
     */
-    
-}
+    /*mensaje del deseo--> ahora es un lorem*/
 .mensaje{
     color: black;
     margin-top: 8%;
     margin-top: 22%;
     text-align: center;
 }
-
-/*Boton de like*/
+/*Corazon de like*/
 .btn-counter span{
     color: #ff0000;
     margin-left: 20%;
 }
-/*links de crear mensajes,mensajes aprobados,no aprobados*/
-#links{
-    width: 50%;
-    margin: 10%;
-    height: 15em;
-}
-input#links{
-    margin: 2%;
-}
-
-
-
-#imgArbol{
-    width: 58.6%;
-
-
-
-}
-
-/*Botones que te llevan al curso*/
 
 .boton_curso{
     text-decoration: none;
@@ -86,158 +65,186 @@ input#links{
     border-radius:0px;
 }
 
-#mensajeNoAprobados, #mensajeAprobados, #crearMensaje{
+#mensajeNoAprobados,
+ #mensajeAprobados, 
+ #crearMensaje{
     width: 100%;
 }
+
+
+#imgArbol{
+    width: 49%;
+}
+
 /*Botones del arbol*/
 .btn1{
     position: relative;
     display: inline-block;
     cursor: pointer;
-    top: 59px;
-    left: 35px;
+    top: 55px;
+    left: 36px;
 }
 
 .btn2{
     position: relative;
-    top: 81px;
-    left: 58px;
+    top: 74px;
+left: 51px;
 }
 .btn3{
     position: relative;
-    top: 86px;
-    left: 98px;
+    top: 76px;
+    left: 90px;
 }
-/*
+
 .btn4{
-    position: absolute;
-    transform: translate(373px , 52px);
-    z-index: 1;
+    position: relative;
+    top: 68px;
+left: 196px;
+    
 }
 .btn5{
-    position: absolute;
-    transform: translate(452px , 123px);
-    z-index: 1;
+    position: relative;
+    top: 197px;
+left: -144px;
 }
 
 .btn6{
-    position: absolute;
-   transform:  translate(441px , 195px);
-    z-index: 1;
+    position: relative;
+    top: 184px;
+    left: -135px;
+ 
 }
-
 .btn7{
-    position: absolute;
-    transform: translate(32px , 139px);
-    z-index: 1;
+    position: relative;
+    top: 175px;
+    left: -123px;
 }
 .btn8{
-    position: absolute;
-    transform: translate(36px , 241px);
-    z-index: 1;
+    position: relative;
+    top: 118px;
+left: 88px;
 }
 .btn9{
-    position: absolute;
-    transform: translate(93px, 210px);
-    z-index: 1;
-
+    position: relative;
+    top: 170px;
+    left: 67px;
 }
-
-.btn10{  
-    position: absolute;
-    transform: translate(154px, 193px);
-    z-index: 1;
-
+.btn10{
+    position: relative;
+    top: 228px;
+    left: -240px;
 }
-
 .btn11{
-    position: absolute;
-    transform: translate(153px, 258px);
-    z-index: 1;
+    position: relative;
+    top: 194px;
+    left: -139px;
 }
-
 .btn12{
-    position: absolute;
-    transform: translate(319px, 206px);
-    z-index: 1;
+    position: relative;
+    top: 324px; 
+    left: -161px;
 }
-
 .btn13{
-    position: absolute;
-    transform: translate(337px, 364px);
-    z-index: 1;
+    position: relative;
+    top: 206px;
+    left: -179px;
 }
-
 .btn14{
-    position: absolute;
-    transform: translate(386px, 229px);
-    z-index: 1;
+    position: relative;
+    top: 323px;
+left: -505px;
 }
-
 .btn15{
-    position: absolute;
-    transform: translate(54px, 356px);
-    z-index: 1;
+    position: relative;
+    top: 373px;
+left: -509px;
 }
 .btn16{
-    position: absolute;
-    transform: translate(87px, 415px);
-    z-index: 1;
+    position: relative;
+    top: 281px;
+    left: -478px;
 }
-
 .btn17{
-    position: absolute;
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 417px;
+    left: -520px;
 }
 .btn18{
-    position: absolute;
-    transform: translate(-612px, 461px);
-    z-index: 1;
+    position: relative;
+    top: 332px;
+left: -347px;
 }
 .btn19{
-    position: absolute;
-  transform: translate(-414px, 362px);
-    z-index: 1;
+    position: relative;
+    top: 389px;
+left: -373px;
 }
-
 .btn20{
-    position: absolute;
-    transform: translate(43px, 495px);
-    z-index: 1;
+    position: relative;
+    top: 449px;
+    left: -760px;
 }
-
 .btn21{
-      position: absolute;  
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 486px;
+    left: -760px;
 }
 .btn22{
-      position: absolute;  
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 471px;
+   left: 155px;
 }
 .btn23{
-      position: absolute;  
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 407px;
+left: 313px;
 }
 .btn24{
-      position: absolute;  
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 465px;
+    left: 203px;
 }
 .btn25{
-      position: absolute;  
-    transform: translate(-565px, 312px);
-    z-index: 1;
+    position: relative;
+    top: 506px;
+left: -19px;
 }
-*/
+.btn26{
+    position: relative;
+    top: 442px;
+left: 203px;
+}
+.btn27{
+    position: relative;
+    top: 524px;
+    left: 123px;
+}
+.btn28{
+    position: relative;
+    top: 574px;
+    left: -190px;
+}
+.btn29{
+    
+    position: relative;
+top: 544px;
+left: -7px;
+}
+.btn30{
+    position: relative;
+    top: 594px;
+left: -35px;
+}
+/*
+.btn31{
+    position: relative;
+    top: 524px;
+    left: 123px;
+}*/
 
 
 
 /* Mensaje actual */
-
 .btn1 .mensajeUsuario {
     visibility: hidden;
     width: 160px;
@@ -254,7 +261,6 @@ input#links{
 }
 
 /* Muestra el deseo del usuario*/
-
 .btn1 .mensajeUsuario::after {
     content: "";
     position: absolute;
@@ -285,6 +291,8 @@ input#links{
     to {opacity:1 ;}
 }
 
+
+/*
 @media  screen and (min-width: 360px){
 body{
     margin: 0%;
@@ -531,4 +539,4 @@ select{
 
 }
 
-
+*/
