@@ -46,9 +46,13 @@ unicamente para cada contenido-->
     
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
-      <a  href="index.php?section=login" id="Login"><i class="fas fa-user"></i></a><!-- Login = a la pag de login, 
+      <?php if(isset($_SESSION['usuario'])){
+      echo"<a  href='index.php?section=perfil' id='Login'><i class='fas fa-user'></i></a>";}
+      else{
+        echo"<a  href='index.php?section=login' id='Login'><i class='fas fa-user'></i></a>";
+      }
+      ?>
 
-si no esta registrado tendra que pasar por esta-->
       <?php
       if(isset($_SESSION['usuario'])){
       echo "<a  href='index.php?section=crearMensaje' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
