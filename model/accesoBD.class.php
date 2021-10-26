@@ -327,6 +327,17 @@ class AccesoBd{
         }
         }
 
+        function getTop10Mensajes(){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where top10 max numlikes ;");
+            $sms=array();
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
+                $sms[]=$mens;
+            }
+            return $sms;
+        }
 
         function getUsernameFromUserId($userId){
             $userOBT= $this->lanzarSQL("SELECT 'username' from `kalpatarubd`.`users` where (`id` = '$userId')");
