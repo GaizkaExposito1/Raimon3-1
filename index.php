@@ -1,3 +1,4 @@
+
 <?php
 require_once "./model/clases/User.class.php";
 session_start();
@@ -46,6 +47,7 @@ unicamente para cada contenido-->
     
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
+      
       <?php if(isset($_SESSION['usuario'])){
       echo"<a  href='index.php?section=perfil' id='Login'><i class='fas fa-user'></i></a>";}
       else{
