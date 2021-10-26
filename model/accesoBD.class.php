@@ -76,7 +76,7 @@ class AccesoBd{
                         //hash contraseña
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
-                         $userNew=new User($id,$dni, $email, 1,$cursoId,$username);
+                         $userNew=new User($id,$dni, $email, 1,$cursoId,$username,0);
                         //Introducir algo en la sesion
                         //comprobar el dni de sanluis con el dni del user
                         $userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`alumnosanluis` where (`dni`='$dni')");
@@ -148,7 +148,7 @@ class AccesoBd{
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                while(($fila=mysqli_fetch_array($userOBT))!=null){
                    extract($fila);
-                $usuario=new User($id,$dni, $email, $rol,$curso,$username);
+                $usuario=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
                     $_SESSION['usuario']=$usuario; //Introducir algo en la sesion
                     return "ok";
                 }
@@ -206,7 +206,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($id,$dni, $email, $rol,$curso,$username);
+                $user=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
                 $users[]=$user;
             }
             return $users;
@@ -225,33 +225,33 @@ class AccesoBd{
         }
         
         function banUser($userId){
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`banned`='1') where (`id` = '$userId')");
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='1') where (`id` = '$userId')");
             return "ok";
         }
 
         function UnbanUser($userId){
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`banned`='0') where (`id` = '$userId')");
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='0') where (`id` = '$userId')");
         }
 
         function getBannedUsers(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`banned`='1'");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`Banned`='1');");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($dni, $email, $rol,$curso,$imgUser,$username,$Banned);
                 $users[]=$user;
             }
             return $users;
         }
 
         function getNotBannedUsers(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`banned`='0'");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`Banned`='0');");
             $users=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
                 $users[]=$user;
             }
             return $users;
@@ -263,7 +263,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $email, $rol,$curso,$imgUser,$username);
+                $user=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
                 $users[]=$user;
             }
             return $users;
@@ -312,6 +312,15 @@ class AccesoBd{
         }
         }
 
+
+        function getUsernameFromUserId($userId){
+            $userOBT= $this->lanzarSQL("SELECT 'username' from `kalpatarubd`.`users` where (`id` = '$userId')");
+               while(($fila=mysqli_fetch_array($userOBT))!=null){
+                   extract($fila);
+                $usuario=$username;
+                    return $usuario;
+                }
+        }
 
         function getUserMensajes($userId){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`='$userId');");

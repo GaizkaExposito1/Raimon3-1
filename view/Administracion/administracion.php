@@ -10,15 +10,16 @@
 
 		</div>
 		<div class="right" id="right">
-			<!--sacar lista de usuarios, botones de banear y desbanear -->
-			<!--sacar lista de mensajes no aprob y botones de aceptar y denegar-->
 			<form action="./controller/actions/banear.php"  method="post">
 				<select name="UsersNB" >
 						<option value="usersNoBaneados" disabled selected><?php echo $language["UsersNB"]; ?> </option>
 						<?php 
+						if(empty($usersNB)){
+							echo "<option value='NO'>No hay usuarios baneados</option>";
+						}else{
 						for ($i=0; $i < count($usersNB); $i++) { 
 							echo "<option value='".$usersNB[$i]->id."'>".$usersNB[$i]->username."</option>";
-						}
+						}}
 						?>
 					</select>
 					<input type="submit" id="aceptar" value="<?php echo $language["BANEAR"]; ?>">
@@ -27,9 +28,12 @@
 				<select name="UsersB" >
 						<option value="usersBaneados" disabled selected><?php echo $language["UsersB"]; ?> </option>
 						<?php 
+						if(empty($usersB)){
+							echo "<option value='NO'>No quedan usuarios sin banear</option>";
+						}else{
 						for ($i=0; $i < count($usersB); $i++) { 
 							echo "<option value='".$usersB[$i]->id."'>".$usersB[$i]->username."</option>";
-						}
+						}}
 						?>
 					</select>
 					<input type="submit" id="aceptar" value="<?php echo $language["DESBANEAR"]; ?>">

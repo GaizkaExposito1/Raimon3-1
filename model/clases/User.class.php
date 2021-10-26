@@ -7,15 +7,15 @@ class User{
     public $curso;
    // public $imgUser;
     public $username;
-    //baneo??
+    public $Banned;
 
-    function __construct($id,$dni,$email,$rol,$curso,/*$imgUser,*/$username){
+    function __construct($id,$dni,$email,$rol,$curso,$username,$Banned){
         $this->dni=$dni;
         $this->id=$id;
         $this->email=$email;
         $this->rol=$rol;
         $this->curso=$curso;
-        //$this->imgUser=$imgUser;
+        $this->Banned=$Banned;
         $this->username=$username;
        
     }

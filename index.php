@@ -54,7 +54,7 @@ si no esta registrado tendra que pasar por esta-->
       echo "<a  href='index.php?section=crearMensaje' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
       <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>
       <a  href='index.php?section=logout' id='logout'> ". $language["LOGOUT"] ."</a>";
-      if($_SESSION['usuario']->rol==2){
+      if($_SESSION['usuario']->rol==2||$_SESSION['usuario']->rol==3){
       echo"<a  href='index.php?section=Administracion' id='Administracion'> ". $language["ADMIN"] ."</a>";
       }}?>
       <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>
