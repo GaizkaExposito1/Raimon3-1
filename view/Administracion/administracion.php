@@ -1,3 +1,11 @@
+<?php
+if(isset($_GET['error'])){
+	$param=$_GET['error'];
+		echo "<script>$( document ).ready(function() {
+			$('#alert').alert('toggle')
+		});</script>";
+}
+?>
 <article>
 <div class="page">
 	<div class="container">
@@ -72,18 +80,10 @@
 	</div>
 </div>
 </article>
-
-
-
-<!--
-	datos perfil tic
-camios de perfil (foto, contraseña, email, username) tic
-enlace para ver mensajes aprobados 
-enlace para ver mensajes no aprobados
-------------------------
-rol=2
-crear Admins
-banear users**
-lista users baneados 
-unban user **
--->
+<!--alert-->
+<div id="alert" class="alert alert-danger" role="alert">
+		<?php
+			$er=str_replace("%"," ",$param);
+			echo $er;
+		?>
+</div>
