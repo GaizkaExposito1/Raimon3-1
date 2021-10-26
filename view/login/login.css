@@ -65,11 +65,13 @@ body {
   color: #F1F1F2;
   position: relative;
   width: 50%;
-  margin-bottom: 0%;
+  margin-bottom: -3%;
 }
 form {
-  margin: 40px;
-  position: absolute;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  /* position: absolute; */
 }
 select{
   font-family: 'JetBrains Mono', monospace;
@@ -116,7 +118,8 @@ input[type="submit"] {
   height: 30px;
   line-height: 30px;
   outline: none;
-  width: 100%;
+
+  margin-top: 20px;
   border-radius: 10px;
   background-color: #EDE7F6;
   color: #707075;
@@ -127,6 +130,21 @@ input[type="button"] {
   width: 60%;
   border-radius: 10px;
   background-color: #EDE7F6;
+}
+#Register{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 0;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5%;
+    outline: none;
+    width: 82%;
+    border-radius: 10px;
+    background-color: #EDE7F6;
+    color: #707075;
 }
 @media  screen and (min-width: 10px) and (max-width: 1000px){
     .left {
