@@ -1,8 +1,8 @@
 function mostrarCaja() {
     let MostrarForm = document.getElementById("right");
-    let cambiarTamañoLeft = document.getElementById("left");
+    let cambiarTamañoContenido = document.getElementById("container");
     let ocultarBoton = document.getElementById("mostrar");
     MostrarForm.style.visibility="visible";
-    cambiarTamañoLeft.style.height="88%";
+    cambiarTamañoContenido.style.height="38em";
     ocultarBoton.style.visibility="";
 }
