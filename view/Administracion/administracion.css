@@ -6,7 +6,7 @@
 /*font-family: 'Josefin Sans', sans-serif;*/
 /*    font-family: 'JetBrains Mono', monospace;*/
 
-
+/*
 body {
   background: #EDE7F6;
   margin: 0;
@@ -39,8 +39,8 @@ body {
   font-size: 50px;
   font-weight: 900;
   text-align: center;
-  margin: 132px 29px 33px; /*Centrar la caja izquierda */
-}
+  margin: 132px 29px 33px; /*Centrar la caja izquierda *//*
+}*//*
 .eula {
   font-family: 'JetBrains Mono', monospace;
   color: #999;
@@ -166,8 +166,8 @@ input[type="button"] {
   width: 60%;
   border-radius: 10px;
   background-color: #EDE7F6;
-}
-/*ALERT MODAL BOOSTRAP*/
+}*/
+/*ALERT MODAL BOOSTRAP*//*
 .btn.btn-secondary{
   color:#B39DDB !important ;
   background-color: transparent !important;
@@ -365,4 +365,4 @@ input[type="button"] {
     background-color: transparent;
     border: 0;
   }
-}
+}*/

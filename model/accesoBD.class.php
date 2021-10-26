@@ -321,6 +321,14 @@ class AccesoBd{
                     return $usuario;
                 }
         }
+        function getCursoFromId($id){
+            $userOBT= $this->lanzarSQL("SELECT 'nombre' from `kalpatarubd`.`grupo` where (`id` = '$id')");
+               while(($fila=mysqli_fetch_array($userOBT))!=null){
+                   extract($fila);
+                $curso=$nombre;
+                    return $curso;
+                }
+        }
 
         function getUserMensajes($userId){
             $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where(`userId`='$userId');");
