@@ -11,7 +11,10 @@ $usersB=$bd->getBannedUsers();
 $sms=$bd->getMensajesNotApproved();
 //capado
 if(isset($_SESSION['usuario'])){
-    if($_SESSION['usuario']->rol==2){
+    if($_SESSION['usuario']->rol==2||$_SESSION['usuario']->rol==3){
 //redireccion
 include "./view/Administracion/administracion.php";}}
+else{
+    include "./view/principal/principal.php";}
+
 ?>

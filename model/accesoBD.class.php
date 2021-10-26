@@ -372,7 +372,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -384,7 +384,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -392,9 +392,20 @@ class AccesoBd{
 
         function deleteMensaje($id, $userId){
             $sms=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (`id`='$id');");
+            while(($fila=mysqli_fetch_array($sms))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
+            }
             $u=$this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`id` = '$userId')");
-            if($sms->userId==$userId || $u->rol==2 || $u->rol==3){
+            while(($fila=mysqli_fetch_array($u))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
+            }
+            if($id==$user->id || $user->rol==2 || $user->rol==3){
             $this->lanzarSQL("DELETE from `kalpatarubd`.`mensajes` where (`id`='$id');");
+            $this->mensajeEmailEliminado($user->email,$mens);
             return "ok";}
             else{
                 return "no tienes permiso para borrar este mensaje";
@@ -481,8 +492,39 @@ class AccesoBd{
         }
 
         //Emails
-        function recordarPassEmail(){
-
+        function mensajeEmailEliminado($email,$mensaje){
+             //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
+             $email=new PHPMailer\PHPMailer\PHPMailer();
+             $email->isSMTP();//servidor
+             //$email->SMTPDenug();//salir trazas de error
+             $email->SMTPDebug=1;//errores y mensajes//2 solo mesnajes
+             $email->SMTPAuth=true;
+             $email->SMTPSecure= 'ssl';//para otro tipo de email k no es gmail->datos smtp tipo
+             $email->Host='smtp.gmail.com';
+             $email->Port='465';
+             //cuenta con la k el servidor va a enviar esto
+             $email->Username='retoraimon@gmail.com';
+             $email->Password='raimon3+1';
+             $email->From='retoraimon@gmail.com';
+             $email->FromName='Kalpataru';
+             $email->AddAddress($email);
+             $email->AddReplyTo($email);
+             $email->IsHTML(true);//poder pner html y css en el correo
+             //$email->Subject="$subject"
+             $email->Subject="Creado deseo en Kalpataru";
+             $email->Body='
+             <body>
+                 <h1>Tu deseo ha sido eliminado por un Administrador</h1>  
+                     <label>Mensaje: </label>'. $mensaje->texto .'
+             </body>';
+             $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
+             if($email->Send()){
+                 //correo enviado
+                 echo "correo enviado en breve te responderemos";
+             }else{
+                 //error
+                 echo $email->ErrorInfo;
+             }
         }
 
         function mensajeAprobarEmail($mensaje){
@@ -508,11 +550,8 @@ class AccesoBd{
                 $email->Body='
                 <body>
                     <h1>Han enviado un deseo a revisión</h1>  
-                    <form>
+                    <h2>Entra al panel de Administracion para aceptarlo o denegarlo</h2>
                         <label>Mensaje: </label>'. $mensaje->texto .'
-                        <a href="172.26.14.18/mikel/Raimon3-1/index.php?section=Acept&id='.$mensaje->id.'">Aceptar</a>
-                        <a href="www.localhost/mikel/Raimon3-1/controller/Email/Deny.php&id='.$mensaje->id.'">Denegar</a>
-                    </form>
                 </body>';
                 $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
                 if($email->Send()){

@@ -2,8 +2,8 @@
 <div class="page">
 	<div class="container">
 		<div class="left" id="left">
-			<div class="perfil"><?php echo $language["PERFIL"]; ?></div>
-			<div class="eula"><?php echo $language["TXT_PERFIL"]; ?></div>
+			<div class="perfil"><?php echo $language["ADMINISTRACION"]; ?></div>
+			<div class="eula"><?php echo $language["TXT_ADMIN"]; ?></div>
 			<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 
 
@@ -39,11 +39,11 @@
 					<input type="submit" id="aceptar" value="<?php echo $language["DESBANEAR"]; ?>">
 			</form>
 			<form id="mensajes" action="./controller/actions/Acept.php"  method="post">
-				<select name="sms" >
+				<select ID="sel" name="sms" >
 						<option value="sms" disabled selected><?php echo $language["MensajesNA"]; ?> </option>
 						<?php 
 						for ($i=0; $i < count($sms); $i++) { 
-							echo "<option value='".$sms[$i]->id."'>".$sms[$i]->texto."</option>";
+							echo "<option id='".$sms[$i]->id."' value='".$sms[$i]->id."'>".$sms[$i]->texto."</option>";
 						}
 						?>
 					</select>

@@ -35,12 +35,14 @@ $(document).ready(function(){
 
 });
 $('#aceptms').click(function(){
-    $('#mensajes').attr('action', 'controller/actions/Acept.php');
+    let valor = $("#sel option:selected").val();
+    $('#mensajes').attr('action', 'controller/actions/Acept.php?id='+valor);
     $('#mensajes').submit();
  });
  
  
  $('#denyms').click(function(){
-    $('#mensajes').attr('action', 'controller/actions/Deny.php');
+    let valor = $("#sel option:selected").val();
+    $('#mensajes').attr('action', 'controller/actions/Deny.php?id='+valor);
     $('#mensajes').submit();
  });
