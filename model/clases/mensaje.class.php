@@ -7,10 +7,9 @@ class Mensaje{
     public $color;
     public $colorTipografia;
     public $texto;
-    public $anonimo;
     public $numLikes;
 
-    function __construct($id,$userId, $activateToken, $tipografia,$color,$colorTipografia, $texto,$anonimo,$numLikes){
+    function __construct($id,$userId, $activateToken, $tipografia,$color,$colorTipografia, $texto,$numLikes){
         $this->id=$id;
         $this->userId=$userId;
         $this->activateToken=$activateToken;
@@ -20,7 +19,6 @@ class Mensaje{
         $this->activateToken=$activateToken;
         $this->texto=$texto;
         $this->color=$color;
-        $this->anonimo=$anonimo;
         $this->numLikes=$numLikes;
     }
    /* function __toString(){

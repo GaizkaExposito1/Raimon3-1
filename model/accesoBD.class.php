@@ -77,13 +77,14 @@ class AccesoBd{
                         $hashPass=password_hash($pass, PASSWORD_BCRYPT);
                         echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
                          $userNew=new User($id,$dni, $email, 1,$cursoId,$username);
-                        $_SESSION['usuario']=$userNew; //Introducir algo en la sesion
+                        //Introducir algo en la sesion
                         //comprobar el dni de sanluis con el dni del user
                         $userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`alumnosanluis` where (`dni`='$dni')");
                         while((mysqli_fetch_array($userCentro))!=null){
-                        //insert a la bd
-                        $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','1','$cursoId','0');");
-                        return "ok";}
+                            $_SESSION['usuario']=$userNew;
+                            //insert a la bd
+                            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','1','$cursoId','0');");
+                            return "ok";}
                      return "no eres usuario del centro";
                         
                 }
@@ -269,7 +270,7 @@ class AccesoBd{
         }
 
         //Mensajes
-        function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto,$anonimo){
+        function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto){
             if($tipografia==null){
                 $tipografia="Comic Sans";
             }
@@ -279,14 +280,11 @@ class AccesoBd{
             if($color==null){
                 $color="#000000";
             }
-            if($anonimo==null){
-                $anonimo=0;
-            }
             if($texto==null || $texto==''){
                 return "no has escrito el texto";
             }
             else{
-            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`anonimo`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','$anonimo','0');");
+            $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','0');");
            /* $bool=$this->hasTextWordInPrefiltro($texto);
             if($bool=="ok"){*/
                 $r=$this->lanzarSQL("SELECT max(`id`) as id from `kalpatarubd`.`mensajes`;");
@@ -294,7 +292,7 @@ class AccesoBd{
                    extract($fila);
                    $Id=$id;
                }
-                $sms=new Mensaje($Id,$userId,null, $tipografia,$colorTipografia,$color,$texto,$anonimo,0);
+                $sms=new Mensaje($Id,$userId,null, $tipografia,$colorTipografia,$color,$texto,0);
             $this->mensajeAprobarEmail($sms);
             return "ok";/*}else{
                 return "la palabra $bool no esta permitida, porfavor cambia el mensaje";
@@ -309,7 +307,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -321,7 +319,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -333,7 +331,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -345,7 +343,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
+                $mens=new Mensaje($userId,$activateToken,$tipografia,$color,$colorTipografia,$forma,$texto,$numLikes);
                 $sms[]=$mens;
             }
             return $sms;
@@ -461,8 +459,8 @@ class AccesoBd{
                 $email->Password='raimon3+1';
                 $email->From='retoraimon@gmail.com';
                 $email->FromName='Kalpataru';
-                $email->AddAddress('l.munoz.vazquez.38@gmail.com');
-                $email->AddReplyTo('l.munoz.vazquez.38@gmail.com');
+                $email->AddAddress('retoraimon@gmail.com');
+                $email->AddReplyTo('retoraimon@gmail.com');
                 $email->IsHTML(true);//poder pner html y css en el correo
                 //$email->Subject="$subject"
                 $email->Subject="Creado deseo en Kalpataru";
@@ -471,7 +469,7 @@ class AccesoBd{
                     <h1>Han enviado un deseo a revisión</h1>  
                     <form>
                         <label>Mensaje: </label>'. $mensaje->texto .'
-                        <a href="172.26.14.18/mikel/Raimon3-1/controller/Email/Acept.php&id='.$mensaje->id.'">Aceptar</a>
+                        <a href="172.26.14.18/mikel/Raimon3-1/index.php?section=Acept&id='.$mensaje->id.'">Aceptar</a>
                         <a href="www.localhost/mikel/Raimon3-1/controller/Email/Deny.php&id='.$mensaje->id.'">Denegar</a>
                     </form>
                 </body>';

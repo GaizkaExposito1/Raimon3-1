@@ -23,7 +23,17 @@
          </select>
          <select name="select" >
            <option value="curso" disabled selected><?php echo $language["TIPOGRAFIA"]; ?></option>
-		   <option value="curso" > <?php echo $language["TIPOGRAFIA"]; ?></option>
+		   <option value="Scheherazade New" >Scheherazade New</option>
+		   <option value="Italianno" >Italianno</option>
+		   <option value="IM Fell English SC" >IM Fell English SC</option>
+		   <option value="Lobster" >Lobster</option>
+		   <option value="Anton" >Anton</option>
+		   <option value="Dancing Script" >Dancing Script</option>
+		   <option value="Architects Daughter" >Architects Daughter</option>
+		   <option value="Pacifico" >Pacifico</option>
+		   <option value="Shadows Into Light" >Shadows Into Light</option>
+		   <option value="Indie Flower" >Indie Flower</option>
+		   <option value="Saira Condensed" >Saira Condensed</option>
          </select>	  
 
 		  <select name="select" >
@@ -33,7 +43,7 @@
          </select>
 		 <input type="radio" id="anonimo" name="anonimo" value="<?php echo $language['ANONIMO']; ?>">
 			<label for="html"><?php echo $language["ANONIMO"]; ?></label><br>
-		<input type="radio" id="NOanonimo" name="anonimo" value="<?php echo $language['NO_ANONIMO']; ?>">
+		<input type="radio" id="NOanonimo" name="Nanonimo" value="<?php echo $language['NO_ANONIMO']; ?>">
 			<label for="css"><?php echo $language["NO_ANONIMO"]; ?></label><br>
 		  <input type="submit" id="aceptar" value="<?php echo $language['ACEPTAR']; ?>">
 		</form>

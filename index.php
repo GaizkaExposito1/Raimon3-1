@@ -51,7 +51,7 @@ unicamente para cada contenido-->
 si no esta registrado tendra que pasar por esta-->
       <?php
       if(isset($_SESSION['usuario'])){
-      echo "<a  href='index.php?section=crearMensajes' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
+      echo "<a  href='index.php?section=crearMensaje' id='CrearMensaje'> ". $language["NEW_MENSAJE"] ." </a>
       <a  href='index.php?section=verMensajesAprobados' id='VerMensajesAprobados'> ". $language["MENSAJES"] ."</a>
       <a  href='index.php?section=logout' id='logout'> ". $language["LOGOUT"] ."</a>";
       if($_SESSION['usuario']->rol==2){

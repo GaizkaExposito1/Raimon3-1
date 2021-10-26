@@ -11,5 +11,4 @@ if($param!="acept"){
 $bd->aceptarMensaje($param);
 }
 ?>
-?>
 <h1>mensaje aprobado</h1>
