@@ -17,6 +17,6 @@ function mostrarCaja() {
     let cambiarTamañoLeft = document.getElementById("left");
     let ocultarBoton = document.getElementById("mostrar");
     MostrarForm.style.visibility="visible";
-    cambiarTamañoLeft.style.height="88%";
+    cambiarTamañoLeft.style.height="135%";
     ocultarBoton.style.visibility="hidden";
 }
