@@ -133,7 +133,7 @@
     <!--Imagen del Arbol-->   
     <div class="arbolBotones"> 
     
-        <img id="imgArbol" src="/Raimon3-1/view/assets/arbol.png" alt="" >
+        <img id="imgArbol" src="./view/assets/Arbol.png" alt="" >
     </div>
 
 
