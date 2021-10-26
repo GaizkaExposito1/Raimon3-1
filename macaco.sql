@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~22 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~13 rows (aproximadamente)
 DELETE FROM `grupo`;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 INSERT INTO `grupo` (`id`, `nombre`) VALUES
@@ -75,9 +75,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   `tipografia` varchar(100) DEFAULT NULL,
   `color` varchar(15) DEFAULT NULL,
   `colorTipografia` varchar(15) DEFAULT NULL,
-  `forma` varchar(15) DEFAULT NULL,
   `texto` varchar(280) DEFAULT NULL,
-  `anonimo` varchar(50) DEFAULT NULL,
   `numLikes` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `userid` (`userId`),
@@ -126,7 +124,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(320) DEFAULT NULL,
   `rol` int(5) DEFAULT NULL,
   `curso` int(5) DEFAULT NULL,
-  `imgUser` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'Preguntar a helen como guardar la imagen del uzuario',
   `Banned` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
@@ -141,8 +138,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `imgUser`, `Banned`) VALUES
-	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, NULL, 0);
+INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES
+	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
