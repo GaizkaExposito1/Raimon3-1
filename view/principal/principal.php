@@ -14,10 +14,10 @@
 
        <!---30 Botones-->
        
-    <div>
+    <div class="arbolBotones">
         <button class="btn1" id="btn1" onclick="mostrarMensaje();">
             ook!!
-            <span class="mensajeUsuario" id="mybotonMostrar">¡Me quiero morir!</span>
+           <!-- <span class="mensajeUsuario" id="mybotonMostrar">¡Me quiero morir!</span> -->
         </button>
 
         <button class="btn2">
@@ -29,99 +29,102 @@
         ook!!
         </button>
 
+        
         <button class="btn4">
-        ook!!
+            ook!!
         </button>
-
-          <button class="btn5">
-              ook!
-          </button>  
-
-          <button class="btn6">
-              ook!
-          </button>
-
-          <button class="btn7">
-              ook!
-          </button>
-
-          <button class="btn8">
-              ook!
-          </button>      
-          <button class="btn9">
-              ook!
-          </button>  
-          <button class="btn10">
-              ook!
-          </button>  
-          <button class="btn11">
-              ook!
-          </button>      
-          <button class="btn12">
-              ook!
-          </button>  
-          <button class="btn13">
-              ook!
-          </button>  
-          <button class="btn14">
-              ook!
-          </button>  
-          <button class="btn15">
-              ook!
-          </button>  
-          <button class="btn16">
-              ook!
-          </button>  
-          <button class="btn17">
-              ook!
-          </button> 
-          <button class="btn18">
-              ook!
-          </button>
-          
-          <button class="btn19">
-              ook!
-          </button> 
-
-          <button class="btn20">
-              ook!
-          </button> 
-          <button class="btn21">
-              ook!
-          </button> 
-          <button class="btn22">
-              ook!
-          </button>  
-          <button class="btn23">
-              ook!
-          </button>  
-          <button class="btn24">
-              ook!
-          </button> 
-          <button class="btn25">
-              ook!
-          </button>
-          
-          <button class="btn26">
-              ook!
-          </button> 
-
-          <button class="btn27">
-              ook!
-          </button> 
-          <button class="btn28">
-              ook!
-          </button>
-          <button class="btn29">
-              ook!
-          </button> 
-
+        
+        <button class="btn5">
+            ook!
+        </button>  
+        
+        <button class="btn6">
+            ook!
+        </button>
+        
+        <button class="btn7">
+            ook!
+        </button>
+        
+        <button class="btn8">
+            ook!
+        </button>      
+        <button class="btn9">
+            ook!
+        </button>  
+        <button class="btn10">
+            ook!
+        </button>  
+        <button class="btn11">
+            ook!
+        </button>      
+        <button class="btn12">
+            ook!
+        </button>  
+        <button class="btn13">
+            ook!
+        </button>  
+        <button class="btn14">
+            ook!
+        </button>  
+        <button class="btn15">
+            ook!
+        </button>  
+        <button class="btn16">
+            ook!
+        </button>  
+        <button class="btn17">
+            ook!
+        </button> 
+        <button class="btn18">
+            ook!
+        </button>
+        
+        <button class="btn19">
+            ook!
+        </button> 
+        
+        <button class="btn20">
+            ook!
+        </button> 
+        <button class="btn21">
+            ook!
+        </button> 
+        <button class="btn22">
+            ook!
+        </button>  
+        <button class="btn23">
+            ook!
+        </button>  
+        <button class="btn24">
+            ook!
+        </button> 
+        <button class="btn25">
+            ook!
+        </button>
+        
+        <button class="btn26">
+            ook!
+        </button> 
+        
+        <button class="btn27">
+            ook!
+        </button> 
+        <button class="btn28">
+            ook!
+        </button>
+        <button class="btn29">
+            ook!
+        </button> 
+        
+        
           <button class="btn30">
               ook!
           </button> 
           <button class="btn31">
               ook!
           </button> 
+                
             
     </div>
   
