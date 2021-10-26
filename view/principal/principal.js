@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#btnMostrar").click(function(){
+    $("#btn1").click(function(){
         $("#mybotonMostrar").css("visibility", "visible");
       
     });  

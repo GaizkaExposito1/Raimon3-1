@@ -1,14 +1,17 @@
 
 body{
-    background-color: #c6a9d1 !important;
+    background-color: #F3E5F5  !important;
 }
 
 h1{
     text-align: center;
 }
 select {
-    margin-left: 9%;
+   margin-left: 9%;
     width: 35%;
+    margin: 5%;
+  /*  transform: translateX(100px);*/
+
 }
 .carouseandSelect{
     display: flex;
@@ -26,8 +29,12 @@ select {
     height: 15em;
     left: 27%;
     margin-left: 70%;
+    background: url(../assets/HojaOto.jpg);
+    /*
     background: -webkit-linear-gradient(to right, #b882ce, #5fa1ca);
     background: linear-gradient(to right, #b882ce, #5fa1ca);
+    */
+    
 }
 .mensaje{
     color: black;
@@ -51,6 +58,14 @@ input#links{
     margin: 2%;
 }
 
+
+
+#imgArbol{
+    width: 58.6%;
+
+
+}
+
 /*Botones que te llevan al curso*/
 /*
 .boton_curso{
@@ -72,16 +87,133 @@ input#links{
 #mensajeNoAprobados, #mensajeAprobados, #crearMensaje{
     width: 100%;
 }
-
-.btnMostrar{
-    position: relative;
+/*Botones del arbol*/
+.btn1{
+    position: absolute;
     display: inline-block;
     cursor: pointer;
-    margin-left: 5%;
+    transform: translate(40px, 58px);
+    z-index: 1;
 }
 
+.btn2{
+    position: absolute;
+    transform: translate(106px , 88px);
+    z-index: 1;
+}
+.btn3{
+    position: absolute;
+    transform: translate(192px , 95px);
+    z-index: 1;
+}
+.btn4{
+    position: absolute;
+    transform: translate(373px , 52px);
+    z-index: 1;
+}
+.btn5{
+    position: absolute;
+    transform: translate(452px , 123px);
+    z-index: 1;
+}
+
+.btn6{
+    position: absolute;
+   transform:  translate(441px , 195px);
+    z-index: 1;
+}
+
+.btn7{
+    position: absolute;
+    transform: translate(32px , 139px);
+    z-index: 1;
+}
+.btn8{
+    position: absolute;
+    transform: translate(36px , 241px);
+    z-index: 1;
+}
+.btn9{
+    position: absolute;
+    transform: translate(93px, 210px);
+    z-index: 1;
+
+}
+
+.btn10{  
+    position: absolute;
+    transform: translate(154px, 193px);
+    z-index: 1;
+
+}
+
+.btn11{
+    position: absolute;
+    transform: translate(153px, 258px);
+    z-index: 1;
+}
+
+.btn12{
+    position: absolute;
+    transform: translate(319px, 206px);
+    z-index: 1;
+}
+/*
+.btn13{
+    position: absolute;
+    transform: translate(-215px, 364px);
+   z-index: 1;
+}
+
+.btn14{
+    position: absolute;
+    transform: translate(-212px, 232px);
+    z-index: 1;
+}
+.btn15{
+    position: absolute;
+    transform: translate(-593px, 361px);
+    z-index: 1;
+}
+.btn16{
+    position: absolute;
+    transform: translate(-602px, 417px);
+    z-index: 1;
+}
+.btn17{
+    position: absolute;
+    transform: translate(-565px, 312px);
+    z-index: 1;
+}
+.btn18{
+    position: absolute;
+    transform: translate(-612px, 461px);
+    z-index: 1;
+}
+.btn19{
+    position: absolute;
+  transform: translate(-414px, 362px);
+    z-index: 1;
+}
+
+.btn20{
+    position: absolute;
+    transform: translate(43px, 495px);
+    z-index: 1;
+}
+
+.btn21{
+      position: absolute;  
+    transform: translate(-565px, 312px);
+    z-index: 1;
+}
+*/
+
+
+
+
 /* Mensaje actual */
-.btnMostrar .mensajeUsuario {
+.btn1 .mensajeUsuario {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -97,7 +229,7 @@ input#links{
 }
 
 /* Muestra el deseo del usuario*/
-.btnMostrar .mensajeUsuario::after {
+.btn1 .mensajeUsuario::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -109,7 +241,7 @@ input#links{
 }
 
 
-.btnMostrar .show {
+.btn1 .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: animacionBoton 1s

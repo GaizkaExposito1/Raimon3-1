@@ -2,8 +2,8 @@
 <div class="page">
 	<div class="container">
 	  <div class="left" id="left">
-		<div class="crearMensaje">Crear Mensaje</div>
-		<div class="eula">Aqui podras escribir tu mensaje</div>
+		<div class="crearMensaje"><?php echo $language["CREAR_MSJ"]; ?></div>
+		<div class="eula"><?php echo $language["TXT_CREAR_MSJ"]; ?></div>
 		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 
 
@@ -14,28 +14,38 @@
 
 
 
-        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="Escribe aqui tu Mensaje... (Max 280 caracteres)"></textarea>
+        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"> </textarea>
 
         <select name="select" >
-           <option value="curso" disabled selected> Color Letra</option>
+           <option value="curso" disabled selected><?php echo $language["COLOR_LETRA"]; ?></option>
 		   <!--rueda color-->
            
          </select>
          <select name="select" >
-           <option value="curso" disabled selected> Tipografia</option>
-		   <option value="curso" > Tipografia</option>
+           <option value="curso" disabled selected><?php echo $language["TIPOGRAFIA"]; ?></option>
+		   <option value="Scheherazade New" >Scheherazade New</option>
+		   <option value="Italianno" >Italianno</option>
+		   <option value="IM Fell English SC" >IM Fell English SC</option>
+		   <option value="Lobster" >Lobster</option>
+		   <option value="Anton" >Anton</option>
+		   <option value="Dancing Script" >Dancing Script</option>
+		   <option value="Architects Daughter" >Architects Daughter</option>
+		   <option value="Pacifico" >Pacifico</option>
+		   <option value="Shadows Into Light" >Shadows Into Light</option>
+		   <option value="Indie Flower" >Indie Flower</option>
+		   <option value="Saira Condensed" >Saira Condensed</option>
          </select>	  
 
 		  <select name="select" >
-           <option value="curso" disabled selected> Color Hoja</option>
+           <option value="curso" disabled selected> <?php echo $language["COLOR_HOJA"]; ?></option>
 		   <!--rueda color-->
            
          </select>
-		 <input type="radio" id="anonimo" name="anonimo" value="anonimo">
-			<label for="html">anonimo</label><br>
-		<input type="radio" id="NOanonimo" name="anonimo" value="NOanonimo">
-			<label for="css">No anonimo</label><br>
-		  <input type="submit" id="aceptar" value="Aceptar">
+		 <input type="radio" id="anonimo" name="anonimo" value="<?php echo $language['ANONIMO']; ?>">
+			<label for="html"><?php echo $language["ANONIMO"]; ?></label><br>
+		<input type="radio" id="NOanonimo" name="Nanonimo" value="<?php echo $language['NO_ANONIMO']; ?>">
+			<label for="css"><?php echo $language["NO_ANONIMO"]; ?></label><br>
+		  <input type="submit" id="aceptar" value="<?php echo $language['ACEPTAR']; ?>">
 		</form>
 	  </div>
 	</div>
