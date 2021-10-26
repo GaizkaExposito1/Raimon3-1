@@ -1,108 +1,61 @@
 /*
 colores de bootstrap
 https://mdbootstrap.com/docs/standard/content-styles/colors/
-
-*/
-
-/*Fonts*/
+Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
-
-
 /*font-family: 'Josefin Sans', sans-serif;*/
 /*    font-family: 'JetBrains Mono', monospace;*/
-
-
-
 body {
-    background: #EDE7F6;
+    background: #B39DDB !important;
     font-family: 'Inter UI', sans-serif;
     margin: 0;
-    padding: 20px;
-    background-size: cover;
-}
+    /*padding: 20px;*/    
+  }
 
-.page {
-    background: #B39DDB;
-    flex-direction: column;
-    height: calc(100% - 40px);
-    position: absolute;
-    place-content: center;
-    width: calc(100% - 40px);
-}
-
-#titulo {
-    color: black;
-    background-color: #FFFF;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 13%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 900px;
-    font-size: 50px;
-    -moz-box-shadow: -2px 3px 15px #000000;
-    -webkit-box-shadow: -2px 3px 15px #000000;
-    box-shadow: -2px 3px 15px #000000;
-}
-
-#contenido {
+#mensajesCurso {
     color: white;
     background-color: #474A59;
     -moz-box-shadow: -2px 3px 15px #000000;
     -webkit-box-shadow: -2px 3px 15px #000000;
     box-shadow: -2px 3px 15px #000000;
-    width:1100px;
-    margin-bottom: 65%;
-    margin-left: 6%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
-
-
-
-@media screen and(max-width:600px) {
-    body {
-        background: #EDE7F6;
-        font-family: 'Inter UI', sans-serif;
-        margin: 0;
-
+ul{
+    list-style:none;
+    padding-bottom: 2%;
+}
+li{
+    padding-top: 1%;
+}
+h1{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align:center;
+}
+h3{
+    padding-bottom: 2%;
+}
+span#User{
+    color: #B39DDB;
+}
+span.delete {
+    text-align: right;
+}
+a.delete{
+    color:#ff0000 !important;
+    padding-left: 4%;
+}
+@media  screen and (min-width: 10px) and (max-width: 1000px){
+    h1{
+        font-size: 40px !important;
     }
-
-    .page {
-        background: #B39DDB;
-        flex-direction: column;
-        height: 95%;
-        place-content: center;
-        width: 95%;
+    h3{
+        font-size: 36px !important;
+    }   
+    li{
+       font-size: 27px
     }
-    
-    #titulo {
-        color: black;
-        background-color: #FFFF;
-        text-align: center;
-        margin-top: 2%;
-        margin-left: 13%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        width: 70%;
-        font-size: 18px;
-        -moz-box-shadow: -2px 3px 15px #000000;
-        -webkit-box-shadow: -2px 3px 15px #000000;
-        box-shadow: -2px 3px 15px #000000;
-    }
-    
-    #contenido {
-        color: white;
-        background-color: #474A59;
-        -moz-box-shadow: -2px 3px 15px #000000;
-        -webkit-box-shadow: -2px 3px 15px #000000;
-        box-shadow: -2px 3px 15px #000000;
-        width: 60%;
-        margin-bottom: 65%;
-        margin-left: 6%;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
 }
