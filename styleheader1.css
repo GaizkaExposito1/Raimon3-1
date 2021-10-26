@@ -72,25 +72,33 @@ a:focus {
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-text-size: 25px;
-    top: 0;
+
+    top: 25px;
   }
   .topnav.responsive a {
     float: none;
     display: block;
+  font-size: 27px;
     text-align: left;
   }
 #langFlagBasque{
 position:initial;
 }
 #langFlagSpain{
-position:initial;
-
-}@media  screen and (min-width: 600px) and (max-width: 1000px){็
+position:initial;}
+.active {
+  color: #d5b6da;
+font-size: 27px !important;
+position: relative;
+top: 15px;
+}
+}@media  screen and (min-width: 600px) and (max-width: 1000px){รง
 	.topnav{
 	    padding-bottom: 4%;
 	}
- .topnav a:not(:first-child) {display: none;}
+
+ .topnav a:not(:first-child) {display: none;
+  font-size: 27px;}
   .topnav a.icon {
     float: right;
     display: block;
@@ -99,11 +107,18 @@ position:initial;
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 25px;
   }
+.active {
+  color: #d5b6da;
+font-size: 27px !important;
+position: relative;
+top: 15px;
+}
   .topnav.responsive a {
     float: none;
     display: block;
+  font-size: 27px;
     text-align: left;
   }
 #langFlagBasque{
@@ -111,4 +126,4 @@ position:initial;
 }
 #langFlagSpain{
 position:initial;
-}
+}}
