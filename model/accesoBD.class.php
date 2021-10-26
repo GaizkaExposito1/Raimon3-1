@@ -225,12 +225,27 @@ class AccesoBd{
         }
         
         function banUser($userId){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`id`='$userId');");
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+            }
             $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='1') where (`id` = '$userId')");
+            $this->mensajeEmailBaneado($user->email);
             return "ok";
         }
 
         function UnbanUser($userId){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`id`='$userId');");
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
+            }
             $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='0') where (`id` = '$userId')");
+            $this->mensajeEmailDesbaneado($user->email);
+            return "ok";
         }
 
         function getBannedUsers(){
@@ -564,17 +579,75 @@ class AccesoBd{
                
 
         }
+        function mensajeEmailBaneado($email){
+            //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
+            $email=new PHPMailer\PHPMailer\PHPMailer();
+            $email->isSMTP();//servidor
+            //$email->SMTPDenug();//salir trazas de error
+            $email->SMTPDebug=1;//errores y mensajes//2 solo mesnajes
+            $email->SMTPAuth=true;
+            $email->SMTPSecure= 'ssl';//para otro tipo de email k no es gmail->datos smtp tipo
+            $email->Host='smtp.gmail.com';
+            $email->Port='465';
+            //cuenta con la k el servidor va a enviar esto
+            $email->Username='retoraimon@gmail.com';
+            $email->Password='raimon3+1';
+            $email->From='retoraimon@gmail.com';
+            $email->FromName='Kalpataru';
+            $email->AddAddress($email);
+            $email->AddReplyTo($email);
+            $email->IsHTML(true);//poder pner html y css en el correo
+            //$email->Subject="$subject"
+            $email->Subject="Creado deseo en Kalpataru";
+            $email->Body='
+            <body>
+                <h1>Tu usuario ha sido baneado por un Administrador</h1>  
+                <h3>por lo tanto no podras volver a acceder a la pagina como usuario, solo como visitante</h3>
+            </body>';
+            $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
+            if($email->Send()){
+                //correo enviado
+                echo "correo enviado en breve te responderemos";
+            }else{
+                //error
+                echo $email->ErrorInfo;
+            }
+       }
 
-        //estadisiticas
-        function getMensajeMaxLike(){
-            $mensajeOBT=$this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (SELECT max(`numLikes`) from `kalpatarubd`.`mensajes`)");
-            while(($fila=mysqli_fetch_array($mensajeOBT))!=null){
-                extract($fila);
-             $mensaje=new Mensaje($userId, $activateToken, $tipografia,$color,$colorTipografia,$forma,$texto,$anonimo,$numLikes);
-             return $mensaje;
-             }
-            
+       function mensajeEmailDesbaneado($email){
+        //esto seria incluido en la clase miclase->enviarCorreo($remitente,$mensaje);
+        $email=new PHPMailer\PHPMailer\PHPMailer();
+        $email->isSMTP();//servidor
+        //$email->SMTPDenug();//salir trazas de error
+        $email->SMTPDebug=1;//errores y mensajes//2 solo mesnajes
+        $email->SMTPAuth=true;
+        $email->SMTPSecure= 'ssl';//para otro tipo de email k no es gmail->datos smtp tipo
+        $email->Host='smtp.gmail.com';
+        $email->Port='465';
+        //cuenta con la k el servidor va a enviar esto
+        $email->Username='retoraimon@gmail.com';
+        $email->Password='raimon3+1';
+        $email->From='retoraimon@gmail.com';
+        $email->FromName='Kalpataru';
+        $email->AddAddress($email);
+        $email->AddReplyTo($email);
+        $email->IsHTML(true);//poder pner html y css en el correo
+        //$email->Subject="$subject"
+        $email->Subject="Creado deseo en Kalpataru";
+        $email->Body='
+        <body>
+        <h1>Tu usuario ha sido desbaneado por un Administrador</h1>  
+        <h3>por lo tanto puedes volver a acceder a la pagina como usuario</h3>
+    </body>';
+        $email->AltBody="para ver este mensja debes habilitar o utilizar un gestor de correo compatible con html";
+        if($email->Send()){
+            //correo enviado
+            echo "correo enviado en breve te responderemos";
+        }else{
+            //error
+            echo $email->ErrorInfo;
         }
+   }
     
     }
 ?>

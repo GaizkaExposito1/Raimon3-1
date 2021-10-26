@@ -14,8 +14,7 @@
 		  <input type="password" id="password"  name="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
-		<input type="button" id="Register" name="Register" value="Register" onclick=enviarARegister() ></input>
-
+		<a href="index.php?section=registro">Registro</a>
 	  </div>
 	</div>
   </div>

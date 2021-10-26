@@ -3,12 +3,12 @@
 require_once "./model/accesoBD.class.php";
 require_once "./model/clases/mensaje.class.php";
 $bd= new AccesoBd();
-$param="acept";//por defecto
-if(isset($_GET['id'])){
-    $param=$_GET['id'];
+
+
+$result=$bd->newAdmin($_POST['dni'],$_POST['pass'],$_POST['confpass'],$_POST['email'],$_POST['username']);
+if($result=="ok"){
+header("Location: ../../index.php?section=administracion");}
+else{
+    header("Location: ../../index.php?section=administracion&error=$result");
 }
-if($param!="acept"){
-$bd->aceptarMensaje($param);
-}
-header("Location: ../../index.php?section=administracion");
 ?>

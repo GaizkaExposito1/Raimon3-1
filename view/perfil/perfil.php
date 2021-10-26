@@ -8,7 +8,7 @@
 			</div>
 			<div class="right" id="right">
 				<div id="imgPerfil">
-					<img id="imgUser" src="../assets/cat.jpg" alt="imagen de perfil">
+					<img id="imgUser" src="./view/assets/cat.jpg" alt="imagen de perfil">
 				</div>
 				<div id="datosPerfil">
 					<p><?php echo $language["USUARIO_PERFIL"]; ?></p>
@@ -74,15 +74,3 @@
 		</div>
 	</div>
 </article>
-<!--
-datos perfil tic
-camios de perfil (foto, contraseña, email, username) tic
-enlace para ver mensajes aprobados tic
-enlace para ver mensajes no aprobados tic
-------------------------
-rol=2
-crear Admins
-banear users**
-lista users baneados 
-unban user **
--->
