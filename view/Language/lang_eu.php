@@ -13,6 +13,9 @@ $language["ADMIN"] = "Administrazio-eremua";
 $language["PRINCIPAL"] = "Orrialde Nagusia";
 //principal
 $language["TITU_PRINC"] = "Desioen Zuhaitza";
+$language["CREAR_MSJ_PRINC"] = "Sortu Mezua";
+$language["MSJ_APR_PRINC"] = "Onartutako Mezuak";
+$language["MSJ_NOAPR_PRINC"] = "Onartu Gabeko Mezuak";
 //login
 $language['INICIO_SESION'] = 'Hasi Saioa';
 $language["LOGIN_SUBTITULO"] = "Ongi etorri Desioen Zuhaitzera!!";
@@ -50,6 +53,7 @@ $language["NEW_EMAIL_PERFIL"] = "Email Berria";
 $language["ANTIGUO_USERNAME_PERFIL"] = "Erabiltzailearen Izen Zaharra";
 $language["NEW_USERNAME_PERFIL"] = "Erabiltzailearen Izen Berria";
 $language["ENVIAR"] = "Bidali";
+$language["CERRAR_PERFIL"] = "Itxi";
 //mensajes curso
 $language["MSJ_X_CURSO"] = "Mezuak Ikastaroaren Arabera";
 $language["NO_MSJ_CURSO"] = "EZ DAGO MEZURIK MAIL HONETAN.";
