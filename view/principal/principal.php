@@ -148,6 +148,7 @@
         </ol>
         <div class="carousel-inner">
         <div class="item active">
+
             <p class="mensaje">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                 minus commodi iusto vel a dolore? Voluptas 
@@ -189,7 +190,7 @@
     if(isset($_SESSION['usuario'])){
     echo "<div id='links'>
         <a href='index.php?section=crearMensaje'><button id='crearMensaje'>Crear Mensaje</button></a>
-        <a href='index.php?section=mensajesAprobados'><button id='mensajeAprobados'>Mensajes Aprobados</button></a>
+        <a href='index.php?section=verMensajesAprobados'><button id='mensajeAprobados'>Mensajes Aprobados</button></a>
         <a href='index.php?section=mensajesNoAprobados'><button id='mensajeNoAprobados'>Mensajes No Aprobados</button></a>
     </div>";}
     ?>

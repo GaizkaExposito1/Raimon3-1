@@ -328,7 +328,7 @@ class AccesoBd{
         }
 
         function getTop10Mensajes(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where top10 max numlikes ;");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` order by `numLikes` desc limit 10;");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']

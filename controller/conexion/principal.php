@@ -8,6 +8,7 @@ $bd= new AccesoBd();
 //colecciones de datos necesarios
 $grupos=$bd->getCursos();
 $top=$bd->getTop10Mensajes();
+
 //redireccion
 include "./view/principal/principal.php";
 ?>
