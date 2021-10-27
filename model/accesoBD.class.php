@@ -231,9 +231,8 @@ class AccesoBd{
                 extract($fila);
                 $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
             }
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='1') where (`id` = '$userId');");
-            //$this->mensajeEmailBaneado($user->email);
-            return "ok";
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set `Banned`='1' where (`id` = '$userId');");
+            $this->mensajeEmailBaneado($user->email);
         }
 
         function UnbanUser($userId){
@@ -243,9 +242,8 @@ class AccesoBd{
                 extract($fila);
                 $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
             }
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='0') where (`id` = '$userId')");
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set `Banned`='0' where `id` = '$userId';");
             $this->mensajeEmailDesbaneado($user->email);
-            return "ok";
         }
 
         function getBannedUsers(){
@@ -254,7 +252,7 @@ class AccesoBd{
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
-                $user=new User($dni, $email, $rol,$curso,$imgUser,$username,$Banned);
+                $user=new User($id,$dni, $email, $rol,$curso,$username,$Banned);
                 $users[]=$user;
             }
             return $users;
@@ -428,7 +426,7 @@ class AccesoBd{
         }
 
         function getMensajesNotApproved(){
-            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where  (`activateToken`='null');");
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where `activateToken`='null';");
             $sms=array();
             while(($fila=mysqli_fetch_array($result))!=null){
                 //obtener cada columna--> $fila['nombreColumna']
@@ -480,7 +478,7 @@ class AccesoBd{
 
         function aceptarMensaje($id){
             $token=md5(uniqid(Rand(), true));
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`activateToken`='$token') where (`id` = '$id')");
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set `activateToken`='$token' where (`id` = '$id');");
         }
 
         //Prefiltro

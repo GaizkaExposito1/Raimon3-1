@@ -45,8 +45,8 @@ if(isset($_SESSION['error'])){
 					<input type="submit" id="aceptar" value="<?php echo $language["DESBANEAR"]; ?>">
 			</form>
 			<form id="mensajes" action="./controller/actions/Acept.php"  method="post">
-				<select ID="sel" name="sms" >
-						<option value="sms" disabled selected><?php echo $language["MensajesNA"]; ?> </option>
+				<select id="sel" name="sms" >
+						<option value="smsD" disabled selected><?php echo $language["MensajesNA"]; ?> </option>
 						<?php 
 						if(empty($sms)){
 							echo "<option value='NO'>".$language["MensajesNAsms"]."</option>";
