@@ -3,10 +3,10 @@
     <ul>
             <?php 
             if(empty($sms)){
-                echo "<h1>No hay mensajes aprobados todavia</h1>";
+                echo "<h1>".$language["NO_MSJ_TDV"]."</h1>";
             }else{
                     foreach ($sms as $mensajeApr) {
-                        echo "<li>".$mensajeApr->id."<button>Eliminar Mensaje</button></li>";
+                        echo "<li>".$mensajeApr->id."<button>".$language["DEL_MSJ"]."</button></li>";
                     }
             }
             ?>
