@@ -20,7 +20,7 @@ $language["MSJ_NOAPR_PRINC"] = "Onartu Gabeko Mezuak";
 $language['INICIO_SESION'] = 'Hasi Saioa';
 $language["LOGIN_SUBTITULO"] = "Ongi etorri Desioen Zuhaitzera!!";
 $language["REIN_DATOS"] = "Datuak Sartu Berriro";
-$language["IR_REGIS"] = "Joan Erregistrora";
+$language["REGIS"] = "Erregistroa";
 $language["USER"] = "Erabiltzailea";
 $language["PASS"] = "Pasahitza";
 $language["ACEPTAR"] = "Onartu";
@@ -86,5 +86,10 @@ $language["DENEGARM"] = "Ukatu eta Ezabatu Mezua";
 //Mensajes aprobados y NO aprobados
 $language["NO_MSJ_TDV"] = "Oraindik ez dago onartutako mezurik";
 $language["DEL_MSJ"] = "Mezua Ezabatu";
+//ver mensaje
+$language["RETURN"] = "Itzuli";
+$language["MSJ_ECR_POR"] = "Honek Idatzitako Mezua: ";
+$language["MSJ_VERMSJ"] = "Mezua: ";
+$language["ESTADO_MSJ"] = "Mezuaren Egoera: ";
 
 ?>
