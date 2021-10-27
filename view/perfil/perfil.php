@@ -1,3 +1,11 @@
+<?php
+if(isset($_GET['error'])){
+	$param=$_GET['error'];
+		echo "<script>$( document ).ready(function() {
+			$('#alert').alert('toggle')
+		});</script>";
+}
+?>
 <article>
 	<div class="page">
 		<div class="container">
@@ -74,3 +82,10 @@
 		</div>
 	</div>
 </article>
+<!--alert-->
+<div id="alert" class="alert alert-danger" role="alert">
+		<?php
+			$er=str_replace("%"," ",$param);
+			echo $er;
+		?>
+</div>

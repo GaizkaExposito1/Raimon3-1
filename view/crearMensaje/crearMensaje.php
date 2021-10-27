@@ -1,3 +1,11 @@
+<?php
+if(isset($_GET['error'])){
+	$param=$_GET['error'];
+		echo "<script>$( document ).ready(function() {
+			$('#alert').alert('toggle')
+		});</script>";
+}
+?>
 <article>
 <div class="page">
 	<div class="container" id="container">
@@ -8,11 +16,9 @@
 	  </div>
 	  <div class="right" id="right"> 
 	  <form id="crear" action="./controller/actions/crearMensaje.php"  method="post">
-        <textarea id="text" name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"> </textarea>
-        <select name="select" >
-           <option value="curso" disabled selected><?php echo $language["COLOR_LETRA"]; ?></option>
-		   <!--rueda color-->
-         </select>
+        <textarea id="text" name="textarea" rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"> </textarea>
+        <label><?php echo $language["COLOR_LETRA"]; ?></label>
+		<input type="color" name="colorTipo">
          <select name="select" >
            <option value="curso" disabled selected><?php echo $language["TIPOGRAFIA"]; ?></option>
 		   <option value="Scheherazade New" >Scheherazade New</option>
@@ -28,9 +34,8 @@
 		   <option value="Saira Condensed" >Saira Condensed</option>
          </select>	  
 
-		  <select name="select" >
-           <option value="curso" disabled selected> <?php echo $language["COLOR_HOJA"]; ?></option>
-		   <!--rueda color-->
+		  <label> <?php echo $language["COLOR_HOJA"]; ?></label>
+		  <input type="color" name="color">
          </select>
 		 <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
@@ -40,7 +45,13 @@
   </div>
 </article>
 
-
+<!--alert-->
+<div id="alert" class="alert alert-danger" role="alert">
+		<?php
+			$er=str_replace("%"," ",$param);
+			echo $er;
+		?>
+</div>
 
 
 

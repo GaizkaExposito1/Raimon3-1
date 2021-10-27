@@ -308,6 +308,17 @@ class AccesoBd{
            
 
         }
+
+        function getMensajePorId($id){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where `id`='$id';");
+            while(($fila=mysqli_fetch_array($result))!=null){
+                //obtener cada columna--> $fila['nombreColumna']
+                extract($fila);
+                $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
+            }
+            return $mens;
+        }
+
         function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto){
             if($tipografia==null){
                 $tipografia="Comic Sans";
@@ -450,9 +461,6 @@ class AccesoBd{
         }
 
         function editMensaje($tipografia,$colorTipografia,$color,$id){
-            if($tipografia==null){
-                return "no has introducido la contraseña";
-            }
             if($tipografia!=null){
                     $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`tipografia`='$tipografia') where (`id` = '$id')");
                 }
