@@ -74,7 +74,8 @@ class AccesoBd{
                         var_dump($id+1);
                     }
                         //hash contraseña
-                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                        //$hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                        $hashPass=$pass;
                         echo "$dni,$hashPass,$confPass,$email,$cursoId,$username";
                          $userNew=new User($id,$dni, $email, 1,$cursoId,$username,0);
                         //Introducir algo en la sesion
@@ -120,7 +121,8 @@ class AccesoBd{
                         //$userCentro=$this->lanzarSQL("SELECT `dni` from `kalpatarubd`.`usersSanluis` where (`dni`='$dni')");
                         //while((mysqli_fetch_array($userCentro))!=null){
                         //hash contraseña
-                        $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                       // $hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                        $hashPass=$pass;
                         //insert a la bd
                         $this->lanzarSQL("INSERT INTO `kalpatarubd`.`users`(`dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES ('$dni','$hashPass','$username','$email','2','16','0');");
                         return "ok";
@@ -142,8 +144,8 @@ class AccesoBd{
             }
             else {
                 //campos no vacios-> hasear pass
-                $hashPass=password_hash($pass, PASSWORD_BCRYPT);
-                //$hashPass=$pass;
+                //$hashPass=password_hash($pass, PASSWORD_BCRYPT);
+                $hashPass=$pass;
                 //comprobar si esta en bd
                $userOBT= $this->lanzarSQL("SELECT * from `kalpatarubd`.`users` where (`username` = '$user' and `pass`='$hashPass')");
                while(($fila=mysqli_fetch_array($userOBT))!=null){
