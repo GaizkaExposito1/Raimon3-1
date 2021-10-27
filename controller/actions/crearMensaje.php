@@ -16,6 +16,6 @@ $result=$bd->newMensaje($user->id,$_POST['tipografia'],$_POST['colorTipo'],$_POS
 if($result=="ok"){
     $result="Mensaje enviado a revision";
     header("Location: ../../index.php?section=principal&error=$result");
-}else{//mover para atras y devolver parametro para k se pueda poner el alert 
-    header("Location: ../../index.php?section=crearMensaje&error=$result");}
+}else{$_SESSION['error']=$result; 
+    header("Location: ../../index.php?section=crearMensaje");}
 ?>
