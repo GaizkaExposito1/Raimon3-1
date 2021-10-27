@@ -18,7 +18,7 @@ class Mensaje{
         $this->colorTipografia=$colorTipografia;
         $this->activateToken=$activateToken;
         $this->texto=$texto;
-        $this->color=$color;
+        //$this->color=$color;
         $this->numLikes=$numLikes;
     }
    /* function __toString(){
