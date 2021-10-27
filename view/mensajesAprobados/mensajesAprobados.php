@@ -1,6 +1,7 @@
 
     <section>
-        <div>
+        <div id="mensajesCurso">
+        <h1>Estos son tus mensajes Aprobados</h1>
             <ul>
             <?php 
             if(empty($sms)){

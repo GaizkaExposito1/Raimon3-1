@@ -1,7 +1,8 @@
 <article>
         <div id="mensajesCurso">
         <?php
-                echo "<h1>CURSO: 1º BAchiller</h1>"; 
+        $curso;
+                echo "<h1>CURSO:".$curso->id."</h1>"; 
                 ?>
             <ul>
             <?php

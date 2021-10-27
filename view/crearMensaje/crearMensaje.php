@@ -31,9 +31,6 @@ if(isset($_SESSION['error'])){
 		   <option value="Indie Flower" >Indie Flower</option>
 		   <option value="Saira Condensed" >Saira Condensed</option>
          </select>	  
-
-		  <label> <?php echo $language["COLOR_HOJA"]; ?></label>
-		  <input type="color" name="color">
 		 <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
 		
