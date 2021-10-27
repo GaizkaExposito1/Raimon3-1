@@ -156,7 +156,7 @@ class AccesoBd{
             }
         }
 
-        function Logout(){
+        function Logout(){  
             session_destroy();
         }
 
