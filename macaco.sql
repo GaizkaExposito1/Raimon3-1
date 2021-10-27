@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS `alumnosanluis` (
 -- Volcando datos para la tabla kalpatarubd.alumnosanluis: ~0 rows (aproximadamente)
 DELETE FROM `alumnosanluis`;
 /*!40000 ALTER TABLE `alumnosanluis` DISABLE KEYS */;
+INSERT INTO `alumnosanluis` (`id`, `dni`, `idgrupo`) VALUES
+	(1, '12345678Z', 1);
 /*!40000 ALTER TABLE `alumnosanluis` ENABLE KEYS */;
 
 -- Volcando estructura para tabla kalpatarubd.grupo
@@ -82,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   CONSTRAINT `userid` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.mensajes: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.mensajes: ~3 rows (aproximadamente)
 DELETE FROM `mensajes`;
 /*!40000 ALTER TABLE `mensajes` DISABLE KEYS */;
 INSERT INTO `mensajes` (`id`, `userId`, `activateToken`, `tipografia`, `color`, `colorTipografia`, `texto`, `numLikes`) VALUES
@@ -98,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `prefiltro` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.prefiltro: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.prefiltro: ~3 rows (aproximadamente)
 DELETE FROM `prefiltro`;
 /*!40000 ALTER TABLE `prefiltro` DISABLE KEYS */;
 INSERT INTO `prefiltro` (`id`, `palabra`) VALUES
@@ -143,11 +145,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `roles` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.users: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.users: ~1 rows (aproximadamente)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `dni`, `pass`, `username`, `email`, `rol`, `curso`, `Banned`) VALUES
-	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, 0);
+	(1, '00000000Z', 'raimon3+1', 'Raimon', 'retoraimon@gmail.com', 3, 16, 0),
+	(3, '12345678Z', '$2y$10$fzxB/S6NV1j8IpI9YlHmuOS/Ua94OQD/yfhyXzhckRcxhlbOaEAMC', 'Raimon2', 'f@f.com', 1, 1, 0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
