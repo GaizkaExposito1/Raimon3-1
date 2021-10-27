@@ -1,14 +1,10 @@
 <?php
 //require
-require_once "./model/accesoBD.class.php";
-require_once "./model/clases/mensaje.class.php";
+require_once "../../model/accesoBD.class.php";
+require_once "../../model/clases/User.class.php";
 $bd= new AccesoBd();
-$param="acept";//por defecto
-if(isset($_GET['id'])){
-    $param=$_GET['id'];
-}
-if($param!="acept"){
-$bd->UnbanUser($param);
-}
+
+$bd->UnbanUser($_POST['UsersB']);
+
 header("Location: ../../index.php?section=administracion");
 ?>

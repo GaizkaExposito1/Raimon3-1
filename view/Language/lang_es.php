@@ -13,6 +13,9 @@ $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
 //principal
 $language["TITU_PRINC"] = "Árbol de los deseos";
+$language["CREAR_MSJ_PRINC"] = "Crear Mensaje";
+$language["MSJ_APR_PRINC"] = "Mensajes Aprobados";
+$language["MSJ_NOAPR_PRINC"] = "Mensajes No Aprobados";
 //login
 $language['INICIO_SESION'] = 'Iniciar Sesión';
 $language["LOGIN_SUBTITULO"] = "¡¡Bienvenido al árbol de los deseos!!";
@@ -50,6 +53,7 @@ $language["NEW_EMAIL_PERFIL"] = "Nuevo Email";
 $language["ANTIGUO_USERNAME_PERFIL"] = "Antiguo Nombre de Usuario";
 $language["NEW_USERNAME_PERFIL"] = "Nuevo Nombre de Usuario";
 $language["ENVIAR"] = "Enviar";
+$language["CERRAR_PERFIL"] = "Cerrar";
 //mensajes curso
 $language["MSJ_X_CURSO"] = "Mensajes por Curso";
 $language["NO_MSJ_CURSO"] = "NO HAY MENSAJES EN ESTE CURSO.";
