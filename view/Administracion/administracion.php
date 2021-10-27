@@ -17,7 +17,7 @@ if(isset($_SESSION['error'])){
 		</div>
 		<div class="right" id="right">
 			<form action="./controller/actions/banear.php"  method="post">
-				<select name="UsersNB" >
+				<select id="userNB" name="UsersNB" >
 						<option value="usersNoBaneados" disabled selected><?php echo $language["UsersNB"]; ?> </option>
 						<?php 
 						if(empty($usersNB)){
@@ -31,7 +31,7 @@ if(isset($_SESSION['error'])){
 					<input type="submit" id="aceptar" value="<?php echo $language["BANEAR"]; ?>">
 			</form>
 			<form action="./controller/actions/desbanear.php"  method="post">
-				<select name="UsersB" >
+				<select id="userB" name="UsersB" >
 						<option value="usersBaneados" disabled selected><?php echo $language["UsersB"]; ?> </option>
 						<?php 
 						if(empty($usersB)){
@@ -45,7 +45,7 @@ if(isset($_SESSION['error'])){
 					<input type="submit" id="aceptar" value="<?php echo $language["DESBANEAR"]; ?>">
 			</form>
 			<form id="mensajes" action="./controller/actions/Acept.php"  method="post">
-				<select id="sel" name="sms" >
+				<select id="mens" name="sms" >
 						<option value="smsD" disabled selected><?php echo $language["MensajesNA"]; ?> </option>
 						<?php 
 						if(empty($sms)){
@@ -59,19 +59,19 @@ if(isset($_SESSION['error'])){
 					<button id="aceptms"><?php echo $language["ACEPTARM"]; ?></button>
 					<button id="denyms"><?php echo $language["DENEGARM"]; ?></button>
 			</form>
-			<form action="./controller/actions/newAdmin.php"  method="post">
-			<label for="dni"><?php echo $language["DNI"]; ?></label>
-					<input type="text" id="text" name="dni">
-					<label for="password"><?php echo $language["PASS"]; ?></label>
+			<form action="./controller/actions/newAdmin.php" legend="Crear Admin"  method="post">
+					<label for="dni" id="lDni"><?php echo $language["DNI"]; ?></label>
+					<input type="text" id="dni" name="dni">
+					<label for="password" id="lPass"><?php echo $language["PASS"]; ?></label>
 					<input type="password" id="password" name="pass">
-					<label for="password"><?php echo $language["CONF_PASS"]; ?> </label>
-					<input type="password" id="password" name="confpass">
-					<label for="email"><?php echo $language["EMAIL"]; ?></label>
+					<label for="password" id="lConPass"><?php echo $language["CONF_PASS"]; ?> </label>
+					<input type="password" id="confirmPassword" name="confpass">
+					<label for="email" id="lEmail"><?php echo $language["EMAIL"]; ?></label>
 					<input type="email" id="email" name="email">
-					<label for="userName"><?php echo $language["USER"]; ?></label>
-					<input type="text" id="text" name="username">
+					<label for="userName" id="lUsername"><?php echo $language["USER"]; ?></label>
+					<input type="text" id="userName" name="username">
 					
-					<input type="submit" id="aceptar" value="<?php echo $language["ACEPTAR"]; ?>">
+					<input type="submit" id="crearAdmin" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
 
 		</div>
