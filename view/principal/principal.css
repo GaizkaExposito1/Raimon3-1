@@ -4,11 +4,15 @@ body{
 
 h1{
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 select{
+    
+   font-family: 'Josefin Sans', sans-serif;
    margin-left: 9%;
-    width: 35%;
-    margin: 5%;
+  width: 35%;
+margin: 5%;
 }
 
 .carouseandSelect{

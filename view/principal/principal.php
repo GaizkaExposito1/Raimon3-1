@@ -52,13 +52,7 @@
     
 
 </div>
-   <!--
-    <div class="arbolBotones"> 
-    
-        <img id="imgArbol" src="./view/assets/Arbol.png" alt="" >
-    </div>
-                -->
-                
+ 
 
   
     <!-------Boststrap carousel--------->
@@ -78,7 +72,9 @@
                 <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
             </p>
         </div>
+        
         <div class="item">
+
             <p class="mensaje">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, 
                 minus commodi iusto vel a dolore? Voluptas rep
@@ -86,7 +82,7 @@
             <p>
                 <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a>
             </p>
-        </div>
+        </div> 
     </div>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
