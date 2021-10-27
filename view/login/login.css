@@ -23,10 +23,8 @@ body {
   
 .container {
   display: flex;
-  height: 30em;
   margin: 0 auto;
   margin-top: 5%;
-  width: 640px;
 }
 .left {
   background: white;
@@ -51,7 +49,8 @@ body {
 .login {
   font-size: 50px;
   font-weight: 900;
-  margin: 50px 40px 40px;
+  /* margin: 50px 40px 40px; */
+  margin-left: 16%;
 }
 .eula {
   color: #999;
@@ -70,8 +69,9 @@ body {
 form {
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   /* position: absolute; */
+  margin-bottom: 13%;
 }
 select{
   font-family: 'JetBrains Mono', monospace;
@@ -131,21 +131,20 @@ input[type="button"] {
   border-radius: 10px;
   background-color: #EDE7F6;
 }
+
 #Register{
-    margin-left: 40px;
-    margin-right: 40px;
-    font-family: 'JetBrains Mono', monospace;
-    border: 0;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 5%;
-    outline: none;
-    width: 82%;
-    border-radius: 10px;
-    background-color: #EDE7F6;
-    color: #707075;
+  margin-left: 227px;
+  margin-right: 40px;
+  font-family: 'JetBrains Mono', monospace;
+  border: 0;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5%;
+  outline: none;
+  width: 82%;
 }
+
 @media  screen and (min-width: 10px) and (max-width: 1000px){
     .left {
       width: 100%;
@@ -154,18 +153,22 @@ input[type="button"] {
       font-size: 50px;
       text-align: center;
     }
+    .container{
+      padding-left: 28px !important;
+    }
     .eula {
     font-size: 26px;
 }
     .right {
-      margin-top: 7%;
+      margin-top: 43%;
       margin-right: 12%;
       margin-left: -87%;
+      padding-top: 11%;
+      padding-bottom: 9%;
       background: #474A59;
       box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
       color: #F1F1F2;
-      width: 90%;
-      height: 120%;
+      width: 95%;
       visibility: hidden;
     }
       #mostrar {
@@ -184,4 +187,9 @@ input[type="button"] {
     label{
       font-size: 20px;
     }
+    #Register{
+      margin-left: 70px;
+      position: relative;
+      left: -4%;
+  }
   } 

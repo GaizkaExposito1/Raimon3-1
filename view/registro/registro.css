@@ -16,16 +16,15 @@ body {
   caret-color: darkblue;
   
 }
+
 #mostrar {
   display: none;
   }
   
 .container {
   display: flex;
-  height: 30em;
   margin: 0 auto;
   margin-top: 5%;
-  width: 640px;
 }
 .left {
   background: white;
@@ -38,7 +37,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 50px;
   font-weight: 900;
-  margin: 134px 180px 33px; /*Centrar la caja izquierda */
+   /*Centrar la caja izquierda */
 }
 .eula {
   font-family: 'JetBrains Mono', monospace;
@@ -47,11 +46,7 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-.login {
-  font-size: 50px;
-  font-weight: 900;
-  margin: 50px 40px 40px;
-}
+
 .eula {
   color: #999;
   font-size: 14px;
@@ -64,11 +59,14 @@ body {
   color: #F1F1F2;
   position: relative;
   width: 50%;
-  margin-bottom: -4%;
+  margin-bottom: -3%;
 }
 form {
-  margin: 40px;
-  position: absolute;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* margin-top: 40px; */
+  /* position: absolute; */
+  margin-bottom: 13%;
 }
 select{
   font-family: 'JetBrains Mono', monospace;
@@ -115,7 +113,8 @@ input[type="submit"] {
   height: 30px;
   line-height: 30px;
   outline: none;
-  width: 100%;
+
+  margin-top: 20px;
   border-radius: 10px;
   background-color: #EDE7F6;
   color: #707075;
@@ -127,6 +126,8 @@ input[type="button"] {
   border-radius: 10px;
   background-color: #EDE7F6;
 }
+
+
 @media  screen and (min-width: 10px) and (max-width: 1000px){
     .left {
       width: 100%;
@@ -135,18 +136,22 @@ input[type="button"] {
       font-size: 50px;
       text-align: center;
     }
+    .container{
+      padding-left: 28px !important;
+    }
     .eula {
     font-size: 26px;
 }
     .right {
-      margin-top: 7%;
+      margin-top: 43%;
       margin-right: 12%;
       margin-left: -87%;
+      padding-top: 11%;
+      padding-bottom: 9%;
       background: #474A59;
       box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
       color: #F1F1F2;
-      width: 90%;
-      height: 120%;
+      width: 95%;
       visibility: hidden;
     }
       #mostrar {
@@ -165,4 +170,5 @@ input[type="button"] {
     label{
       font-size: 20px;
     }
+
   } 

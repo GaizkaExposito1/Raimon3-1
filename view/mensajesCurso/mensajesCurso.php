@@ -7,15 +7,15 @@
             <?php
             if(empty($sms)){
                 
-                echo "<h3> NO HAY MENSAJES EN ESTE CUROS</h3>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>USUARIO:</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<h3>".$language["NO_MSJ_CURSO"]."</h3>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
+                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
 
                 
             }else{

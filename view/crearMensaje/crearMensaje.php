@@ -1,9 +1,7 @@
 <?php
-if(isset($_GET['error'])){
-	$param=$_GET['error'];
-		echo "<script>$( document ).ready(function() {
-			$('#alert').alert('toggle')
-		});</script>";
+if(isset($_SESSION['error'])){
+		echo "<div id='alert' class='alert alert-danger' role='alert'>".$_SESSION['error']."</div>";
+		unset($_SESSION['error']);
 }
 ?>
 <article>
@@ -45,13 +43,6 @@ if(isset($_GET['error'])){
   </div>
 </article>
 
-<!--alert-->
-<div id="alert" class="alert alert-danger" role="alert">
-		<?php
-			$er=str_replace("%"," ",$param);
-			echo $er;
-		?>
-</div>
 
 
 

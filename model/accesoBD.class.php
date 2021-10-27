@@ -315,8 +315,9 @@ class AccesoBd{
                 //obtener cada columna--> $fila['nombreColumna']
                 extract($fila);
                 $mens=new Mensaje($id,$userId,$activateToken,$tipografia,$color,$colorTipografia,$texto,$numLikes);
+                return $mens;
             }
-            return $mens;
+           
         }
 
         function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto){

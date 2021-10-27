@@ -7,5 +7,6 @@ $result=$bd->Registro($_POST['dni'],$_POST['pass'],$_POST['confpass'],$_POST['em
 
 if($result="ok"){
      header("Location: ../../index.php");
-}else{ header("Location: ../../index.php?section=registro&error=$result");}
+}else{ $_SESSION['error']=$result;
+     header("Location: ../../index.php?section=registro");}
 ?>

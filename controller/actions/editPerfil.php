@@ -7,6 +7,6 @@ $result=$bd->editUser($_POST['newPass'],$_POST['newConfpass'],$_POST['newEmail']
 
 if($result=="ok"){
     header("Location: ../../index.php?section=perfil");
-}else{//mover para atras y devolver parametro para k se pueda poner el alert 
-    header("Location: ../../index.php?section=perfil&error=$result");}
+}else{$_SESSION['error']=$result;
+    header("Location: ../../index.php?section=perfil");}
 ?>

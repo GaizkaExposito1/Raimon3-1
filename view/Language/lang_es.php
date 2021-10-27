@@ -11,9 +11,13 @@ $language["MENSAJES"] = "Ver mensajes aprobados";
 $language["LOGOUT"] = "Cerrar sesion";
 $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
+//principal
+$language["TITU_PRINC"] = "Árbol de los deseos";
 //login
 $language['INICIO_SESION'] = 'Iniciar Sesión';
 $language["LOGIN_SUBTITULO"] = "¡¡Bienvenido al árbol de los deseos!!";
+$language["REIN_DATOS"] = "Reintroducir datos";
+$language["IR_REGIS"] = "Ir a Registro";
 $language["USER"] = "Usuario";
 $language["PASS"] = "Contraseña";
 $language["ACEPTAR"] = "Aceptar";
@@ -48,6 +52,8 @@ $language["NEW_USERNAME_PERFIL"] = "Nuevo Nombre de Usuario";
 $language["ENVIAR"] = "Enviar";
 //mensajes curso
 $language["MSJ_X_CURSO"] = "Mensajes por Curso";
+$language["NO_MSJ_CURSO"] = "NO HAY MENSAJES EN ESTE CURSO.";
+$language["USER_MSJ_CURSO"] = "USUARIO:";
 //crear mensaje y editar mensaje
 $language["CREAR_MSJ"] = "Crear Mensaje";
 $language["EDITAR_MSJ"] = "Editar Mensaje";
@@ -73,8 +79,8 @@ $language["MensajesNA"] = "Mensajes por Aprobar";
 $language["MensajesNAsms"] = "Todos los mensajes han sido aprobados";
 $language["ACEPTARM"] = "Aprobar Mensaje";
 $language["DENEGARM"] = "Denegar y Borrar Mensaje";
-//Mensajes no aprobados
-
-//Mensajes aprovados
+//Mensajes aprobados y NO aprobados
+$language["NO_MSJ_TDV"] = "No hay mensajes aprobados todavia";
+$language["DEL_MSJ"] = "Eliminar Mensaje";
 
 ?>
