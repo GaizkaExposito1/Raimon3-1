@@ -6,7 +6,7 @@
 /*font-family: 'Josefin Sans', sans-serif;*/
 /*    font-family: 'JetBrains Mono', monospace;*/
 
-/*
+
 body {
   background: #EDE7F6;
   margin: 0;
@@ -39,8 +39,8 @@ body {
   font-size: 50px;
   font-weight: 900;
   text-align: center;
-  margin: 132px 29px 33px; /*Centrar la caja izquierda *//*
-}*//*
+  margin: 132px 29px 33px; /*Centrar la caja izquierda */
+}
 .eula {
   font-family: 'JetBrains Mono', monospace;
   color: #999;
@@ -61,71 +61,6 @@ body {
 }
 #continuar{
   visibility: hidden;
-}
-#imgPerfil{
-  text-align: center;
-}
-#datosPerfil{
-  width: 50%;
-  margin-top: 8%;
-  margin-left: 2%;
-}
-#cambiarContraseña{
-  position: relative ;
-  top: -6px ;
-  left: 7px ;
-  color: #e050c8 ;
-  background-color: transparent ;
-  border: 0 ;
-}
-#cambiarUsername{
-  position: relative ;
-  top: -6px ;
-  left: 7px ;
-  color: #e050c8 ;
-  background-color: transparent ;
-  border: 0 ;
-}
-#cambiarEmail{
-  position: relative ;
-  top: -6px ;
-  left: 93px;
-  color: #e050c8 ;
-  background-color: transparent ;
-  border: 0 ;
-}
-#mensajesAprobados{
-  position: relative;
-  top: 5px;
-  left: -5px;
-  color: #e050c8;
-  background-color: transparent;
-  border: 0;
-}
-#mensajesDenegados{
-  position: relative;
-  top: 5px;
-  left: 15px;
-  color: #e050c8;
-  background-color: transparent;
-  border: 0;
-}
-#editarContraseña, #editarEmail, #editarUsername{
-  display: none;
-}
-img{
-  border-radius: 50%;
-  width: 20%;
-  box-shadow:3px 2px 2px #000;
-  margin-top: 3%;
-}
-#editarDatsos{
-  width: 50%;
-}
-form#editarContraseña, form#editarEmail, form#editarUsername {
-  left: 320px;
-  top: -173px;
-  position: relative;
 }
 label {
   font-family: 'JetBrains Mono', monospace;
@@ -157,7 +92,7 @@ input[type="submit"] {
   line-height: 30px;
   outline: none;
   margin-top: 2%;
-  width: 90%;
+  width: 29%;
   background-color: #EDE7F6;
   color: #707075;
   border-radius: 10px;
@@ -166,8 +101,107 @@ input[type="button"] {
   width: 60%;
   border-radius: 10px;
   background-color: #EDE7F6;
-}*/
-/*ALERT MODAL BOOSTRAP*//*
+}
+
+input {
+  margin: 0;
+  margin-left: 4% !important;
+}
+input[type="password"], input[type="email"], input[type="text"]{
+  margin: 0;
+  color: #000 !important;
+}
+input[type="submit"] {margin: 0;margin-top: 2%;color: #000 !important;margin-left: 4%;}
+input[type="button"] {
+  margin-top: 2%;
+  color: #000 !important;
+}
+button {
+  margin-left: 3.5% !important;
+  margin: 0;
+  border-radius: 10px;
+  border-color: transparent;
+  color: #000 !important;
+}
+#userNB, #userB, #mens{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 30%;
+  margin-left: 1%;
+  }
+label{
+  padding-right: 2%;
+  margin-left: 5%;
+}
+select{
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  color: black !important;
+  background-color: #EDE7F6;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 8%;
+  opacity: 70%;
+
+}
+#dni{
+  position: relative;
+  width: 30%;
+  left: -5%;
+}
+#lDni{
+  position: relative;
+}
+#password{
+  position: relative;
+  width: 30%;
+  left: -8%;
+}
+#lPass{
+  position: relative;
+  left: -30px;
+}
+#confirmPassword{
+  position: relative;
+  width: 24%;
+  left: 32%;
+}
+#lConPass{
+  position: relative;
+  left: 250px;
+}
+#email{
+  position: relative;
+  width: 30%;
+  left: 23%;
+}
+#lEmail{
+  position: relative;
+  right: 425px;
+  top: 46px;
+}
+#userName{
+  position: relative;
+  width: 23%;
+  right: 37.5%;
+  bottom: 48px;
+}
+#lUsername{
+  position: relative;
+  right: 240px;
+  bottom: 45px;
+}
+#crearAdmin{
+   position: relative;
+   left: 60%;
+   bottom: 39px;
+}
+/*ALERT MODAL BOOSTRAP*/
 .btn.btn-secondary{
   color:#B39DDB !important ;
   background-color: transparent !important;
@@ -237,12 +271,13 @@ input[type="button"] {
     box-shadow: 0px 0px 40px 16px rgb(0 0 0 / 22%);
     color: #F1F1F2;
     width: 90%;
-    height: 73%;
+    height: 90%;
     visibility: hidden;
   }
   #mostrar {
     color: #999;
     display: block;
+    margin-left:  0% !important;
     margin-top: 40%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -252,34 +287,36 @@ input[type="button"] {
   }
   .btn-primary {
     position: relative !important;
-    top: -144px !important;
+    top: -208px !important;
     left: 72px !important;
   }
-  #cambiarEmail{
-    position: relative ;
-    top: -6px ;
-    left: 8px;
-    color: #e050c8 ;
-    background-color: transparent ;
-    border: 0 ;
+
+  
+  input {
+    margin: 0;
+    margin-left: 4% !important;
   }
-  #editarDatsos{
-    width: 100%;
-    position: relative ;
-    top: -21px;
+  input[type="password"], input[type="email"], input[type="text"]{
+    margin: 0;
+    color: #000 !important;
   }
-  form#editarContraseña, form#editarEmail, form#editarUsername {
-    left: 13px;
-    top: -24px;
-    position: relative;
+  input[type="submit"] {margin: 0;margin-top: 2%;width: 90%;color: #000 !important;margin-left: 4%;}
+  input[type="button"] {
+    margin-top: 2%;
+    color: #000 !important;
   }
-  #mensajesDenegados, #mensajesAprobados{
-    position: relative;
-    top: 5px;
-    left: 5px;
-    color: #e050c8;
-    background-color: transparent;
-    border: 0;
+  button {
+    margin-left: 3.5% !important;
+    margin: 0;
+    color: #000 !important;
+  }
+  #userNB, #userB, #mens{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    }
+  label{
+    padding-right: 2%;
+    margin-left: 5%;
   }
 }
 
@@ -339,30 +376,47 @@ input[type="button"] {
     top: -144px !important;
     left: 72px !important;
   }
-  #cambiarEmail{
-    position: relative ;
-    top: -6px ;
-    left: 8px;
-    color: #e050c8 ;
-    background-color: transparent ;
-    border: 0 ;
-  }
-  #editarDatsos{
-    width: 100%;
-    position: relative ;
-    top: -21px;
-  }
-  form#editarContraseña, form#editarEmail, form#editarUsername {
-    left: 13px;
-    top: -24px;
-    position: relative;
-  }
-  #mensajesDenegados, #mensajesAprobados{
-    position: relative;
-    top: 5px;
-    left: 5px;
-    color: #e050c8;
-    background-color: transparent;
+  select{
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    font-size: 20px;
+    height: 30px;
+    width: 90%;
+    line-height: 30px;
+    color: black !important;
+    background-color: #EDE7F6;
     border: 0;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 8%;
+    opacity: 70%;
+
   }
-}*/
+
+  input {
+    margin: 0;
+    margin-left: 4% !important;
+  }
+  input[type="password"], input[type="email"], input[type="text"]{
+    margin: 0;
+    color: #000 !important;
+  }
+  input[type="submit"] {margin: 0;margin-top: 2%;width: 90%;color: #000 !important;margin-left: 4%;}
+  input[type="button"] {
+    margin-top: 2%;
+    color: #000 !important;
+  }
+  button {
+    margin-left: 3.5% !important;
+    margin: 0;
+    color: #000 !important;
+  }
+  #userNB, #userB, #mens{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    }
+  label{
+    padding-right: 2%;
+    margin-left: 5%;
+  }
+}
