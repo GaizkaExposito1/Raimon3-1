@@ -8,7 +8,7 @@ $language["LOGOUT"] = "Itxi";
 $language["ACC_ALUMNADO"] = "Ikaslearen Arloa";
 $language["NEW_MENSAJE"] = "Mezu Berria";
 $language["MENSAJES"] = "Ikusi Gainditu Mezua";
-$language["LOGOUT"] = "Itxi sesioa";
+$language["LOGOUT"] = "Itxi Sesioa";
 $language["ADMIN"] = "Administrazio-eremua";
 $language["PRINCIPAL"] = "Orrialde Nagusia";
 //principal
