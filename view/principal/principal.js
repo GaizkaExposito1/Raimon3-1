@@ -1,15 +1,3 @@
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        $("#mybotonMostrar").css("visibility", "visible");
-      
-    });  
-  });
-
-function mostrarMensaje() {
-    let btnMostrar = document.getElementById("mybotonMostrar");
-    btnMostrar.style.visibility="visible";
-}
-
 /*--------------------------------------------------------------------------- */
 
 $('#myCarousel').carousel();

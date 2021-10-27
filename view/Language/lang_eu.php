@@ -52,6 +52,8 @@ $language["NEW_USERNAME_PERFIL"] = "Erabiltzailearen Izen Berria";
 $language["ENVIAR"] = "Bidali";
 //mensajes curso
 $language["MSJ_X_CURSO"] = "Mezuak Ikastaroaren Arabera";
+$language["NO_MSJ_CURSO"] = "EZ DAGO MEZURIK MAIL HONETAN.";
+$language["USER_MSJ_CURSO"] = "ERABILTZAILEA:";
 //crear mensaje y editar mensaje
 $language["CREAR_MSJ"] = "Sortu Mezua";
 $language["EDITAR_MSJ"] = "Editatu Mezua";
@@ -64,5 +66,21 @@ $language["COLOR_HOJA"] = "Orri Kolore";
 $language["ANONIMO"] = "Anonimoa";
 $language["NO_ANONIMO"] = "Ez Anonimoa";
 $language["FORMA_HOJA"] = "Orri Forma";
+//administracion
+$language["ADMINISTRACION"] = "Administrazioa";
+$language["TXT_ADMIN"] = "Administrazio-pantaila";
+$language["UsersNB"] = "Baneatu gabeko Erabiltzaileak";
+$language["NBsms"] = "Ez Dago Baneatutako Erabiltzailerik";
+$language["BANEAR"] = "Baneatu";
+$language["UsersB"] = "Baneatutako Erabiltzaileak";
+$language["UsersBsms"] = "Ez Dago Erabiltzailerik Banik Gabe";
+$language["DESBANEAR"] = "Desbaneatu";
+$language["MensajesNA"] = "Onartzeko Dauden Mezuak";
+$language["MensajesNAsms"] = "Mezu Gustiak Onartu Dira";
+$language["ACEPTARM"] = "Onartu Mezua";
+$language["DENEGARM"] = "Ukatu eta Ezabatu Mezua";
+//Mensajes aprobados y NO aprobados
+$language["NO_MSJ_TDV"] = "Oraindik ez dago onartutako mezurik";
+$language["DEL_MSJ"] = "Mezua Ezabatu";
 
 ?>
