@@ -15,11 +15,12 @@
        <!---30 Botones-->
        
     <div class="arbolBotones">
+      
         <button class="btn1" id="btn1" onclick="mostrarMensaje();">
             ook!!
            <!-- <span class="mensajeUsuario" id="mybotonMostrar">¡Me quiero morir!</span> -->
         </button>
-
+  
         <button class="btn2">
             ook!!
            
@@ -120,12 +121,12 @@
         <button class="btn30">
             ook!
         </button> 
-        <!--
+        
         <button class="btn31">
             ook!
         </button> 
         
-                -->       
+                      
             
     </div>
   
