@@ -128,3 +128,400 @@ select{
 
 
 }
+
+/*Hojasss*/
+
+#hoja1{
+    position: absolute;
+    left: 0;
+    width: 3%;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-size: 100% 100%;
+    animation: run1 6s ease-in-out infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    
+    }
+    #hoja2{
+    position: absolute;
+    left: 0;
+    width: 3%;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-size: 100% 100%;
+    animation: run2 7s ease-in-out infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    }
+    #hoja3{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 8%;
+        margin-left: 6%;
+        background-size: 100% 100%;
+        animation: run1 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+    }
+    #hoja4{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 12%;
+        margin-left: 20%;
+        background-size: 100% 100%;
+        animation: run2 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+         }
+    #hoja5{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 8%;
+        margin-left: 21%;
+        margin-top: 5%;
+        background-size: 100% 100%;
+        animation: run2 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+            
+            }
+    #hoja6{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 8%;
+        margin-left: 26%;
+        background-size: 100% 100%;
+        animation: run1 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+            }
+    #hoja7{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 5%;
+        margin-left: 25%;
+        background-size: 100% 100%;
+        animation: run2 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;      
+    }
+    
+    #hoja8{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 6%;
+        margin-left: 18%;
+        background-size: 100% 100%;
+        animation: run1 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+                    
+                    }
+    #hoja9{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 10%;
+        margin-left: 4.5%;
+        background-size: 100% 100%;
+        animation: run1 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+                        
+    }
+    #hoja10{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 4%;
+        margin-left: 22%;
+        background-size: 100% 100%;
+        animation: run2 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+    }
+                            
+    #hoja11{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 6%;
+        margin-left: 6%;
+        background-size: 100% 100%;
+        animation: run2 8s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+                                
+    }
+    
+    #hoja12{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-left: 25%;
+        margin-top: 5%;
+        background-size: 100% 100%;
+        animation: run1 6s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        
+        }
+        #hoja13{
+        position: absolute;
+        left: 0;
+        width: 3%;
+        margin-top: 10%;
+        margin-left: 20%;
+        background-size: 100% 100%;
+        animation: run2 7s ease-in-out infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        }
+        #hoja14{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 8%;
+            margin-left: 26%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+        #hoja15{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 12%;
+            margin-left: 9%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+             }
+        #hoja16{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 8%;
+            margin-left: 9%;
+            margin-top: 5%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                
+                }
+        #hoja17{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 8%;
+            margin-left: 6%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                }
+        #hoja18{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 5%;
+            margin-left: 6%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;      
+        }
+        
+        #hoja19{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 8%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                        
+                        }
+        #hoja20{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 10%;
+            margin-left: 15%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                            
+        }
+        #hoja21{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 4%;
+            margin-left: 22%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+                                
+        #hoja22{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 25%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        }  
+        
+        #hoja23{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 4%;
+            margin-left: 30%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+                                
+        #hoja24{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 45%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        } 
+        
+        #hoja25{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 4%;
+            margin-left: 35%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+                                
+        #hoja26{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 38%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        } 
+        
+        #hoja27{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 4%;
+            margin-left: 30%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+                                
+        #hoja28{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 40%;
+            background-size: 100% 100%;
+            animation: run2 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        } 
+        #hoja29{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 38%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        } 
+        
+        #hoja30{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 4%;
+            margin-left: 30%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+                                
+        #hoja31{
+            position: absolute;
+            left: 0;
+            width: 3%;
+            margin-top: 6%;
+            margin-left: 40%;
+            background-size: 100% 100%;
+            animation: run1 8s ease-in-out infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+                                    
+        } 
+
+
+    /*#HojaOto:hover{display: flex;}*/
+    @keyframes run1{
+        0%{opacity: 0;}
+        10%{opacity: 1;}
+    
+        100%{opacity: 1;
+            transform: translate3d(17px,57vh,15px);
+           
+        }
+    }
+    @keyframes run2{
+        0%{opacity: 0;}
+        10%{opacity: 1;}
+    
+        100%{opacity: 1;
+            transform: translate3d(17px,20vh,15px);
+           
+        }
+    }
+    
+    
