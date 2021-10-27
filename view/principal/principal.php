@@ -45,7 +45,7 @@
     <img id="hoja26" src="./view/assets/hoja9.png"  alt="" srcset="">
     <img id="hoja27" src="./view/assets/hoja11.png"  alt="" srcset="">
     <img id="hoja28" src="./view/assets/hoja1.png"  alt="" srcset="">
-    <img id="hoja29" src="./view/assets/hoja5.png"  alt="" srcset="">
+    <img id="hoja29" src="./view/assets/hoja5.png"  alt="" srcset=""> 
     <img id="hoja30" src="./view/assets/hoja6.png"  alt="" srcset="">
     <img id="hoja31" src="./view/assets/hoja7.png"  alt="" srcset="">
   
