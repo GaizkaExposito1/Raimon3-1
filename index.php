@@ -48,13 +48,7 @@ unicamente para cada contenido-->
     
     <nav class="topnav2" id="myTopnav2">
       <img id="LogoCLSLarge" class="CSLlogo2" alt="CentroSanLuis Logo" src="./view/assets/CentroSanLuisLargo.png">
-      
-      <?php if(isset($_SESSION['usuario'])){
-      echo"<a  href='index.php?section=perfil' id='Login'><i class='fas fa-user'></i></a>";}
-      else{
-        echo"<a  href='index.php?section=login' id='Login'><i class='fas fa-user'></i></a>";
-      }
-      ?>
+      <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>
 
       <?php
       if(isset($_SESSION['usuario'])){
@@ -63,9 +57,15 @@ unicamente para cada contenido-->
       <a  href='index.php?section=logout' id='logout'> ". $language["LOGOUT"] ."</a>";
       if($_SESSION['usuario']->rol==2||$_SESSION['usuario']->rol==3){
       echo"<a  href='index.php?section=Administracion' id='Administracion'> ". $language["ADMIN"] ."</a>";
-      }}?>
-      <a  href="index.php?section=principal" id="PagePrincipal"><?php echo $language["PRINCIPAL"]; ?></a>
-      <a  href="javascript:void(0);" id="ir" onmouseover="MidMenu()"><i class="fas fa-bars"></i></a>
+      }echo"      <a  href='index.php?section=logout' id='logout'> ". $language["LOGOUT"] ."</a>";
+      }?>
+      <?php if(isset($_SESSION['usuario'])){
+      echo"<a  href='index.php?section=perfil' id='Login'><i class='fas fa-user'></i></a>";}
+      else{
+        echo"<a  href='index.php?section=login' id='Login'><i class='fas fa-user'></i></a>";
+      }
+      ?>
+      <a  href="javascript:void(0);" id="ir" onclick="MidMenu()"><i class="fas fa-bars"></i></a>
     </nav>
   </header>
   <section id="contenido">

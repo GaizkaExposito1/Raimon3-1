@@ -61,18 +61,18 @@ a:focus {
 
 @media screen and (max-width: 600px) {
 .topnav{
-	    padding-bottom: 4%;
+  padding-bottom: 4%;
 	}
  .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    font-size: 27px;
   }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
-
     top: 25px;
   }
   .topnav.responsive a {
@@ -81,11 +81,8 @@ a:focus {
   font-size: 27px;
     text-align: left;
   }
-#langFlagBasque{
-position:initial;
-}
-#langFlagSpain{
-position:initial;}
+#langFlagBasque{position:initial;width: 20%;}
+#langFlagSpain{position:initial;width: 20%;}
 .active {
   color: #d5b6da;
 font-size: 27px !important;
@@ -102,8 +99,10 @@ top: 15px;
   .topnav a.icon {
     float: right;
     display: block;
+    font-size: 27px;
   }
   .topnav.responsive {position: relative;}
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -111,9 +110,9 @@ top: 15px;
   }
 .active {
   color: #d5b6da;
-font-size: 27px !important;
-position: relative;
-top: 15px;
+  font-size: 27px !important;
+  position: relative;
+  top: 15px;
 }
   .topnav.responsive a {
     float: none;
