@@ -250,37 +250,6 @@ input[type="button"] {
     border: 0;
     background-color: white;
   }
-  .btn-primary {
-    position: relative !important;
-    top: -208px !important;
-    left: 72px !important;
-  }
-  #cambiarEmail{
-    position: relative ;
-    top: -6px ;
-    left: 8px;
-    color: #e050c8 ;
-    background-color: transparent ;
-    border: 0 ;
-  }
-  #editarDatsos{
-    width: 100%;
-    position: relative ;
-    top: -21px;
-  }
-  form#editarContraseña, form#editarEmail, form#editarUsername {
-    left: 13px;
-    top: -24px;
-    position: relative;
-  }
-  #mensajesDenegados, #mensajesAprobados{
-    position: relative;
-    top: 5px;
-    left: 5px;
-    color: #e050c8;
-    background-color: transparent;
-    border: 0;
-  }
 }
 
 @media  screen and (min-width: 600px) and (max-width: 1000px){
@@ -334,35 +303,5 @@ input[type="button"] {
     border: 0;
     background-color: white;  
   }
-  .btn-primary {
-    position: relative !important;
-    top: -144px !important;
-    left: 72px !important;
-  }
-  #cambiarEmail{
-    position: relative ;
-    top: -6px ;
-    left: 8px;
-    color: #e050c8 ;
-    background-color: transparent ;
-    border: 0 ;
-  }
-  #editarDatsos{
-    width: 100%;
-    position: relative ;
-    top: -21px;
-  }
-  form#editarContraseña, form#editarEmail, form#editarUsername {
-    left: 13px;
-    top: -24px;
-    position: relative;
-  }
-  #mensajesDenegados, #mensajesAprobados{
-    position: relative;
-    top: 5px;
-    left: 5px;
-    color: #e050c8;
-    background-color: transparent;
-    border: 0;
-  }
+
 }
