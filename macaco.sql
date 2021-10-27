@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versión del servidor:         8.0.18 - MySQL Community Server - GPL
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             11.3.0.6295
+-- HeidiSQL Versión:             11.2.0.6213
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `grupo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.grupo: ~13 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.grupo: ~22 rows (aproximadamente)
 DELETE FROM `grupo`;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
 INSERT INTO `grupo` (`id`, `nombre`) VALUES
@@ -80,11 +80,15 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
   PRIMARY KEY (`id`),
   KEY `userid` (`userId`),
   CONSTRAINT `userid` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla kalpatarubd.mensajes: ~0 rows (aproximadamente)
 DELETE FROM `mensajes`;
 /*!40000 ALTER TABLE `mensajes` DISABLE KEYS */;
+INSERT INTO `mensajes` (`id`, `userId`, `activateToken`, `tipografia`, `color`, `colorTipografia`, `texto`, `numLikes`) VALUES
+	(1, 1, '(NULL)', '', '', '', 'vvv', 0),
+	(2, 1, '6fc89398a244347b9771b8f155e9ed94', NULL, NULL, NULL, 'puto', 0),
+	(3, 1, '9095e7033b12bc82d0dc8e88e731b845', NULL, NULL, NULL, 'puto', 0);
 /*!40000 ALTER TABLE `mensajes` ENABLE KEYS */;
 
 -- Volcando estructura para tabla kalpatarubd.prefiltro
@@ -92,11 +96,15 @@ CREATE TABLE IF NOT EXISTS `prefiltro` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `palabra` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla kalpatarubd.prefiltro: ~0 rows (aproximadamente)
 DELETE FROM `prefiltro`;
 /*!40000 ALTER TABLE `prefiltro` DISABLE KEYS */;
+INSERT INTO `prefiltro` (`id`, `palabra`) VALUES
+	(1, 'puto'),
+	(2, 'puta'),
+	(3, 'ostia');
 /*!40000 ALTER TABLE `prefiltro` ENABLE KEYS */;
 
 -- Volcando estructura para tabla kalpatarubd.roles
@@ -106,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla kalpatarubd.roles: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla kalpatarubd.roles: ~3 rows (aproximadamente)
 DELETE FROM `roles`;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `rol`) VALUES
