@@ -7,9 +7,10 @@
             <?php
             if(empty($sms)){
                 echo "<h3>".$language["NO_MSJ_CURSO"]."</h3>";
-            }else{
+            }else{$ind=0;
                     foreach ($sms as $mensaje) {
-                        echo "<li><a href='index.php?section=verMensaje&id=".$mensaje->id."'>".$mensaje->id."</a></li>";
+                     echo "<li><a href='index.php?section=verMensaje&id=".$mensaje->id."'>".$usernames[$ind].":".$mensaje->id."</a></li>";
+                    $ind++;
                     }
             }
             ?>

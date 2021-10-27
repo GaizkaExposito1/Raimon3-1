@@ -14,8 +14,8 @@ if(isset($_SESSION['error'])){
 				<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 			</div>
 			<div class="right" id="right">
-                <h4 id="creadorMensaje"><?php echo $language["MSJ_ECR_POR"]; ?></h4><?php $user?>
-				<p id="mensaje"><?php echo $language["MSJ_VERMSJ"]; ?></p><?php $mensaje->texto ?>
+                <h4 id="creadorMensaje"><?php echo $language["MSJ_ECR_POR"]; ?></h4><?php echo $user;?>
+				<p id="mensaje"><?php echo $language["MSJ_VERMSJ"]; ?></p><?php echo $mensaje->texto; ?>
 				<p id="estado"><?php echo $language["ESTADO_MSJ"]; ?></p>
 				<?php
                 if($mensaje->activateToken==null){

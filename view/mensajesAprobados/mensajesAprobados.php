@@ -7,7 +7,7 @@
                 echo "<h1>".$language["NO_MSJ_TDV"]."</h1>";
             }else{
                     foreach ($sms as $mensajeApr) {
-                        echo "<li>v<a href='eliminar.php?id=".$mensajeApr->id."'>".$language["DEL_MSJ"]."</a></li>";
+                        echo "<li><a href='index.php?section=verMensaje&id=".$mensajeApr->id."'>".$mensajeApr->texto."</a></li>";
                     }
             }
             ?>
