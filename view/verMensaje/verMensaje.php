@@ -19,9 +19,9 @@ if(isset($_SESSION['error'])){
 				<p id="estado"><?php echo $language["ESTADO_MSJ"]; ?></p>
 				<?php
                 if($mensaje->activateToken==null){
-                    //no esta activo
+                  echo"  <img src='../assets/caratriste.jpg' width: 10%;' alt=''></img>";
                 }else{
-                    //esta activo
+					echo"  <img src='../assets/caracontenta.jpg'width: 10%;' alt=''></img>";
                 }
                 ?>
                 <p id="like">
