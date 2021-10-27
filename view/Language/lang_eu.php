@@ -83,6 +83,7 @@ $language["MensajesNA"] = "Onartzeko Dauden Mezuak";
 $language["MensajesNAsms"] = "Mezu Gustiak Onartu Dira";
 $language["ACEPTARM"] = "Onartu Mezua";
 $language["DENEGARM"] = "Ukatu eta Ezabatu Mezua";
+$language["MOSTRAR_CAJA"] = "Erakutsi";
 //Mensajes aprobados y NO aprobados
 $language["NO_MSJ_TDV"] = "Oraindik ez dago onartutako mezurik";
 $language["DEL_MSJ"] = "Mezua Ezabatu";

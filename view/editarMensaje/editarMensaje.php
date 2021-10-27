@@ -6,7 +6,7 @@
 	  <div class="left" id="left">
 		<div class="crearMensaje"><?php echo $language["EDITAR_MSJ"]; ?></div>
 		<div class="eula"><?php echo $language["TXT_EDITAR_MSJ"]; ?></div>
-		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
+		<input type="button" id="mostrar" value="<?php echo $language["MOSTRAR_CAJA"]; ?>" onclick="mostrarCaja()">
 
 
 
