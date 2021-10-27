@@ -14,14 +14,20 @@ if(isset($_SESSION['error'])){
 				<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 			</div>
 			<div class="right" id="right">
-                <h4 id="creadorMensaje">Mensaje escrito por CreadorMensaje</h4>
-				<p id="mensaje">Mensaje:</p>
+                <h4 id="creadorMensaje">Mensaje escrito por: </h4><?php $user?>
+				<p id="mensaje">Mensaje:</p><?php $mensaje->texto ?>
 				<p id="estado">Estado de mensaje:</p>
-				
+				<?php
+                if($mensaje->activateToken==null){
+                    //no esta activo
+                }else{
+                    //esta activo
+                }
+                ?>
                 <p id="like">
-                <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
+                <a href="./controller/actions/darLike.php" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
                 </p>
-				<a class='delete' href='#wii'>Eliminar Mensaje</a>
+				<a class='delete' href='./controller/actions/eliminarMensaje.php'>Eliminar Mensaje</a>
 			</div>
 		</div>
 	</div>

@@ -8,6 +8,7 @@ if(isset($_GET['id'])){
     $param=$_GET['id'];
 }
 $mensaje=$bd->getMensajePorId($param);
+$user=$bd->getUsernameFromUserId($mensaje->userId);
 //redireccion
 include "./view/verMensaje/verMensaje.php";
 ?>
