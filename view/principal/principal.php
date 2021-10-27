@@ -2,19 +2,14 @@
 <!----------------------------------------------------------------------->
  <div class="carouseandSelect">
 
-  <select name="select" >
+  <select id="select" name="select" >
 					<option value="curso" disabled selected><?php echo $language["CURSO"]; ?> </option>
 					<?php 
 					for ($i=0; $i < count($grupos); $i++) { 
-						echo "<option value='cursos'>$grupos[$i]</option>";
+						echo "<option value='".$grupos[$i]->id."'>$grupos[$i]</option>";
 					}
 					?>
     </select>
-
-     
-
-    
-    
    
     <div class="arbolBotones"> 
     

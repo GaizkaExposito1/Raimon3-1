@@ -9,8 +9,8 @@ if(isset($_GET['section'])){
 }
 if(isset($_GET['id'])){
     $param=$_GET['id'];
-}
-$bd->darLike($param);
+    $bd->darLike($param);
+}else{
+$bd->darLike($_SESSION['smsId']);}
 header("Location: ../../index.php?section=".$parame);
-?>
 ?>

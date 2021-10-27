@@ -6,21 +6,10 @@
             <ul>
             <?php
             if(empty($sms)){
-                
                 echo "<h3>".$language["NO_MSJ_CURSO"]."</h3>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-                echo "<li><span id='User'>".$language["USER_MSJ_CURSO"]."</span> MENSAJE <span class='delete'><a class='delete' href='#wii'>X</a></span></li>";
-
-                
             }else{
                     foreach ($sms as $mensaje) {
-                        echo "<li>".$mensaje->id."</li>";
+                        echo "<li><a href='index.php?section=verMensaje&id=".$mensaje->id."'>".$mensaje->id."</a></li>";
                     }
             }
             ?>

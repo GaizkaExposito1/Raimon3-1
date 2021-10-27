@@ -10,7 +10,7 @@ if(isset($_SESSION['error'])){
 		<div class="left" id="left">
 			<div class="perfil"><?php echo $language["ADMINISTRACION"]; ?></div>
 			<div class="eula"><?php echo $language["TXT_ADMIN"]; ?></div>
-			<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
+			<input type="button" id="mostrar" value="<?php $language["MOSTRAR_CAJA"]; ?>" onclick="mostrarCaja()">
 
 
 

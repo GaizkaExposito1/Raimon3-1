@@ -27,7 +27,10 @@ if(isset($_SESSION['error'])){
                 <p id="like">
                 <a href="./controller/actions/darLike.php" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
                 </p>
-				<a class='delete' href='./controller/actions/eliminarMensaje.php'><?php $language["DEL_MSJ"]; ?></a>
+				<?php
+				$_SESSION['smsId']= $mensaje->id;
+				echo"<a class='delete' href='./controller/actions/eliminarMensaje.php'>".$language["DEL_MSJ"]."</a>
+				<a class='delete' href='index.php?section=editarMensaje'>EditarMensaje</a>";?>
 			</div>
 		</div>
 	</div>

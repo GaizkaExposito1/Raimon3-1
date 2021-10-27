@@ -83,6 +83,7 @@ $language["MensajesNA"] = "Mensajes por Aprobar";
 $language["MensajesNAsms"] = "Todos los mensajes han sido aprobados";
 $language["ACEPTARM"] = "Aprobar Mensaje";
 $language["DENEGARM"] = "Denegar y Borrar Mensaje";
+$language["MOSTRAR_CAJA"] = "Mostrar";
 //Mensajes aprobados y NO aprobados
 $language["NO_MSJ_TDV"] = "No hay mensajes aprobados todavia";
 $language["DEL_MSJ"] = "Eliminar Mensaje";
