@@ -11,9 +11,13 @@ $language["MENSAJES"] = "Ikusi Gainditu Mezua";
 $language["LOGOUT"] = "Itxi sesioa";
 $language["ADMIN"] = "Administrazio-eremua";
 $language["PRINCIPAL"] = "Orrialde Nagusia";
+//principal
+$language["TITU_PRINC"] = "Desioen Zuhaitza";
 //login
 $language['INICIO_SESION'] = 'Hasi Saioa';
 $language["LOGIN_SUBTITULO"] = "Ongi etorri Desioen Zuhaitzera!!";
+$language["REIN_DATOS"] = "Datuak Sartu Berriro";
+$language["IR_REGIS"] = "Joan Erregistrora";
 $language["USER"] = "Erabiltzailea";
 $language["PASS"] = "Pasahitza";
 $language["ACEPTAR"] = "Onartu";

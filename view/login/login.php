@@ -48,8 +48,8 @@ if(isset($_GET['error'])){
 		?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Reintroducir datos</button>
-        <button type="button" class="btn btn-primary" onclick="$(location).attr('href','index.php?section=registro')">Ir a Registro</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $language["REIN_DATOS"]; ?></button>
+        <button type="button" class="btn btn-primary" onclick="$(location).attr('href','index.php?section=registro')"><?php echo $language["IR_REGIS"]; ?></button>
       </div>
     </div>
   </div>
