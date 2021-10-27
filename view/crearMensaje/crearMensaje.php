@@ -7,8 +7,8 @@
 		<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 	  </div>
 	  <div class="right" id="right"> 
-	  <form action="./controller/actions/crearMensaje.php"  method="post">
-        <textarea name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"> </textarea>
+	  <form id="crear" action="./controller/actions/crearMensaje.php"  method="post">
+        <textarea id="text" name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"> </textarea>
         <select name="select" >
            <option value="curso" disabled selected><?php echo $language["COLOR_LETRA"]; ?></option>
 		   <!--rueda color-->
@@ -32,7 +32,9 @@
            <option value="curso" disabled selected> <?php echo $language["COLOR_HOJA"]; ?></option>
 		   <!--rueda color-->
          </select>
+		 <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
+		
 	  </div>
 	</div>
   </div>

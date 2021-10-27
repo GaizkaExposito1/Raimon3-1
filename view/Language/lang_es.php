@@ -25,7 +25,7 @@ $language["DNI"] = "Dni";
 $language["CONF_PASS"] = "Confirmar Contraseña";
 $language["EMAIL"] = "Correo Electrónico";
 $language["CURSO"] = "Curso";
-//perfil y perfil admin
+//perfil 
 $language["PERFIL"] = "Perfil";
 $language["TXT_PERFIL"] = "Aquí podras editar tu perfil";
 $language["USUARIO_PERFIL"] = "Usuario : NOMBREUSUARIO";
@@ -60,5 +60,21 @@ $language["COLOR_HOJA"] = "Color Hoja";
 $language["ANONIMO"] = "Anónimo";
 $language["NO_ANONIMO"] = "No Anónimo";
 $language["FORMA_HOJA"] = "Forma Hoja";
+//administracion
+$language["ADMINISTRACION"] = "Administracion";
+$language["TXT_ADMIN"] = "Pantalla de administracion";
+$language["UsersNB"] = "Usuarios no baneados";
+$language["NBsms"] = "No hay usuarios Baneados";
+$language["BANEAR"] = "Banear";
+$language["UsersB"] = "Usuarios Baneados";
+$language["UsersBsms"] = "No quedan usuarios sin banear";
+$language["DESBANEAR"] = "Desbanear";
+$language["MensajesNA"] = "Mensajes por Aprobar";
+$language["MensajesNAsms"] = "Todos los mensajes han sido aprobados";
+$language["ACEPTARM"] = "Aprobar Mensaje";
+$language["DENEGARM"] = "Denegar y Borrar Mensaje";
+//Mensajes no aprobados
+
+//Mensajes aprovados
 
 ?>

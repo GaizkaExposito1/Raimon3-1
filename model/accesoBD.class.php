@@ -231,8 +231,8 @@ class AccesoBd{
                 extract($fila);
                 $user=new User($dni, $pass, $email, $rol,$curso,$imgUser,$username);
             }
-            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='1') where (`id` = '$userId')");
-            $this->mensajeEmailBaneado($user->email);
+            $this->lanzarSQL("UPDATE `kalpatarubd`.`users` set (`Banned`='1') where (`id` = '$userId');");
+            //$this->mensajeEmailBaneado($user->email);
             return "ok";
         }
 
@@ -297,6 +297,17 @@ class AccesoBd{
         }
 
         //Mensajes
+        function darLike($id){
+            $result= $this->lanzarSQL("SELECT * from `kalpatarubd`.`mensajes` where (`id`='$id');");
+            while(($fila=mysqli_fetch_array($result))!=null){
+                extract($fila);
+                $numLike=$numLikes;
+                $numLike=$numLike+1;
+                $this->lanzarSQL("UPDATE `kalpatarubd`.`mensajes` set (`numLikes`='numLike') where (`id` = '$id')");
+            }
+           
+
+        }
         function newMensaje($userId, $tipografia,$colorTipografia,$color,$texto){
             if($tipografia==null){
                 $tipografia="Comic Sans";
@@ -312,8 +323,8 @@ class AccesoBd{
             }
             else{
             $this->lanzarSQL("INSERT INTO `kalpatarubd`.`mensajes`(`userId`,`activateToken`,`tipografia`,`color`,`colorTipografia`,`texto`,`numLikes`) VALUES ('$userId','null','$tipografia','$color','$colorTipografia','$texto','0');");
-           /* $bool=$this->hasTextWordInPrefiltro($texto);
-            if($bool=="ok"){*/
+            $bool=$this->hasTextWordInPrefiltro($texto);
+            if($bool=="ok"){
                 $r=$this->lanzarSQL("SELECT max(`id`) as id from `kalpatarubd`.`mensajes`;");
                 while(($fila=mysqli_fetch_array($r))!=null){
                    extract($fila);
@@ -321,9 +332,9 @@ class AccesoBd{
                }
                 $sms=new Mensaje($Id,$userId,null, $tipografia,$colorTipografia,$color,$texto,0);
             $this->mensajeAprobarEmail($sms);
-            return "ok";/*}else{
+            return "ok";}else{
                 return "la palabra $bool no esta permitida, porfavor cambia el mensaje";
-            }*/
+            }
         }
         }
 
@@ -477,7 +488,7 @@ class AccesoBd{
         }
 
         function hasTextWordInPrefiltro($text){
-            $words=array(str_word_count($text,1));
+            $words=explode(" ",$text);
             $PF=$this->getPrefiltro();
             $palabra="ok";
             for($i=0; $i<count($words);$i++){

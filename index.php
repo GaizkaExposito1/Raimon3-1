@@ -18,6 +18,7 @@ if(isset($_GET['section'])){
     <title><?php echo $language["TITLE"]; ?></title>
     <link href="./styleheader1.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
     <link href="./styleheader2.css" rel="stylesheet" type="text/css"> <!--Css Header 2-->
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <script src="./index.js"></script>
     <link href="./view/<?php echo $param ?>/<?php echo $param ?>.css" rel="stylesheet" type="text/css">  <!--Css 

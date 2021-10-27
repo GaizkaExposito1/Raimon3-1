@@ -9,9 +9,9 @@ require_once "../controller/librerias/OAuth.php";
 require_once "../controller/librerias/POP3.php";
 require_once "../controller/librerias/SMTP.php";
 $bd=new AccesoBd();
-$response=$bd->newMensaje(1,"arial","negro","blanco","puto","anonimo");
+//$response=$bd->newMensaje(1,"arial","negro","blanco","puto","anonimo");
 //$responde=$bd->getUsers();
-//$responde=$bd->banUser(1);
+$response=$bd->banUser(1);
 //$responde=$bd->getBannedUsers(1);
 echo "$response";
 ?>

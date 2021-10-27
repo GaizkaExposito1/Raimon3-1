@@ -15,7 +15,7 @@
 						<option value="usersNoBaneados" disabled selected><?php echo $language["UsersNB"]; ?> </option>
 						<?php 
 						if(empty($usersNB)){
-							echo "<option value='NO'>No hay usuarios baneados</option>";
+							echo "<option value='NO'>".$language["NBsms"]."</option>";
 						}else{
 						for ($i=0; $i < count($usersNB); $i++) { 
 							echo "<option value='".$usersNB[$i]->id."'>".$usersNB[$i]->username."</option>";
@@ -29,7 +29,7 @@
 						<option value="usersBaneados" disabled selected><?php echo $language["UsersB"]; ?> </option>
 						<?php 
 						if(empty($usersB)){
-							echo "<option value='NO'>No quedan usuarios sin banear</option>";
+							echo "<option value='NO'>".$language["UsersBsms"]."</option>";
 						}else{
 						for ($i=0; $i < count($usersB); $i++) { 
 							echo "<option value='".$usersB[$i]->id."'>".$usersB[$i]->username."</option>";
@@ -42,9 +42,12 @@
 				<select ID="sel" name="sms" >
 						<option value="sms" disabled selected><?php echo $language["MensajesNA"]; ?> </option>
 						<?php 
+						if(empty($sms)){
+							echo "<option value='NO'>".$language["MensajesNAsms"]."</option>";
+						}else{
 						for ($i=0; $i < count($sms); $i++) { 
 							echo "<option id='".$sms[$i]->id."' value='".$sms[$i]->id."'>".$sms[$i]->texto."</option>";
-						}
+						}}
 						?>
 					</select>
 					<button id="aceptms"><?php echo $language["ACEPTARM"]; ?></button>
