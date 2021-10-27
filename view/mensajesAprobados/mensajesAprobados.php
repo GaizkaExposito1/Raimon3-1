@@ -4,10 +4,10 @@
             <ul>
             <?php 
             if(empty($sms)){
-                echo "<h1>No hay mensajes aprobados todavia</h1>";
+                echo "<h1>".$language["NO_MSJ_TDV"]."</h1>";
             }else{
                     foreach ($sms as $mensajeApr) {
-                        echo "<li>v<a href='eliminar.php?id=".$mensajeApr->id."'>Eliminar Mensaje</a></li>";
+                        echo "<li>v<a href='eliminar.php?id=".$mensajeApr->id."'>".$language["DEL_MSJ"]."</a></li>";
                     }
             }
             ?>

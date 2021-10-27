@@ -14,11 +14,14 @@ if(isset($_SESSION['error'])){
 				<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 			</div>
 			<div class="right" id="right">
-                <p>Mensaje escrito por CreadorMensaje</p>
-				<p>Mensaje:</p>
-                <p>
+                <h4 id="creadorMensaje">Mensaje escrito por CreadorMensaje</h4>
+				<p id="mensaje">Mensaje:</p>
+				<p id="estado">Estado de mensaje:</p>
+				
+                <p id="like">
                 <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
                 </p>
+				<a class='delete' href='#wii'>Eliminar Mensaje</a>
 			</div>
 		</div>
 	</div>
