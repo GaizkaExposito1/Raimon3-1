@@ -13,6 +13,9 @@ $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
 //principal
 $language["TITU_PRINC"] = "Árbol de los deseos";
+$language["CREAR_MSJ_PRINC"] = "Crear Mensaje";
+$language["MSJ_APR_PRINC"] = "Mensajes Aprobados";
+$language["MSJ_NOAPR_PRINC"] = "Mensajes No Aprobados";
 //login
 $language['INICIO_SESION'] = 'Iniciar Sesión';
 $language["LOGIN_SUBTITULO"] = "¡¡Bienvenido al árbol de los deseos!!";

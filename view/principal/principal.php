@@ -62,9 +62,9 @@
     <?php
     if(isset($_SESSION['usuario'])){
     echo "<div id='links'>
-      <a href='index.php?section=crearMensaje' ><button id='crearMensaje'>Crear Mensaje</button></a>
-        <a href='index.php?section=verMensajesAprobados'><button id='mensajeAprobados'>Mensajes Aprobados</button></a>
-        <a href='index.php?section=mensajesNoAprobados'><button id='mensajeNoAprobados'>Mensajes No Aprobados</button></a>
+      <a href='index.php?section=crearMensaje' ><button id='crearMensaje'>".$language["CREAR_MSJ_PRINC"]."</button></a>
+        <a href='index.php?section=verMensajesAprobados'><button id='mensajeAprobados'>".$language["MSJ_APR_PRINC"]."</button></a>
+        <a href='index.php?section=mensajesNoAprobados'><button id='mensajeNoAprobados'>".$language["MSJ_NOAPR_PRINC"]."</button></a>
     </div>";}
     ?>
 </div>

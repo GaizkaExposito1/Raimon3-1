@@ -13,6 +13,9 @@ $language["ADMIN"] = "Administrazio-eremua";
 $language["PRINCIPAL"] = "Orrialde Nagusia";
 //principal
 $language["TITU_PRINC"] = "Desioen Zuhaitza";
+$language["CREAR_MSJ_PRINC"] = "Sortu Mezua";
+$language["MSJ_APR_PRINC"] = "Onartutako Mezuak";
+$language["MSJ_NOAPR_PRINC"] = "Onartu Gabeko Mezuak";
 //login
 $language['INICIO_SESION'] = 'Hasi Saioa';
 $language["LOGIN_SUBTITULO"] = "Ongi etorri Desioen Zuhaitzera!!";
