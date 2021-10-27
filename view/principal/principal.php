@@ -1,4 +1,4 @@
-<h1>Árbol de los deseos <span>&#127810;</span></h1>
+<h1><?php echo $language["TITU_PRINC"]; ?> <span>&#127810;</span></h1>
 <!----------------------------------------------------------------------->
  <div class="carouseandSelect">
 

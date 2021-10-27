@@ -11,9 +11,13 @@ $language["MENSAJES"] = "Ver mensajes aprobados";
 $language["LOGOUT"] = "Cerrar sesion";
 $language["ADMIN"] = "Zona Administracion";
 $language["PRINCIPAL"] = "Pagina Principal";
+//principal
+$language["TITU_PRINC"] = "Árbol de los deseos";
 //login
 $language['INICIO_SESION'] = 'Iniciar Sesión';
 $language["LOGIN_SUBTITULO"] = "¡¡Bienvenido al árbol de los deseos!!";
+$language["REIN_DATOS"] = "Reintroducir datos";
+$language["IR_REGIS"] = "Ir a Registro";
 $language["USER"] = "Usuario";
 $language["PASS"] = "Contraseña";
 $language["ACEPTAR"] = "Aceptar";
