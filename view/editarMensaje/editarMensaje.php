@@ -18,55 +18,26 @@
 
         <textarea disabled name= textarea rows= 6 cols= 45 maxlength= 280 placeholder="<?php echo $language['PLACEHOLDER_CREAR_MSJ']; ?>"></textarea>
 
-        <select name="select" >
-           <option value="curso" disabled selected><?php echo $language["COLOR_LETRA"]; ?></option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$colorTipografia[$i]</option>";
-			
-		   }
-
-		   ?>
+        <label><?php echo $language["COLOR_LETRA"]; ?></label>
+		<input type="color" name="colorTipo">
          </select>
          <select name="select" >
            <option value="curso" disabled selected><?php echo $language["TIPOGRAFIA"]; ?></option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$tipografia[$i]</option>";
-			
-		   }
-
-		   ?>
+		   <option value="Scheherazade New" >Scheherazade New</option>
+		   <option value="Italianno" >Italianno</option>
+		   <option value="IM Fell English SC" >IM Fell English SC</option>
+		   <option value="Lobster" >Lobster</option>
+		   <option value="Anton" >Anton</option>
+		   <option value="Dancing Script" >Dancing Script</option>
+		   <option value="Architects Daughter" >Architects Daughter</option>
+		   <option value="Pacifico" >Pacifico</option>
+		   <option value="Shadows Into Light" >Shadows Into Light</option>
+		   <option value="Indie Flower" >Indie Flower</option>
+		   <option value="Saira Condensed" >Saira Condensed</option>
          </select>	  
 
-		  <select name="select" >
-           <option value="curso" disabled selected><?php echo $language["COLOR_HOJA"]; ?></option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$color[$i]</option>";
-			
-		   }
-
-		   ?>
-         </select>
-         <select name="select" >
-           <option value="curso" disabled selected><?php echo $language["FORMA_HOJA"]; ?></option>
-           <?php 
-		   $cursos=$grupos;
-		   
-		   for ($i=0; $i < count($cursos); $i++) { 
-			echo "<option value='cursos'>$Forma[$i]</option>";
-			
-		   }
-
-		   ?>
-         </select>
+		 <label> <?php echo $language["COLOR_HOJA"]; ?></label>
+		  <input type="color" name="color">
 
 		  <input type="submit" id="aceptar" value="<?php echo $language['ACEPTAR']; ?>">
 		</form>

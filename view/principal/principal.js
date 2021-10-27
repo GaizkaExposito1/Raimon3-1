@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------- */
-
+$(document).ready(function(){
 $('#myCarousel').carousel();
     
   
@@ -12,3 +12,9 @@ $("#nextBtn").click(function(){
 });
 
 /*------------------------------------------------------------------------- */
+
+$('#select').on('change', function() {
+    var selectVal = $("#select option:selected").val();
+      location.href = 'index.php?section=mensajesCurso&id='+selectVal;
+    });
+});
