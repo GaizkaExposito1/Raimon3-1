@@ -45,7 +45,7 @@ if(isset($_SESSION['error'])){
 									<?php echo $language["CONTRA_ES_PERFIL"]; ?>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $language["CERRAR_PERFIL"] ?></button>
 								</div>
 							</div>
 						</div>

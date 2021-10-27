@@ -53,6 +53,7 @@ $language["NEW_EMAIL_PERFIL"] = "Email Berria";
 $language["ANTIGUO_USERNAME_PERFIL"] = "Erabiltzailearen Izen Zaharra";
 $language["NEW_USERNAME_PERFIL"] = "Erabiltzailearen Izen Berria";
 $language["ENVIAR"] = "Bidali";
+$language["CERRAR_PERFIL"] = "Itxi";
 //mensajes curso
 $language["MSJ_X_CURSO"] = "Mezuak Ikastaroaren Arabera";
 $language["NO_MSJ_CURSO"] = "EZ DAGO MEZURIK MAIL HONETAN.";
