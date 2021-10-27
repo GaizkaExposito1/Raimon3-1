@@ -78,35 +78,35 @@ img#LogoCLSLarge {
     text-align: left;
   }
 
-  #PagePrincipal{
-    position: relative;
-    top: -260px;
-    font-size: 27px;
-  }
-  #Administracion{
-    position: relative;
-    top: -23px;
-    font-size: 27px;
-  }
-  #logout{
-    position: relative;
-    top: 100px;
-    font-size: 27px;
-  }
-  #VerMensajesAprobados{
-    position: relative;
-    top: 50px;
-    font-size: 27px;
-  }
-  #CrearMensaje{
-    position: relative;
-    top: 60px;
-    font-size: 27px;
-  }
-  #Login{
-    position: relative;
-    top: 350px;
-    LEFT: -180px;
-    font-size: 27px;
-  }
+    #PagePrincipal{
+      position: relative;
+      top: -10px;
+      font-size: 27px;
+    }
+    #Administracion{
+      position: relative;
+      top: -10px;
+      font-size: 27px;
+    }
+    #logout{
+      position: relative;
+      top: 100px;
+      font-size: 27px;
+    }
+    #VerMensajesAprobados{
+      position: relative;
+      top: 50px;
+      font-size: 27px;
+    }
+    #CrearMensaje{
+      position: relative;
+      top: 60px;
+      font-size: 27px;
+    }
+    #Login{
+      position: relative;
+      top: 350px;
+      LEFT: -180px;
+      font-size: 27px;
+    }
 }

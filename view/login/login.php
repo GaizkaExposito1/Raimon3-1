@@ -19,7 +19,7 @@ if(isset($_SESSION['error'])){
 		  <input type="password" id="password"  name="password" placeholder=" pon el ojop que todo lo ve">
 		  <input type="submit" id="submit" value="<?php echo $language["ACEPTAR"]; ?>">
 		</form>
-		<a href="index.php?section=registro">Registro</a>
+		<a id="Register" href="index.php?section=registro">Registro</a>
 	  </div>
 	</div>
   </div>
