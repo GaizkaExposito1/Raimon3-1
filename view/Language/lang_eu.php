@@ -86,5 +86,10 @@ $language["DENEGARM"] = "Ukatu eta Ezabatu Mezua";
 //Mensajes aprobados y NO aprobados
 $language["NO_MSJ_TDV"] = "Oraindik ez dago onartutako mezurik";
 $language["DEL_MSJ"] = "Mezua Ezabatu";
+//ver mensaje
+$language["RETURN"] = "Itzuli";
+$language["MSJ_ECR_POR"] = "Honek Idatzitako Mezua: ";
+$language["MSJ_VERMSJ"] = "Mezua: ";
+$language["ESTADO_MSJ"] = "Mezuaren Egoera: ";
 
 ?>

@@ -5,7 +5,7 @@ if(isset($_SESSION['error'])){
 }
 ?>
 <article>
-    <a href="$_SERVER['HTTP_REFERER']">Volver</a>
+    <a href="$_SERVER['HTTP_REFERER']"><?php echo $language["RETURN"]; ?></a>
 	<div class="page">
 		<div class="container">
 			<div class="left" id="left">
@@ -14,9 +14,9 @@ if(isset($_SESSION['error'])){
 				<input type="button" id="mostrar" value="mostrar" onclick="mostrarCaja()">
 			</div>
 			<div class="right" id="right">
-                <h4 id="creadorMensaje">Mensaje escrito por: </h4><?php $user?>
-				<p id="mensaje">Mensaje:</p><?php $mensaje->texto ?>
-				<p id="estado">Estado de mensaje:</p>
+                <h4 id="creadorMensaje"><?php echo $language["MSJ_ECR_POR"]; ?></h4><?php $user?>
+				<p id="mensaje"><?php echo $language["MSJ_VERMSJ"]; ?></p><?php $mensaje->texto ?>
+				<p id="estado"><?php echo $language["ESTADO_MSJ"]; ?></p>
 				<?php
                 if($mensaje->activateToken==null){
                     //no esta activo
@@ -27,7 +27,7 @@ if(isset($_SESSION['error'])){
                 <p id="like">
                 <a href="./controller/actions/darLike.php" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span></a> 
                 </p>
-				<a class='delete' href='./controller/actions/eliminarMensaje.php'>Eliminar Mensaje</a>
+				<a class='delete' href='./controller/actions/eliminarMensaje.php'><?php $language["DEL_MSJ"]; ?></a>
 			</div>
 		</div>
 	</div>

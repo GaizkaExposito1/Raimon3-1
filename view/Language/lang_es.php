@@ -86,5 +86,10 @@ $language["DENEGARM"] = "Denegar y Borrar Mensaje";
 //Mensajes aprobados y NO aprobados
 $language["NO_MSJ_TDV"] = "No hay mensajes aprobados todavia";
 $language["DEL_MSJ"] = "Eliminar Mensaje";
+//ver mensaje
+$language["RETURN"] = "Volver";
+$language["MSJ_ECR_POR"] = "Mensaje Escrito Por: ";
+$language["MSJ_VERMSJ"] = "Mensaje: ";
+$language["ESTADO_MSJ"] = "Estado de mensaje: ";
 
 ?>
