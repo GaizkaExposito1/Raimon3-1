@@ -48,11 +48,9 @@
     <img id="hoja29" src="./view/assets/hoja5.png"  alt="" srcset=""> 
     <img id="hoja30" src="./view/assets/hoja6.png"  alt="" srcset="">
     <img id="hoja31" src="./view/assets/hoja7.png"  alt="" srcset="">
-  
-    
-
 </div>
  
+<div class="PostItAnimacion"></div>
 
   
     <!-------Boststrap carousel--------->
@@ -93,6 +91,7 @@
         <span class="sr-only">Next</span>
     </a>
     <!-------Links para ir a otras paginas--------->
+
     <?php
     if(isset($_SESSION['usuario'])){
     echo "<div id='links'>

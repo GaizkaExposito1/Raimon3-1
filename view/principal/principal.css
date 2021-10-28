@@ -9,10 +9,10 @@ h1{
 }
 select{
     
-   font-family: 'Josefin Sans', sans-serif;
-   margin-left: 9%;
-  width: 35%;
-margin: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 9%;
+    width: 35%;
+    margin: 5%;
 }
 
 .carouseandSelect{
@@ -73,61 +73,58 @@ margin: 5%;
 
 
 /*Post IT*/
-#crearMensaje{
-    color: #EFEFEF;
-   /* width: 408px;*/
-    height: 173px;
+
+.PostItAnimacion{
+    height: 181px;
+    width: 144px;
     background-size: 100% 100%;
-   /* animation:flex-grow 0.25s;*/
-    animation: postItanimacion 0.8s infinite;
+    animation: postItanimacion 0.9s infinite;
    animation-direction: normal;
     animation-play-state: paused;
+    margin-top: 19%;
+    margin-left: 107%;
+    position: absolute;
 
 }
-.postIt:hover{
+.PostItAnimacion:hover{
     animation-play-state: running;
 }
 
 @keyframes postItanimacion {
 
     0% , 10%{
-
-        background-image: url(/Raimon3-1/view/assets/1.png);
+        background-image: url(../assets/1.png);
     }
     11%,19%{
-        background-image: url(/Raimon3-1/view/assets/2.png);
-        
+        background-image: url(../assets/2.png);   
     }
     20%, 30%{
-        background-image: url(/Raimon3-1/view/assets/3.png);
-        
+        background-image: url(../assets/3.png); 
     }
     31%,40%{
-        background-image: url(/Raimon3-1/view/assets/4.png);
-       
+        background-image: url(../assets/4.png);
     }
     
     41%,50%{
-        background-image: url(/Raimon3-1/view/assets/5.png);
-        
+        background-image: url(../assets/5.png);   
     }
     51%,60%{
-        background-image: url(/Raimon3-1/view/assets/6.png);
+        background-image: url(../assets/6.png);
     }
     61%,70%{
-        background-image: url(/Raimon3-1/view/assets/7.png);
+        background-image: url(../assets/7.png);
     }
     71%,80%{
-        background-image: url(/Raimon3-1/view/assets/8.png);
+        background-image: url(../assets/8.png);
     }
     81%,90% {
-        background-image: url(/Raimon3-1/view/assets/9.png);
+        background-image: url(../assets/9.png);
     }
     91%,96%{
-        background-image: url(/Raimon3-1/view/assets/10.png);
+        background-image: url(../assets/10.png);
     }
     97%,100%{
-        background-image: url(/Raimon3-1/view/assets/11.png);
+        background-image: url(../assets/11.png);
     }
 
 
